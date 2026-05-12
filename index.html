@@ -3,9 +3,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>Xtreme Tours APANECA</title>
 
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
@@ -22,32 +23,61 @@ body{
     overflow-x:hidden;
 }
 
+/* ================= BACKGROUND ================= */
+
+body::before{
+    content:"";
+    position:fixed;
+    inset:0;
+    z-index:-1;
+
+    background:
+    linear-gradient(rgba(2,8,23,.88),rgba(2,8,23,.94)),
+    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=2070&auto=format&fit=crop');
+
+    background-size:cover;
+    background-position:center;
+}
+
 /* ================= HEADER ================= */
 
 header{
     width:100%;
     height:90px;
+
     position:fixed;
     top:0;
     left:0;
     z-index:999;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
+
     padding:0 50px;
+
     background:rgba(3,8,20,.85);
+
     backdrop-filter:blur(12px);
+
     border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .logo-btn{
     background:linear-gradient(135deg,#0ea5ff,#0f172a);
+
     padding:16px 34px;
+
     border-radius:40px;
+
     text-decoration:none;
+
     color:white;
+
     font-weight:700;
+
     font-size:18px;
+
     box-shadow:0 0 25px rgba(14,165,255,.45);
 }
 
@@ -68,14 +98,11 @@ header{
 .hero{
     width:100%;
     min-height:100vh;
-    background:
-    linear-gradient(rgba(2,8,23,.82),rgba(2,8,23,.94)),
-    url('https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1974&auto=format&fit=crop');
-    background-size:cover;
-    background-position:center;
+
     display:flex;
     justify-content:center;
     align-items:center;
+
     padding:140px 20px 60px;
 }
 
@@ -83,12 +110,18 @@ header{
 
 .main-box{
     width:100%;
-    max-width:1300px;
+    max-width:1400px;
+
     background:rgba(7,15,30,.72);
+
     border:1px solid rgba(255,255,255,.06);
+
     border-radius:35px;
+
     padding:40px;
+
     backdrop-filter:blur(14px);
+
     box-shadow:0 20px 50px rgba(0,0,0,.5);
 }
 
@@ -96,15 +129,21 @@ header{
 
 .main-title{
     text-align:center;
-    font-size:58px;
+
+    font-size:clamp(32px,5vw,58px);
+
     font-weight:700;
+
     margin-bottom:12px;
 }
 
 .subtitle{
     text-align:center;
-    font-size:20px;
+
+    font-size:clamp(16px,2vw,20px);
+
     color:#c0d5ea;
+
     margin-bottom:40px;
 }
 
@@ -113,16 +152,23 @@ header{
 .top-tour{
     display:flex;
     justify-content:flex-start;
+
     margin-bottom:25px;
 }
 
 .tour-btn{
     background:white;
+
     border:none;
+
     padding:16px 34px;
+
     border-radius:40px;
+
     font-size:18px;
+
     font-weight:600;
+
     cursor:pointer;
 }
 
@@ -130,51 +176,63 @@ header{
 
 .booking-bar{
     width:100%;
+
     display:grid;
+
     grid-template-columns:
-    2fr
-    1fr
-    1fr
-    1fr
-    2fr
-    1.4fr;
+    repeat(5,minmax(160px,1fr))
+    220px;
+
     gap:18px;
+
     align-items:center;
+
+    margin-bottom:50px;
 }
 
-/* ================= BOXES ================= */
+/* ================= BOX ================= */
 
 .box{
     background:#071223;
+
     border:1px solid rgba(255,255,255,.06);
+
     border-radius:22px;
+
     padding:18px;
-    height:100px;
+
+    min-height:100px;
+
     display:flex;
     flex-direction:column;
     justify-content:center;
-    transition:.3s;
-}
-
-.box:hover{
-    border-color:#0ea5ff;
 }
 
 .box label{
     font-size:12px;
+
     color:#8ea7c2;
+
     margin-bottom:10px;
+
     letter-spacing:1px;
+
     text-transform:uppercase;
 }
 
 .box select,
 .box input{
     background:none;
+
     border:none;
+
     outline:none;
+
     color:white;
+
     font-size:18px;
+
+    width:100%;
 }
 
 /* ================= DATE ================= */
@@ -200,70 +258,101 @@ header{
 /* ================= BUTTON ================= */
 
 .reserve-btn{
-    height:100px;
+    min-height:100px;
+
     border:none;
+
     border-radius:22px;
+
     background:linear-gradient(135deg,#ff004c,#ff3b71);
+
     color:white;
+
     font-size:22px;
+
     font-weight:700;
+
     cursor:pointer;
-    transition:.35s;
+
     box-shadow:0 15px 35px rgba(255,0,76,.3);
 }
 
-.reserve-btn:hover{
-    transform:translateY(-4px);
-}
+/* ================= CONTENT ================= */
 
-/* ================= INFO PANELS ================= */
-
-.info-panels{
-    margin-top:50px;
-    display:flex;
-    flex-direction:column;
-    gap:25px;
-}
-
-/* ================= PANEL ================= */
-
-.panel{
+.content-section{
     width:100%;
-    height:110px;
+
     background:rgba(10,20,35,.7);
-    border-radius:25px;
+
+    border-radius:30px;
+
     border:1px solid rgba(255,255,255,.06);
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    padding:0 35px;
-    transition:.3s;
+
+    padding:35px;
+
+    margin-bottom:30px;
 }
 
-.panel:hover{
-    transform:translateY(-4px);
-    border-color:#0ea5ff;
+.section-title{
+    font-size:clamp(26px,4vw,38px);
+
+    margin-bottom:20px;
+
+    border-left:5px solid #0ea5ff;
+
+    padding-left:18px;
 }
 
-.left-panel{
-    display:flex;
-    align-items:center;
+.section-text{
+    color:#b8cadb;
+
+    font-size:16px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+}
+
+/* ================= CARDS ================= */
+
+.cards{
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
     gap:25px;
 }
 
-.icon{
-    font-size:42px;
-    color:#0ea5ff;
+.card{
+    background:#081728;
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    border:1px solid rgba(255,255,255,.05);
 }
 
-.panel h2{
-    font-size:32px;
-    font-weight:600;
+.card img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
 }
 
-.arrow{
-    font-size:38px;
-    color:#0ea5ff;
+.card-content{
+    padding:22px;
+}
+
+.card-content h3{
+    font-size:24px;
+    margin-bottom:10px;
+}
+
+.card-content p{
+    color:#afc1d2;
+    line-height:1.7;
+    font-size:15px;
 }
 
 /* ================= RESPONSIVE ================= */
@@ -279,31 +368,86 @@ header{
 @media(max-width:768px){
 
     header{
-        padding:0 20px;
+        height:auto;
+
+        padding:18px;
+
+        flex-direction:column;
+
+        gap:18px;
     }
 
     .menu{
-        gap:15px;
+        width:100%;
+
+        justify-content:center;
+
+        gap:20px;
+
+        flex-wrap:wrap;
     }
 
-    .main-title{
-        font-size:34px;
-    }
-
-    .subtitle{
-        font-size:16px;
+    .hero{
+        padding:
+        170px
+        15px
+        50px;
     }
 
     .main-box{
-        padding:25px;
+        padding:22px;
+    }
+
+    .top-tour{
+        justify-content:center;
+    }
+
+    .tour-btn{
+        width:100%;
     }
 
     .booking-bar{
         grid-template-columns:1fr;
     }
 
-    .panel h2{
-        font-size:22px;
+    .reserve-btn{
+        min-height:85px;
+
+        font-size:18px;
+    }
+
+    .content-section{
+        padding:22px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .card img{
+        height:190px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    .logo-btn{
+        width:100%;
+        text-align:center;
+    }
+
+    .menu{
+        justify-content:space-between;
+        gap:10px;
+    }
+
+    .menu a{
+        font-size:11px;
+    }
+
+    .main-title{
+        font-size:26px;
     }
 
 }
@@ -315,11 +459,20 @@ header{
 
 <header>
 
-    <a href="#" class="logo-btn">INICIO</a>
+    <a href="#" class="logo-btn">
+        INICIO
+    </a>
 
     <div class="menu">
-        <a href="#">CONTÁCTANOS</a>
-        <a href="#">🌐 IDIOMA ▼</a>
+
+        <a href="#">
+            CONTÁCTANOS
+        </a>
+
+        <a href="#">
+            🌐 IDIOMA ▼
+        </a>
+
     </div>
 
 </header>
@@ -333,13 +486,17 @@ header{
         </h1>
 
         <p class="subtitle">
-            Programar un tour
+            Programa tu próxima aventura extrema
         </p>
 
+        <!-- BUTTON -->
+
         <div class="top-tour">
+
             <button class="tour-btn">
-                Programar un tour
+                🗓️ Programar un tour
             </button>
+
         </div>
 
         <!-- ================= BOOKING ================= -->
@@ -365,8 +522,13 @@ header{
 
             <div class="box date-box">
 
-                <div class="day">13</div>
-                <div class="month">MAY 2026</div>
+                <div class="day">
+                    13
+                </div>
+
+                <div class="month">
+                    MAY 2026
+                </div>
 
             </div>
 
@@ -409,7 +571,7 @@ header{
 
             </div>
 
-            <!-- BUTTON -->
+            <!-- RESERVAR -->
 
             <button class="reserve-btn">
                 RESERVAR
@@ -426,7 +588,11 @@ header{
             </h2>
 
             <p class="section-text">
-                Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.
+
+                Explora los mejores lugares turísticos de Apaneca
+                y vive aventuras inolvidables rodeado de naturaleza,
+                montaña y experiencias extremas.
+
             </p>
 
             <div class="cards">
@@ -437,7 +603,9 @@ header{
 
                     <div class="card-content">
 
-                        <h3>Ruta de las Flores</h3>
+                        <h3>
+                            Ruta de las Flores
+                        </h3>
 
                         <p>
                             Descubre paisajes increíbles y recorridos llenos de adrenalina.
@@ -453,7 +621,9 @@ header{
 
                     <div class="card-content">
 
-                        <h3>Lago de Coatepeque</h3>
+                        <h3>
+                            Lago de Coatepeque
+                        </h3>
 
                         <p>
                             Vive experiencias acuáticas y aventuras premium.
@@ -476,7 +646,10 @@ header{
             </h2>
 
             <p class="section-text">
-                Disfruta de recorridos diseñados para turistas nacionales e internacionales con experiencias únicas, vehículos extremos y actividades premium.
+
+                Disfruta de recorridos diseñados para turistas nacionales
+                e internacionales con experiencias únicas y actividades premium.
+
             </p>
 
             <div class="cards">
@@ -487,7 +660,9 @@ header{
 
                     <div class="card-content">
 
-                        <h3>Tour Extremo</h3>
+                        <h3>
+                            Tour Extremo
+                        </h3>
 
                         <p>
                             Aventura total en rutas montañosas y caminos extremos.
@@ -503,7 +678,9 @@ header{
 
                     <div class="card-content">
 
-                        <h3>Tour Premium</h3>
+                        <h3>
+                            Tour Premium
+                        </h3>
 
                         <p>
                             Experiencias VIP con atención personalizada y máxima comodidad.
@@ -519,7 +696,7 @@ header{
 
     </div>
 
-</div>
+</section>
 
 </body>
 </html>
