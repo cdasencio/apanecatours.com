@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -27,7 +27,7 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;display:grid;grid-template-columns:repeat(6,1fr);gap:14px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
 .nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
 .nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
-.hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('https://images.pexels.com/photos/32266108/pexels-photo-32266108.jpeg?auto=compress&cs=tinysrgb&w=3840');background-size:cover;background-position:center}
+.hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('assets/imagenes/imagen1.jpg');background-size:cover;background-position:center}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(circle at center,rgba(0,0,0,.08),rgba(0,0,0,.34) 72%)}
 .hero-content{max-width:940px;position:relative;z-index:2;margin:auto}
 .hero-sale{display:inline-flex;align-items:center;justify-content:center;background:#ffd000;color:#06111f;padding:12px 22px;border-radius:0;font-size:14px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;box-shadow:0 15px 35px rgba(0,0,0,.28)}
@@ -90,6 +90,10 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .price-card{display:flex;justify-content:space-between;align-items:center}
 .price-grid-tours{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
 .price-card-pending{display:grid;gap:10px;align-items:start}
+.price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:14px;line-height:1.45}
+.price-list li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
+.price-list li:last-child{border-bottom:none;padding-bottom:0}
+.price-list b{color:#ffd000;white-space:nowrap}
 .price-card span{color:#ffd000;font-size:24px;font-weight:900}
 .price-card small{color:#8ea7c2;line-height:1.6}
 .image-gallery{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
@@ -134,10 +138,9 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 
   <section class="hero">
     <div class="hero-content">
-      <div class="hero-sale" data-i18n="heroSale">CYBER MAYO</div>
       <div class="hero-badge" data-i18n="heroBadge">RATATOUILLE APANECA</div>
       <h1 data-i18n="heroTitle">XTREME TOURS</h1>
-      <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuadrimoto.</p>
+      <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.</p>
       <div class="hero-actions">
         <a href="#reservas" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
       </div>
@@ -178,14 +181,14 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <p class="section-text" data-i18n="destinationsCopy">Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.</p>
       <div class="cards">
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1200&auto=format&fit=crop" alt="Laguna rodeada de bosque y montañas">
+          <img src="assets/imagenes/imagen2.jpg" alt="Buggy junto a laguna y montañas">
           <div class="card-content">
             <h3>Laguna Verde</h3>
             <p data-i18n="lagunaCopy">La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montañas, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexión con la naturaleza.</p>
           </div>
         </article>
         <article class="card">
-          <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop" alt="Paisaje volcánico con camino natural">
+          <img src="assets/imagenes/imagen3.jpg" alt="Cuatrimoto en ruta natural">
           <div class="card-content">
             <h3 data-i18n="ausolesTitle">Ausoles de Ahuachapán</h3>
             <p data-i18n="ausolesCopy">Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.</p>
@@ -193,26 +196,37 @@ input[type="date"],input[type="time"]{color-scheme:dark}
         </article>
       </div>
       <div class="image-gallery" aria-label="Galería de destinos">
-        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?q=80&w=900&auto=format&fit=crop" alt="Paisaje natural de montaña">
-        <img src="https://images.unsplash.com/photo-1448375240586-882707db888b?q=80&w=900&auto=format&fit=crop" alt="Bosque para fotografía de tour">
-        <img src="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=900&auto=format&fit=crop" alt="Camino natural de aventura">
-        <img src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=900&auto=format&fit=crop" alt="Lago entre montañas">
+        <img src="assets/imagenes/imagen4.jpg" alt="Buggy en camino natural">
+        <img src="assets/imagenes/imagen5.jpg" alt="Buggy en ruta de naturaleza">
+        <img src="assets/imagenes/imagen6.jpg" alt="Buggy frente a laguna">
+        <img src="assets/imagenes/imagen7.jpg" alt="Grupo de visitantes en tour">
+        <img src="assets/imagenes/imagen8.jpg" alt="Visitantes junto a buggy">
+        <img src="assets/imagenes/imagen9.jpg" alt="Visitantes disfrutando el recorrido">
       </div>
     </section>
 
     <section class="content-section" id="precios">
       <h2 class="section-title" data-i18n="pricesTitle">PRECIOS</h2>
-      <p class="section-text" data-i18n="pricesCopy">Los precios de Laguna Verde y Ausoles son diferentes. Las tarifas finales serán confirmadas según destino, vehículo, fecha, disponibilidad y tipo de experiencia.</p>
+      <p class="section-text" data-i18n="pricesCopy">Los precios de Laguna Verde y Ausoles son diferentes. En Laguna Verde el precio depende del vehículo y capacidad seleccionada. En Ausoles el precio es de $100 por persona, ya sea en cuatrimoto o buggy.</p>
       <div class="price-grid price-grid-tours">
         <div class="price-card price-card-pending">
           <strong data-i18n="lagunaPriceTitle">Tour Laguna Verde</strong>
-          <span data-i18n="pricePending">Por confirmar</span>
+          <ul class="price-list">
+            <li><span data-i18n="singleAtv">Cuatrimoto sencilla</span><b>$30</b></li>
+            <li><span data-i18n="doubleAtv">Cuatrimoto doble</span><b>$40</b></li>
+            <li><span data-i18n="buggyOne">Buggy 1 persona</span><b>$50</b></li>
+            <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$55</b></li>
+            <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$60</b></li>
+            <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$65</b></li>
+            <li><span data-i18n="buggyFive">Buggy 5 personas</span><b>$75</b></li>
+            <li><span data-i18n="buggySix">Buggy 6 personas</span><b>$90</b></li>
+          </ul>
           <small data-i18n="lagunaPriceNote">Tarifa independiente del tour Ausoles.</small>
         </div>
         <div class="price-card price-card-pending">
           <strong data-i18n="ausolesPriceTitle">Tour Ausoles</strong>
-          <span data-i18n="pricePending">Por confirmar</span>
-          <small data-i18n="ausolesPriceNote">Tarifa independiente del tour Laguna Verde.</small>
+          <span>$100</span>
+          <small data-i18n="ausolesPriceNote">Precio por persona, sea en cuatrimoto o buggy.</small>
         </div>
       </div>
     </section>
@@ -224,45 +238,27 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 
     <section class="content-section" id="boutique">
       <h2 class="section-title" data-i18n="boutiqueTitle">BOUTIQUE</h2>
-      <p class="section-text" data-i18n="boutiqueCopy">Descubre artículos exclusivos, recuerdos premium y accesorios inspirados en la aventura y naturaleza de Apaneca.</p>
-      <div class="cards">
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1200&auto=format&fit=crop" alt="Ropa colgada en boutique">
-          <div class="card-content">
-            <h3>Hoodies Xtreme</h3>
-            <p data-i18n="hoodiesCopy">Diseños exclusivos inspirados en la Ruta de las Flores y tours extremos.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="https://images.unsplash.com/photo-1503342217505-b0a15ec3261c?q=80&w=1200&auto=format&fit=crop" alt="Accesorios y ropa de aventura">
-          <div class="card-content">
-            <h3>Accesorios Adventure</h3>
-            <p data-i18n="accessoriesCopy">Gorras, termos y artículos premium para acompañar tu experiencia.</p>
-          </div>
-        </article>
-      </div>
-      <div class="image-gallery" aria-label="Galería de boutique">
-        <img src="https://images.unsplash.com/photo-1485968579580-b6d095142e6e?q=80&w=900&auto=format&fit=crop" alt="Ropa casual para boutique">
-        <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=900&auto=format&fit=crop" alt="Prendas para fotografía de boutique">
-        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=900&auto=format&fit=crop" alt="Accesorios de aventura">
-        <img src="https://images.unsplash.com/photo-1523398002811-999ca8dec234?q=80&w=900&auto=format&fit=crop" alt="Camisas en tienda">
-      </div>
+      <p class="section-text" data-i18n="boutiqueCopy">Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.</p>
     </section>
 
     <section class="content-section" id="restaurante">
       <h2 class="section-title" data-i18n="restaurantTitle">RESTAURANTE</h2>
       <p class="section-text" data-i18n="restaurantCopy">Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.</p>
-      <div class="image-gallery restaurant-gallery" aria-label="Galería de restaurante">
-        <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?q=80&w=900&auto=format&fit=crop" alt="Mesa con comida para restaurante">
-        <img src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=900&auto=format&fit=crop" alt="Interior de restaurante">
-        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?q=80&w=900&auto=format&fit=crop" alt="Platillo fresco">
-        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=900&auto=format&fit=crop" alt="Ambiente de restaurante">
-      </div>
     </section>
 
     <section class="content-section" id="tours">
       <h2 class="section-title" data-i18n="experiencesTitle">TOURS Y EXPERIENCIAS</h2>
       <p class="section-text" data-i18n="experiencesCopy">Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.</p>
+      <div class="image-gallery" aria-label="Galería de experiencias">
+        <img src="assets/imagenes/imagen10.jpg" alt="Cliente en experiencia de tour">
+        <img src="assets/imagenes/imagen11.jpg" alt="Clientes en buggy rojo">
+        <img src="assets/imagenes/imagen12.jpg" alt="Visitantes saludando desde buggy">
+        <img src="assets/imagenes/imagen13.jpg" alt="Visitante junto a buggy rojo">
+        <img src="assets/imagenes/imagen14.jpg" alt="Clientes en experiencia de buggy">
+        <img src="assets/imagenes/imagen15.jpg" alt="Clientes con lentes y equipo de tour">
+        <img src="assets/imagenes/imagen1.jpg" alt="Clientes llegando al punto de atención">
+        <img src="assets/imagenes/imagen16.jpg" alt="Visitantes frente al local">
+      </div>
       <div class="review-grid">
         <figure class="review">
           <blockquote data-i18n="reviewOne">Una aventura completa, con paisajes increíbles y excelente atención.</blockquote>
@@ -289,10 +285,14 @@ const WHATSAPP_NUMBER = "";
 const RESERVATION_EMAIL = "reservas@xtremetoursapaneca.com";
 
 const vehicleOptions = [
-  { id: "buggy6", name: "Buggy", capacity: 6, maxUnits: 4 },
-  { id: "buggy4", name: "Buggy", capacity: 4, maxUnits: 4 },
-  { id: "buggy2", name: "Buggy", capacity: 2, maxUnits: 4 },
-  { id: "quad2", name: "Cuadrimoto", capacity: 2, maxUnits: 8 }
+  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 30 },
+  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 40 },
+  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 50 },
+  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 55 },
+  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 60 },
+  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 65 },
+  { id: "buggy5", esName: "Buggy", enName: "Buggy", capacity: 5, maxUnits: 4, lagunaPrice: 75 },
+  { id: "buggy6", esName: "Buggy", enName: "Buggy", capacity: 6, maxUnits: 4, lagunaPrice: 90 }
 ];
 
 const tours = [
@@ -301,11 +301,11 @@ const tours = [
     icon: "🌿",
     es: {
       name: "Tour Laguna Verde",
-      description: "Tour ecológico y lleno de aventura hacia Laguna Verde. Su tarifa será independiente al tour de Ausoles y se confirmará posteriormente."
+      description: "Tour ecológico y lleno de aventura hacia Laguna Verde. El precio depende del vehículo y capacidad seleccionada."
     },
     en: {
       name: "Laguna Verde Tour",
-      description: "Eco adventure to Laguna Verde. Its rate is separate from the Ausoles tour and will be confirmed later."
+      description: "Eco adventure to Laguna Verde. Pricing depends on the selected vehicle and capacity."
     }
   },
   {
@@ -313,11 +313,11 @@ const tours = [
     icon: "🌋",
     es: {
       name: "Tour Ausoles",
-      description: "Tour lleno de aventura hacia los Ausoles de Ahuachapán. Su tarifa será independiente al tour de Laguna Verde y se confirmará posteriormente."
+      description: "Tour lleno de aventura hacia los Ausoles de Ahuachapán. El precio es $100 por persona, ya sea en cuatrimoto o buggy."
     },
     en: {
       name: "Ausoles Tour",
-      description: "Adventure route to the Ausoles of Ahuachapán. Its rate is separate from the Laguna Verde tour and will be confirmed later."
+      description: "Adventure route to the Ausoles of Ahuachapán. The price is $100 per person, whether by ATV or buggy."
     }
   }
 ];
@@ -334,10 +334,10 @@ const translations = {
     navBoutique: "Boutique",
     navRestaurant: "Restaurante",
     navExperiences: "Experiencias",
-    heroSale: "CYBER MAYO",
+    heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
-    heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuadrimoto.",
+    heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.",
     heroCta: "VER OFERTA",
     tours: "TOURS",
     bookingTitle: "Reserve de acuerdo a su destino",
@@ -349,6 +349,17 @@ const translations = {
     units: "Unidades",
     capacity: "Capacidad",
     vehicleCapacity: "Vehículo con capacidad para",
+    pricePerUnit: "Precio por unidad",
+    pricePerPerson: "Precio por persona",
+    singleAtv: "Cuatrimoto sencilla",
+    doubleAtv: "Cuatrimoto doble",
+    buggyOne: "Buggy 1 persona",
+    buggyTwo: "Buggy 2 personas",
+    buggyThree: "Buggy 3 personas",
+    buggyFour: "Buggy 4 personas",
+    buggyFive: "Buggy 5 personas",
+    buggySix: "Buggy 6 personas",
+    estimatedTotal: "Total estimado",
     responsible: "Nombre del responsable",
     fullName: "Nombre completo",
     phone: "Número de teléfono",
@@ -357,6 +368,8 @@ const translations = {
     totalCapacity: "Capacidad total seleccionada",
     tourPrice: "Precio del tour",
     pricePending: "Por confirmar",
+    ausolesPersonPriceNote: "Tour Ausoles: $100 por persona.",
+    lagunaVehiclePriceNote: "Tour Laguna Verde: precio según vehículo seleccionado.",
     nextStep: "Recibiremos tus datos por correo y luego enviaremos la confirmación junto con el link de pago.",
     warning: "Selecciona vehículos suficientes para cubrir la cantidad de personas.",
     reserveNow: "COMENZAR A RESERVAR",
@@ -372,17 +385,17 @@ const translations = {
     ausolesTitle: "Ausoles de Ahuachapán",
     ausolesCopy: "Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.",
     pricesTitle: "PRECIOS",
-    pricesCopy: "Los precios de Laguna Verde y Ausoles son diferentes. Las tarifas finales serán confirmadas según destino, vehículo, fecha, disponibilidad y tipo de experiencia.",
+    pricesCopy: "Los precios de Laguna Verde y Ausoles son diferentes. En Laguna Verde el precio depende del vehículo y capacidad seleccionada. En Ausoles el precio es de $100 por persona, ya sea en cuatrimoto o buggy.",
     lagunaPriceTitle: "Tour Laguna Verde",
     ausolesPriceTitle: "Tour Ausoles",
     lagunaPriceNote: "Tarifa independiente del tour Ausoles.",
-    ausolesPriceNote: "Tarifa independiente del tour Laguna Verde.",
+    ausolesPriceNote: "Precio por persona, sea en cuatrimoto o buggy.",
     recommendationsTitle: "RECOMENDACIONES",
     recommendationsCopy: "Llevar ropa cómoda, calzado adecuado, protector solar, lentes, agua y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.",
     boutiqueTitle: "BOUTIQUE",
-    boutiqueCopy: "Descubre artículos exclusivos, recuerdos premium y accesorios inspirados en la aventura y naturaleza de Apaneca.",
-    hoodiesCopy: "Diseños exclusivos inspirados en la Ruta de las Flores y tours extremos.",
-    accessoriesCopy: "Gorras, termos y artículos premium para acompañar tu experiencia.",
+    boutiqueCopy: "Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.",
+    hoodiesCopy: "Souvenirs, detalles típicos y recuerdos inspirados en El Salvador.",
+    accessoriesCopy: "Artesanías y artículos tradicionales salvadoreños para visitantes.",
     restaurantTitle: "RESTAURANTE",
     restaurantCopy: "Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.",
     experiencesTitle: "TOURS Y EXPERIENCIAS",
@@ -407,7 +420,7 @@ const translations = {
     navBoutique: "Boutique",
     navRestaurant: "Restaurant",
     navExperiences: "Experiences",
-    heroSale: "CYBER MAY",
+    heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
     heroCopy: "Book your Laguna Verde or Ausoles experience and discover Apaneca by buggy or ATV.",
@@ -422,6 +435,17 @@ const translations = {
     units: "Units",
     capacity: "Capacity",
     vehicleCapacity: "Vehicle capacity up to",
+    pricePerUnit: "Price per unit",
+    pricePerPerson: "Price per person",
+    singleAtv: "Single ATV",
+    doubleAtv: "Double ATV",
+    buggyOne: "Buggy 1 person",
+    buggyTwo: "Buggy 2 people",
+    buggyThree: "Buggy 3 people",
+    buggyFour: "Buggy 4 people",
+    buggyFive: "Buggy 5 people",
+    buggySix: "Buggy 6 people",
+    estimatedTotal: "Estimated total",
     responsible: "Responsible guest",
     fullName: "Full name",
     phone: "Phone number",
@@ -430,6 +454,8 @@ const translations = {
     totalCapacity: "Selected total capacity",
     tourPrice: "Tour price",
     pricePending: "To be confirmed",
+    ausolesPersonPriceNote: "Ausoles Tour: $100 per person.",
+    lagunaVehiclePriceNote: "Laguna Verde Tour: price based on selected vehicle.",
     nextStep: "We will receive your details by email and then send confirmation with the payment link.",
     warning: "Select enough vehicles to cover the number of guests.",
     reserveNow: "START BOOKING",
@@ -445,17 +471,17 @@ const translations = {
     ausolesTitle: "Ausoles of Ahuachapán",
     ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles and geothermal energy surrounded by mountains and extreme nature.",
     pricesTitle: "PRICES",
-    pricesCopy: "Laguna Verde and Ausoles have different prices. Final rates will be confirmed according to destination, vehicle, date, availability and experience type.",
+    pricesCopy: "Laguna Verde and Ausoles have different prices. Laguna Verde pricing depends on the selected vehicle and capacity. Ausoles costs $100 per person, whether by ATV or buggy.",
     lagunaPriceTitle: "Laguna Verde Tour",
     ausolesPriceTitle: "Ausoles Tour",
     lagunaPriceNote: "Separate rate from the Ausoles tour.",
-    ausolesPriceNote: "Separate rate from the Laguna Verde tour.",
+    ausolesPriceNote: "Price per person, whether by ATV or buggy.",
     recommendationsTitle: "TIPS",
     recommendationsCopy: "Wear comfortable clothes, proper shoes, sunscreen, sunglasses, bring water and book in advance. Arriving a few minutes early is recommended.",
     boutiqueTitle: "BOUTIQUE",
-    boutiqueCopy: "Discover exclusive items, premium souvenirs and accessories inspired by Apaneca's adventure and nature.",
-    hoodiesCopy: "Exclusive designs inspired by the Route of Flowers and extreme tours.",
-    accessoriesCopy: "Caps, bottles and premium items to join your experience.",
+    boutiqueCopy: "Find El Salvador souvenirs, traditional keepsakes and Salvadoran handmade crafts to take home a special detail from your visit.",
+    hoodiesCopy: "Souvenirs, traditional details and keepsakes inspired by El Salvador.",
+    accessoriesCopy: "Salvadoran crafts and traditional items for visitors.",
     restaurantTitle: "RESTAURANT",
     restaurantCopy: "Enjoy a food experience to complement your adventure in Apaneca, with options for local and international visitors.",
     experiencesTitle: "TOURS AND EXPERIENCES",
@@ -475,6 +501,26 @@ let currentLanguage = "es";
 
 function t(key) {
   return translations[currentLanguage][key] || translations.es[key] || key;
+}
+
+function vehicleName(vehicle) {
+  return currentLanguage === "en" ? vehicle.enName : vehicle.esName;
+}
+
+function vehiclePrice(vehicle, tourId) {
+  return tourId === "ausoles" ? 100 : vehicle.lagunaPrice;
+}
+
+function tourTotalPrice(tourId, selectedVehicles, people) {
+  if (tourId === "ausoles") {
+    const selectedCapacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
+    return Math.max(people, selectedCapacity) * 100;
+  }
+  return selectedVehicles.reduce((total, vehicle) => total + vehicle.lagunaPrice * vehicle.units, 0);
+}
+
+function formatPrice(value) {
+  return `$${value}`;
 }
 
 function buildBookingCards() {
@@ -510,10 +556,10 @@ function buildBookingCards() {
             ${vehicleOptions.map((vehicle) => `
               <div class="vehicle-row">
                 <div class="vehicle-name">
-                  <strong>${vehicle.name}</strong>
-                  <small>${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()}</small>
+                  <strong>${vehicleName(vehicle)}</strong>
+                  <small>${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()} · ${tour.id === "ausoles" ? `${t("pricePerPerson")}: $100` : `${t("pricePerUnit")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}`}</small>
                 </div>
-                <select name="${vehicle.id}" data-capacity="${vehicle.capacity}" data-label="${vehicle.name} ${vehicle.capacity}">
+                <select name="${vehicle.id}" data-capacity="${vehicle.capacity}" data-label="${vehicleName(vehicle)} ${vehicle.capacity}">
                   <option value="">${t("units")}</option>
                   ${Array.from({ length: vehicle.maxUnits }, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join("")}
                 </select>
@@ -537,7 +583,8 @@ function buildBookingCards() {
         </div>
         <div class="summary-box">
           <span>${t("totalCapacity")}: <strong data-summary-capacity>0</strong></span>
-          <span>${t("tourPrice")}: <strong>${t("pricePending")}</strong></span>
+          <span>${t("estimatedTotal")}: <strong data-summary-price>$0</strong></span>
+          <p class="summary-note">${tour.id === "ausoles" ? t("ausolesPersonPriceNote") : t("lagunaVehiclePriceNote")}</p>
           <p class="summary-note">${t("nextStep")}</p>
           <p class="summary-warning" data-summary-warning>${t("warning")}</p>
         </div>
@@ -548,6 +595,7 @@ function buildBookingCards() {
 
   grid.querySelectorAll(".tour-card").forEach((form) => {
     form.addEventListener("change", () => updateSummary(form));
+    form.addEventListener("input", () => updateSummary(form));
     form.addEventListener("submit", handleBookingSubmit);
     updateSummary(form);
   });
@@ -562,13 +610,15 @@ function getFormSummary(form) {
 
   const capacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
   const people = Number(form.elements.people.value || 0);
+  const totalPrice = tourTotalPrice(form.dataset.tourId, selectedVehicles, people);
 
-  return { selectedVehicles, capacity, people };
+  return { selectedVehicles, capacity, people, totalPrice };
 }
 
 function updateSummary(form) {
   const summary = getFormSummary(form);
   form.querySelector("[data-summary-capacity]").textContent = summary.capacity;
+  form.querySelector("[data-summary-price]").textContent = formatPrice(summary.totalPrice);
   form.querySelector("[data-summary-warning]").classList.toggle("is-visible", summary.people > 0 && summary.capacity < summary.people);
 }
 
@@ -589,7 +639,10 @@ function handleBookingSubmit(event) {
 
   const tour = tours.find((item) => item.id === form.dataset.tourId);
   const vehicleLines = summary.selectedVehicles
-    .map((vehicle) => `- ${vehicle.units} x ${vehicle.name} para hasta ${vehicle.capacity} personas`)
+    .map((vehicle) => {
+      const priceText = form.dataset.tourId === "ausoles" ? "$100 por persona" : `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} c/u`;
+      return `- ${vehicle.units} x ${vehicleName(vehicle)} para hasta ${vehicle.capacity} personas - ${priceText}`;
+    })
     .join("\n");
 
   const message = [
@@ -604,7 +657,7 @@ function handleBookingSubmit(event) {
     vehicleLines,
     "",
     `${t("totalCapacity")}: ${summary.capacity}`,
-    `${t("tourPrice")}: ${t("pricePending")}`,
+    `${t("estimatedTotal")}: ${formatPrice(summary.totalPrice)}`,
     "",
     t("nextStep"),
     "",
@@ -644,3 +697,4 @@ applyTranslations();
   </script>
 </body>
 </html>
+
