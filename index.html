@@ -93,6 +93,10 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .summary-warning.is-visible{display:block}
 .reserve-btn{width:100%;min-height:68px;margin-top:24px;border:none;border-radius:22px;background:linear-gradient(135deg,#ff0059,#ff3b71);color:white;font-size:18px;font-weight:900;letter-spacing:1px;cursor:pointer;transition:.3s;box-shadow:0 18px 35px rgba(255,0,89,.30)}
 .reserve-btn:hover{transform:translateY(-3px)}
+.reserve-btn:disabled{cursor:not-allowed;opacity:.68;transform:none}
+.submit-status{min-height:22px;margin-top:14px;color:#b8cadb;font-size:13px;font-weight:800;line-height:1.5;text-align:center}
+.submit-status.success{color:#86efac}
+.submit-status.warning{color:#ffd000}
 .feature-strip{max-width:1280px;margin:60px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .feature{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:26px;padding:26px}
 .feature span{font-size:34px}
@@ -313,6 +317,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 const WHATSAPP_NUMBER = "50378830399";
 const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
 const SECONDARY_PHONE = "7255 8194";
+const GOOGLE_SCRIPT_URL = "";
 
 const vehicleOptions = [
   { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 30 },
@@ -422,9 +427,9 @@ const translations = {
     pricePending: "Por confirmar",
     ausolesPersonPriceNote: "Ruta Extrema (Ausoles Tour): $100 por persona.",
     lagunaVehiclePriceNote: "Tour Laguna Verde: precio según vehículo seleccionado.",
-    nextStep: "Recibiremos tus datos por correo en forma de orden y luego enviaremos la confirmación junto con el link de pago.",
+    nextStep: "Enviaremos tu orden para confirmar disponibilidad y luego recibirás el link de pago.",
     warning: "Selecciona vehículos suficientes para cubrir la cantidad de personas.",
-    reserveNow: "COMENZAR A RESERVAR",
+    reserveNow: "ENVIAR ORDEN DE RESERVA",
     featureRoutesTitle: "Rutas naturales",
     featureRoutesCopy: "Explora paisajes únicos entre montañas y naturaleza extrema.",
     featurePremiumTitle: "Experiencias premium",
@@ -460,7 +465,10 @@ const translations = {
     alertRequiredClient: "Completa nombre del responsable, número de teléfono y correo electrónico para generar la orden.",
     whatsappGreeting: "Hola, quiero información sobre Xtreme Tours APANECA.",
     emailSubject: "Orden de reserva - Ratatouille Xtreme Tours",
-    emailGreeting: "Nueva orden de reserva generada desde la página web."
+    emailGreeting: "Nueva orden de reserva generada desde la página web.",
+    sendingOrder: "Enviando orden...",
+    orderSent: "Orden enviada correctamente. Te enviaremos confirmación y link de pago.",
+    whatsappFallback: "Abriremos WhatsApp con tu orden lista para enviar."
   },
   en: {
     promo: "ADVENTURE DEALS: BOOK YOUR TOUR IN APANECA",
@@ -526,9 +534,9 @@ const translations = {
     pricePending: "To be confirmed",
     ausolesPersonPriceNote: "Extreme Route (Ausoles Tour): $100 per person.",
     lagunaVehiclePriceNote: "Laguna Verde Tour: price based on selected vehicle.",
-    nextStep: "We will receive your details by email as an order and then send confirmation with the payment link.",
+    nextStep: "We will send your order to confirm availability, then you will receive the payment link.",
     warning: "Select enough vehicles to cover the number of guests.",
-    reserveNow: "START BOOKING",
+    reserveNow: "SEND BOOKING ORDER",
     featureRoutesTitle: "Natural routes",
     featureRoutesCopy: "Explore unique landscapes between mountains and extreme nature.",
     featurePremiumTitle: "Premium experiences",
@@ -564,7 +572,10 @@ const translations = {
     alertRequiredClient: "Complete responsible guest name, phone number and email to generate the order.",
     whatsappGreeting: "Hello, I want information about Xtreme Tours APANECA.",
     emailSubject: "Booking order - Ratatouille Xtreme Tours",
-    emailGreeting: "New booking order generated from the website."
+    emailGreeting: "New booking order generated from the website.",
+    sendingOrder: "Sending order...",
+    orderSent: "Order sent successfully. We will send confirmation and the payment link.",
+    whatsappFallback: "We will open WhatsApp with your order ready to send."
   }
 };
 
@@ -684,6 +695,7 @@ function buildBookingCards() {
           <p class="summary-warning" data-summary-warning>${t("warning")}</p>
         </div>
         <button type="submit" class="reserve-btn">${t("reserveNow")}</button>
+        <p class="submit-status" data-submit-status aria-live="polite"></p>
       </form>
     `;
   }).join("");
@@ -768,6 +780,31 @@ function fieldValue(value, fallback) {
   return value && String(value).trim() ? String(value).trim() : fallback;
 }
 
+function setSubmitStatus(form, text, type = "") {
+  const status = form.querySelector("[data-submit-status]");
+  if (!status) return;
+  status.textContent = text;
+  status.className = `submit-status ${type}`.trim();
+}
+
+function openWhatsAppOrder(message) {
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank", "noopener");
+}
+
+async function sendOrderToGoogleScript(payload) {
+  if (!GOOGLE_SCRIPT_URL) return false;
+
+  await fetch(GOOGLE_SCRIPT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    headers: { "Content-Type": "text/plain;charset=utf-8" },
+    body: JSON.stringify(payload)
+  });
+
+  return true;
+}
+
 function updateSummary(form) {
   const summary = getFormSummary(form);
   const orderList = form.querySelector("[data-order-summary]");
@@ -778,9 +815,10 @@ function updateSummary(form) {
   form.querySelector("[data-summary-warning]").classList.toggle("is-visible", summary.people > 0 && summary.capacity < summary.people);
 }
 
-function handleBookingSubmit(event) {
+async function handleBookingSubmit(event) {
   event.preventDefault();
   const form = event.currentTarget;
+  const submitButton = form.querySelector(".reserve-btn");
 
   if (!form.reportValidity()) {
     return;
@@ -842,9 +880,40 @@ function handleBookingSubmit(event) {
     `Contacto adicional: ${SECONDARY_PHONE}`
   ].join("\n");
 
-  const subject = encodeURIComponent(`${t("emailSubject")} - ${orderNumber}`);
-  const body = encodeURIComponent(message);
-  window.location.href = `mailto:${RESERVATION_EMAIL}?subject=${subject}&body=${body}`;
+  const payload = {
+    orderNumber,
+    subject: `${t("emailSubject")} - ${orderNumber}`,
+    message,
+    customerName: form.elements.name.value,
+    customerPhone: form.elements.phone.value,
+    customerEmail: form.elements.email.value,
+    tour: tour[currentLanguage].name,
+    people: form.elements.people.value,
+    total: formatPrice(summary.totalPrice),
+    destinationEmail: RESERVATION_EMAIL
+  };
+
+  submitButton.disabled = true;
+  setSubmitStatus(form, t("sendingOrder"));
+
+  try {
+    const sentToGmail = await sendOrderToGoogleScript(payload);
+
+    if (sentToGmail) {
+      setSubmitStatus(form, t("orderSent"), "success");
+      form.reset();
+      updateSummary(form);
+      return;
+    }
+
+    setSubmitStatus(form, t("whatsappFallback"), "warning");
+    openWhatsAppOrder(message);
+  } catch (error) {
+    setSubmitStatus(form, t("whatsappFallback"), "warning");
+    openWhatsAppOrder(message);
+  } finally {
+    submitButton.disabled = false;
+  }
 }
 
 function applyTranslations() {
@@ -873,5 +942,4 @@ applyTranslations();
   </script>
 </body>
 </html>
-
 
