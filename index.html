@@ -49,7 +49,7 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .hero-actions{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
 .hero-primary{background:#ffd000;color:#06111f;text-decoration:none;border-radius:0;padding:19px 34px;font-size:15px;font-weight:900;letter-spacing:1.6px;box-shadow:0 18px 35px rgba(0,0,0,.32);transition:.3s;text-transform:uppercase}
 .hero-primary:hover{transform:translateY(-3px)}
-.booking-wrapper{max-width:1280px;margin:42px auto 0;padding:0 20px;position:relative;z-index:10}
+.booking-wrapper{max-width:1280px;margin:42px auto 0;padding:0 20px;position:relative;z-index:10;scroll-margin-top:150px}
 .booking-top{display:flex;margin-left:30px}
 .booking-tab{background:#071b2e;color:white;border:none;padding:16px 28px;border-radius:18px 18px 0 0;font-size:14px;font-weight:900;letter-spacing:1px}
 .booking-panel{background:linear-gradient(145deg,rgba(7,15,30,.98),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.08);border-radius:36px;padding:34px;box-shadow:0 25px 55px rgba(0,0,0,.45)}
@@ -115,6 +115,11 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .content-section{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:38px;margin-bottom:34px}
 .section-title{font-size:42px;margin-bottom:18px}
 .section-text{color:#b8cadb;line-height:1.8}
+.safety-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px;overflow:hidden}
+.safety-card img{display:block;width:100%;max-width:360px;height:180px;object-fit:cover;border-radius:16px;margin:0 0 18px}
+.safety-card h3{font-size:22px;margin-bottom:10px}
+.safety-card p{color:#b8cadb;line-height:1.75;font-size:15px}
 .cards{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
 .card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden}
 .card img{width:100%;height:260px;object-fit:cover}
@@ -132,6 +137,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .price-list b{color:#ffd000;white-space:nowrap}
 .price-card span{color:#ffd000;font-size:24px;font-weight:900}
 .price-card small{color:#8ea7c2;line-height:1.6}
+.destination-gallery-title{margin-top:30px;font-size:26px;font-weight:900}
 .image-gallery{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .image-gallery img{width:100%;height:190px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:#081728}
 .restaurant-gallery img{height:210px}
@@ -184,7 +190,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <h1 data-i18n="heroTitle">XTREME TOURS</h1>
       <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.</p>
       <div class="hero-actions">
-        <a href="#reservas" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
+        <a href="#seleccion-tour" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
       </div>
     </div>
   </section>
@@ -194,7 +200,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <button class="booking-tab" type="button" data-i18n="tours">TOURS</button>
     </div>
     <div class="booking-panel">
-      <h2 class="booking-title" data-i18n="bookingTitle">Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles.</h2>
+      <h2 class="booking-title" id="seleccion-tour" data-i18n="bookingTitle">Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles.</h2>
       <div class="tour-grid" id="bookingGrid"></div>
     </div>
   </section>
@@ -230,20 +236,31 @@ input[type="date"],input[type="time"]{color-scheme:dark}
           </div>
         </article>
         <article class="card">
-          <img src="imagen3.jpg" alt="Cuatrimoto en ruta natural">
+          <img src="imagen3.jpg" alt="Ruta Extrema (Ausoles Tour)">
           <div class="card-content">
-            <h3 data-i18n="ausolesTitle">Ausoles de Ahuachapán</h3>
+            <h3 data-i18n="ausolesTitle">Ruta Extrema (Ausoles Tour)</h3>
             <p data-i18n="ausolesCopy">Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.</p>
           </div>
         </article>
       </div>
-      <div class="image-gallery" aria-label="Galería de destinos">
-        <img src="imagen4.jpg" alt="Buggy en camino natural">
-        <img src="imagen5.jpg" alt="Buggy en ruta de naturaleza">
-        <img src="imagen6.jpg" alt="Buggy frente a laguna">
-        <img src="imagen7.jpg" alt="Grupo de visitantes en tour">
-        <img src="imagen8.jpg" alt="Visitantes junto a buggy">
-        <img src="imagen9.jpg" alt="Visitantes disfrutando el recorrido">
+                        <h3 class="destination-gallery-title">Laguna Verde</h3>
+            <div class="image-gallery" aria-label="Galería de Laguna Verde">
+        <img src="imagen4.jpg" alt="Laguna Verde">
+        <img src="imagen5.jpg" alt="Laguna Verde">
+        <img src="imagen6.jpg" alt="Laguna Verde">
+        <img src="imagen7.jpg" alt="Laguna Verde">
+        <img src="imagen8.jpg" alt="Laguna Verde">
+        <img src="imagen9.jpg" alt="Laguna Verde">
+      </div>
+
+      <h3 class="destination-gallery-title">Ruta Extrema (Ausoles Tour)</h3>
+            <div class="image-gallery" aria-label="Galería de Ruta Extrema (Ausoles Tour)">
+        <img src="imagen10.jpg" alt="Ruta Extrema (Ausoles Tour)">
+        <img src="imagen11.jpg" alt="Ruta Extrema (Ausoles Tour)">
+        <img src="imagen12.jpg" alt="Ruta Extrema (Ausoles Tour)">
+        <img src="imagen13.jpg" alt="Ruta Extrema (Ausoles Tour)">
+        <img src="imagen14.jpg" alt="Ruta Extrema (Ausoles Tour)">
+        <img src="imagen15.jpg" alt="Ruta Extrema (Ausoles Tour)">
       </div>
     </section>
 
@@ -272,34 +289,79 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       </div>
     </section>
 
-    <section class="content-section" id="recomendaciones">
+        <section class="content-section" id="recomendaciones">
       <h2 class="section-title" data-i18n="recommendationsTitle">RECOMENDACIONES</h2>
       <p class="section-text" data-i18n="recommendationsCopy">Llevar ropa cómoda, calzado adecuado, protector solar, lentes, agua y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
+      <div class="safety-grid">
+        <article class="safety-card">
+          <img src="imagen16.jpg" alt="Clientes en buggy frente al local Ratatouille">
+          <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
+          <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
+        </article>
+        <article class="safety-card">
+          <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
+          <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
+        </article>
+      </div>
     </section>
 
     <section class="content-section" id="boutique">
       <h2 class="section-title" data-i18n="boutiqueTitle">BOUTIQUE</h2>
       <p class="section-text" data-i18n="boutiqueCopy">Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.</p>
+            <div class="image-gallery" aria-label="Galería de boutique">
+        <img src="imagen17.jpg" alt="Casitas decorativas de recuerdo">
+        <img src="imagen18.jpg" alt="Bolsos artesanales en boutique">
+        <img src="imagen19.jpg" alt="Decoración artesanal de frutas">
+        <img src="imagen20.jpg" alt="Termo decorativo en boutique">
+        <img src="imagen21.jpg" alt="Vaso decorativo en boutique">
+        <img src="imagen22.jpg" alt="Recuerdos coloridos de El Salvador">
+        <img src="imagen23.jpg" alt="Cartera artesanal salvadoreña">
+        <img src="imagen24.jpg" alt="Tazas de recuerdo salvadoreñas">
+        <img src="imagen25.jpg" alt="Decoración artesanal de frutas en tienda">
+        <img src="imagen26.jpg" alt="Artesanías de madera">
+        <img src="imagen27.jpg" alt="Termo de El Salvador">
+        <img src="imagen28.jpg" alt="Cliente eligiendo recuerdos en boutique">
+      </div>
     </section>
 
     <section class="content-section" id="restaurante">
       <h2 class="section-title" data-i18n="restaurantTitle">RESTAURANTE</h2>
       <p class="section-text" data-i18n="restaurantCopy">Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.</p>
+                        <div class="image-gallery restaurant-gallery" aria-label="Galería de restaurante">
+        <img src="imagen29.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen30.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen31.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen32.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen33.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen34.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen35.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen36.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen37.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen38.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen39.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen40.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen41.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen42.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen43.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen44.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen45.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen46.jpg" alt="Restaurante Ratatouille">
+        <img src="imagen47.jpg" alt="Restaurante Ratatouille">
+      </div>
     </section>
 
     <section class="content-section" id="tours">
       <h2 class="section-title" data-i18n="experiencesTitle">TOURS Y EXPERIENCIAS</h2>
       <p class="section-text" data-i18n="experiencesCopy">Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.</p>
-      <div class="image-gallery" aria-label="Galería de experiencias">
-        <img src="imagen10.jpg" alt="Cliente en experiencia de tour">
-        <img src="imagen11.jpg" alt="Clientes en buggy rojo">
-        <img src="imagen12.jpg" alt="Visitantes saludando desde buggy">
-        <img src="imagen14.jpg" alt="Clientes en experiencia de buggy">
-        <img src="imagen15.jpg" alt="Clientes con lentes y equipo de tour">
-        <img src="imagen1.jpg" alt="Clientes llegando al punto de atención">
-        <img src="imagen16.jpg" alt="Visitantes frente al local">
-      </div>
-      <div class="review-grid">
+                  <div class="image-gallery" aria-label="Galería de experiencias">
+        <img src="imagen48.jpg" alt="Grupo de visitantes junto a buggies en Laguna Verde">
+        <img src="imagen49.jpg" alt="Familia disfrutando buggy en Laguna Verde">
+        <img src="imagen50.jpg" alt="Visitantes en buggy durante la experiencia">
+        <img src="imagen51.jpg" alt="Clientes posando en buggy rojo">
+        <img src="imagen52.jpg" alt="Clientes con lentes de tour en buggy rojo">
+        <img src="imagen53.jpg" alt="Visitantes sonriendo en buggy">
+        <img src="imagen54.jpg" alt="Pareja en buggy frente al restaurante">
+      </div>      <div class="review-grid">
         <figure class="review">
           <blockquote data-i18n="reviewOne">Una aventura completa, con paisajes increíbles y excelente atención.</blockquote>
           <figcaption>María G.</figcaption>
@@ -448,7 +510,7 @@ const translations = {
     destinationsTitle: "DESTINOS",
     destinationsCopy: "Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.",
     lagunaCopy: "La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montañas, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexión con la naturaleza.",
-    ausolesTitle: "Ausoles de Ahuachapán",
+    ausolesTitle: "Ruta Extrema (Ausoles Tour)",
     ausolesCopy: "Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.",
     pricesTitle: "PRECIOS",
     pricesCopy: "Los precios de Laguna Verde y Ausoles son diferentes. En Laguna Verde el precio depende del vehículo y capacidad seleccionada. En Ausoles el precio es de $100 por persona, ya sea en cuatrimoto o buggy.",
@@ -458,6 +520,10 @@ const translations = {
     ausolesPriceNote: "Precio por persona, sea en cuatrimoto o buggy.",
     recommendationsTitle: "RECOMENDACIONES",
     recommendationsCopy: "Llevar ropa cómoda, calzado adecuado, protector solar, lentes, agua y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.",
+    localVisitTitle: "Preséntate estrictamente en nuestro local",
+    localVisitCopy: "Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.",
+    avoidScamTitle: "Evita ser estafado",
+    avoidScamCopy: "Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.",
     boutiqueTitle: "BOUTIQUE",
     boutiqueCopy: "Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.",
     hoodiesCopy: "Souvenirs, detalles típicos y recuerdos inspirados en El Salvador.",
@@ -472,6 +538,7 @@ const translations = {
     alertVehicle: "Selecciona al menos una unidad de vehículo.",
     alertCapacity: "La capacidad seleccionada no cubre la cantidad de personas.",
     alertRequiredClient: "Completa nombre del responsable, número de teléfono y correo electrónico para generar la orden.",
+    alertTimeRange: "Selecciona una hora de reserva entre 9:00 AM y 6:00 PM.",
     whatsappGreeting: "Hola, quiero información sobre Xtreme Tours APANECA.",
     emailSubject: "Orden de reserva - Ratatouille Xtreme Tours",
     emailGreeting: "Nueva orden de reserva generada desde la página web.",
@@ -557,7 +624,7 @@ const translations = {
     destinationsTitle: "DESTINATIONS",
     destinationsCopy: "Explore the best tourist spots in Apaneca and enjoy unforgettable adventures surrounded by nature and mountains.",
     lagunaCopy: "Laguna Verde in Apaneca feels like a postcard destination. Surrounded by mountains, cloud forests and fresh weather, it offers peace, adventure and connection with nature.",
-    ausolesTitle: "Ausoles of Ahuachapán",
+    ausolesTitle: "Extreme Route (Ausoles Tour)",
     ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles and geothermal energy surrounded by mountains and extreme nature.",
     pricesTitle: "PRICES",
     pricesCopy: "Laguna Verde and Ausoles have different prices. Laguna Verde pricing depends on the selected vehicle and capacity. Ausoles costs $100 per person, whether by ATV or buggy.",
@@ -567,6 +634,10 @@ const translations = {
     ausolesPriceNote: "Price per person, whether by ATV or buggy.",
     recommendationsTitle: "TIPS",
     recommendationsCopy: "Wear comfortable clothes, proper shoes, sunscreen, sunglasses, bring water and book in advance. Arriving a few minutes early is recommended.",
+    localVisitTitle: "Come directly to our official location",
+    localVisitCopy: "To receive your tour, instructions, and official assistance, please come directly to our Ratatouille Apaneca location.",
+    avoidScamTitle: "Avoid being scammed",
+    avoidScamCopy: "Communicate only with authorized staff from our location. Do not accept information or instructions from outside people trying to promote tours to you.",
     boutiqueTitle: "BOUTIQUE",
     boutiqueCopy: "Find El Salvador souvenirs, traditional keepsakes and Salvadoran handmade crafts to take home a special detail from your visit.",
     hoodiesCopy: "Souvenirs, traditional details and keepsakes inspired by El Salvador.",
@@ -581,6 +652,7 @@ const translations = {
     alertVehicle: "Select at least one vehicle unit.",
     alertCapacity: "The selected capacity does not cover the number of guests.",
     alertRequiredClient: "Complete responsible guest name, phone number and email to generate the order.",
+    alertTimeRange: "Select a booking time between 9:00 AM and 6:00 PM.",
     whatsappGreeting: "Hello, I want information about Xtreme Tours APANECA.",
     emailSubject: "Booking order - Ratatouille Xtreme Tours",
     emailGreeting: "New booking order generated from the website.",
@@ -644,7 +716,7 @@ function buildBookingCards() {
           </div>
           <div class="field">
             <label>${t("time")}</label>
-            <input name="time" type="time" required>
+            <input name="time" type="time" min="09:00" max="18:00" required>
           </div>
           <div class="field full">
             <label>${t("people")}</label>
@@ -906,6 +978,11 @@ async function handleBookingSubmit(event) {
   if (!form.reportValidity()) {
     return;
   }
+  if (form.elements.time.value && (form.elements.time.value < "09:00" || form.elements.time.value > "18:00")) {
+    setSubmitStatus(form, t("alertTimeRange"), "error");
+    form.elements.time.focus();
+    return;
+  }
 
   const summary = getFormSummary(form);
 
@@ -1024,4 +1101,17 @@ applyTranslations();
   </script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
 
