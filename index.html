@@ -387,7 +387,14 @@ const WHATSAPP_NUMBER = "50378830399";
 const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
 const SECONDARY_PHONE = "7255 8194";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby2TCg7vQmanG03F2y2x2wuzRadfWDwfUMDShSOVLzpBZZgfyypRpeoy_ykmeu_Wf1U/exec";
+const COMMISSION_REGISTER_KEY = "ratatouille_commission_register_v2";
+const COMMISSION_RATES_KEY = "ratatouille_commission_rates_v2";
 const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
+const DEFAULT_COMMISSION_RATES = {
+  atv: 2.50,
+  buggy: 10.00,
+  ausoles: 20.00
+};
 
 const vehicleOptions = [
   { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 30 },
@@ -959,22 +966,97 @@ async function sendOrderToGoogleScript(payload) {
   return true;
 }
 
+function loadCommissionRates() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(COMMISSION_RATES_KEY) || "{}");
+    return { ...DEFAULT_COMMISSION_RATES, ...(stored && typeof stored === "object" ? stored : {}) };
+  } catch {
+    return { ...DEFAULT_COMMISSION_RATES };
+  }
+}
+
+function tourIsAusoles(tourId, tourName) {
+  const value = `${tourId || ""} ${tourName || ""}`.toLowerCase();
+  return value.includes("ausoles") || value.includes("extrema") || value.includes("extreme");
+}
+
+function makeCommissionId(orderNumber) {
+  return `order-${String(orderNumber || Date.now()).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+}
+
+function calculateCommissionRecord(order) {
+  const rates = loadCommissionRates();
+  if (tourIsAusoles(order.tourId, order.tour)) {
+    return Number(rates.ausoles || 0);
+  }
+  return (Number(order.atvUnits || 0) * Number(rates.atv || 0)) + (Number(order.buggyUnits || 0) * Number(rates.buggy || 0));
+}
+
+function buildCommissionRecord(payload) {
+  const record = {
+    id: makeCommissionId(payload.orderNumber),
+    orderNumber: payload.orderNumber,
+    date: new Date().toISOString().slice(0, 10),
+    tour: tourIsAusoles(payload.tourId, payload.tour) ? "Ruta Extrema (Ausoles Tour)" : "Laguna Verde",
+    tourId: payload.tourId,
+    customerName: payload.customerName || "Cliente",
+    atvUnits: Number(payload.atvUnits || 0),
+    buggyUnits: Number(payload.buggyUnits || 0),
+    status: "pending",
+    notes: "Orden real creada desde la pagina de tours.",
+    createdAt: new Date().toISOString()
+  };
+  record.commission = calculateCommissionRecord(record);
+  return record;
+}
+
+function saveCommissionRecord(payload) {
+  try {
+    const record = buildCommissionRecord(payload);
+    const current = JSON.parse(localStorage.getItem(COMMISSION_REGISTER_KEY) || "[]");
+    const orders = Array.isArray(current) ? current : [];
+    const existingIndex = orders.findIndex((order) => order.orderNumber === record.orderNumber);
+
+    if (existingIndex >= 0) {
+      orders[existingIndex] = {
+        ...orders[existingIndex],
+        ...record,
+        id: orders[existingIndex].id || record.id,
+        status: orders[existingIndex].status || "pending",
+        closedAs: orders[existingIndex].closedAs || "",
+        disposedAt: orders[existingIndex].disposedAt || ""
+      };
+    } else {
+      orders.unshift(record);
+    }
+
+    localStorage.setItem(COMMISSION_REGISTER_KEY, JSON.stringify(orders));
+    return record;
+  } catch (error) {
+    console.warn("No se pudo guardar la orden directa de comisiones.", error);
+    return null;
+  }
+}
+
 function queueCommissionOrder(payload) {
+  const queuedPayload = { ...payload, queuedAt: new Date().toISOString() };
+  const commissionRecord = saveCommissionRecord(queuedPayload);
+
   try {
     const current = JSON.parse(localStorage.getItem(COMMISSION_INBOX_KEY) || "[]");
     const inbox = Array.isArray(current) ? current : [];
-    const queuedPayload = { ...payload, queuedAt: new Date().toISOString() };
     inbox.push(queuedPayload);
     localStorage.setItem(COMMISSION_INBOX_KEY, JSON.stringify(inbox.slice(-200)));
-    try {
-      const commissionChannel = new BroadcastChannel("ratatouille_commissions");
-      commissionChannel.postMessage({ type: "new-order", payload: queuedPayload });
-      commissionChannel.close();
-    } catch {
-      /* localStorage remains the fallback when BroadcastChannel is unavailable. */
-    }
   } catch (error) {
     console.warn("No se pudo registrar la orden para comisiones.", error);
+  }
+
+  try {
+    const commissionChannel = new BroadcastChannel("ratatouille_commissions");
+    commissionChannel.postMessage({ type: "new-order", payload: queuedPayload, record: commissionRecord });
+    commissionChannel.close();
+  } catch {
+    /* localStorage remains the fallback when BroadcastChannel is unavailable. */
   }
 }
 
