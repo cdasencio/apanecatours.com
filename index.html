@@ -963,8 +963,16 @@ function queueCommissionOrder(payload) {
   try {
     const current = JSON.parse(localStorage.getItem(COMMISSION_INBOX_KEY) || "[]");
     const inbox = Array.isArray(current) ? current : [];
-    inbox.push({ ...payload, queuedAt: new Date().toISOString() });
+    const queuedPayload = { ...payload, queuedAt: new Date().toISOString() };
+    inbox.push(queuedPayload);
     localStorage.setItem(COMMISSION_INBOX_KEY, JSON.stringify(inbox.slice(-200)));
+    try {
+      const commissionChannel = new BroadcastChannel("ratatouille_commissions");
+      commissionChannel.postMessage({ type: "new-order", payload: queuedPayload });
+      commissionChannel.close();
+    } catch {
+      /* localStorage remains the fallback when BroadcastChannel is unavailable. */
+    }
   } catch (error) {
     console.warn("No se pudo registrar la orden para comisiones.", error);
   }
@@ -1012,6 +1020,12 @@ async function handleBookingSubmit(event) {
   const orderNumber = createOrderNumber();
   const orderSummaryText = getOrderSummaryText(form, summary);
   const vehicleOrderDetails = getVehicleOrderDetails(form);
+  const atvUnits = summary.selectedVehicles
+    .filter((vehicle) => vehicle.id.startsWith("atv"))
+    .reduce((total, vehicle) => total + vehicle.units, 0);
+  const buggyUnits = summary.selectedVehicles
+    .filter((vehicle) => vehicle.id.startsWith("buggy"))
+    .reduce((total, vehicle) => total + vehicle.units, 0);
   const translatorSelection = translationSummaryText(summary);
   const emailHtml = buildOrderEmailHtml(form, summary, orderNumber);
 
@@ -1059,7 +1073,12 @@ async function handleBookingSubmit(event) {
     customerPhone: form.elements.phone.value,
     customerEmail: form.elements.email.value,
     tour: tour[currentLanguage].name,
+    tourId: form.dataset.tourId,
     people: form.elements.people.value,
+    atvUnits,
+    buggyUnits,
+    vehicleOrderDetails,
+    orderSummaryText,
     total: formatPrice(summary.totalPrice),
     destinationEmail: RESERVATION_EMAIL
   };
