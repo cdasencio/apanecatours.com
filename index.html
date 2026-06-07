@@ -387,6 +387,7 @@ const WHATSAPP_NUMBER = "50378830399";
 const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
 const SECONDARY_PHONE = "7255 8194";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycby2TCg7vQmanG03F2y2x2wuzRadfWDwfUMDShSOVLzpBZZgfyypRpeoy_ykmeu_Wf1U/exec";
+const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
 
 const vehicleOptions = [
   { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 30 },
@@ -958,6 +959,17 @@ async function sendOrderToGoogleScript(payload) {
   return true;
 }
 
+function queueCommissionOrder(payload) {
+  try {
+    const current = JSON.parse(localStorage.getItem(COMMISSION_INBOX_KEY) || "[]");
+    const inbox = Array.isArray(current) ? current : [];
+    inbox.push({ ...payload, queuedAt: new Date().toISOString() });
+    localStorage.setItem(COMMISSION_INBOX_KEY, JSON.stringify(inbox.slice(-200)));
+  } catch (error) {
+    console.warn("No se pudo registrar la orden para comisiones.", error);
+  }
+}
+
 function updateSummary(form) {
   const summary = getFormSummary(form);
   const orderList = form.querySelector("[data-order-summary]");
@@ -1051,6 +1063,8 @@ async function handleBookingSubmit(event) {
     total: formatPrice(summary.totalPrice),
     destinationEmail: RESERVATION_EMAIL
   };
+
+  queueCommissionOrder(payload);
 
   submitButton.disabled = true;
   setSubmitStatus(form, t("sendingOrder"));
