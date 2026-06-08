@@ -386,7 +386,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 const WHATSAPP_NUMBER = "50378830399";
 const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
 const SECONDARY_PHONE = "7255 8194";
-const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwlls5YUQorlyE6H2FohbdUZAFOQAiy2-6KtKOpYdDhwmWwxQ92irvjz075dYoCjF1k/exec";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxeGebEF1iiG5oF0sJ0Qz3Lb9UkxfXg1y-me-wbXdeNnW3yzlvfN54NY78VDtm0R40/exec";
 const COMMISSION_REGISTER_KEY = "ratatouille_commission_register_v2";
 const COMMISSION_RATES_KEY = "ratatouille_commission_rates_v2";
 const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
@@ -956,14 +956,44 @@ function openWhatsAppOrder(message) {
 async function sendOrderToGoogleScript(payload) {
   if (!GOOGLE_SCRIPT_URL) return false;
 
-  await fetch(GOOGLE_SCRIPT_URL, {
-    method: "POST",
-    mode: "no-cors",
-    headers: { "Content-Type": "text/plain;charset=utf-8" },
-    body: JSON.stringify(payload)
-  });
+  return new Promise((resolve) => {
+    const frameName = `ratatouilleOrderFrame_${Date.now()}`;
+    const iframe = document.createElement("iframe");
+    const form = document.createElement("form");
+    const input = document.createElement("input");
 
-  return true;
+    iframe.name = frameName;
+    iframe.style.display = "none";
+    iframe.setAttribute("aria-hidden", "true");
+
+    form.method = "POST";
+    form.action = GOOGLE_SCRIPT_URL;
+    form.target = frameName;
+    form.style.display = "none";
+
+    input.type = "hidden";
+    input.name = "payload";
+    input.value = JSON.stringify(payload);
+
+    form.appendChild(input);
+    document.body.appendChild(iframe);
+    document.body.appendChild(form);
+
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      resolve(true);
+      setTimeout(() => {
+        form.remove();
+        iframe.remove();
+      }, 3000);
+    };
+
+    iframe.addEventListener("load", finish, { once: true });
+    form.submit();
+    setTimeout(finish, 2500);
+  });
 }
 
 function loadCommissionRates() {
