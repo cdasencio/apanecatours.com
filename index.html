@@ -148,6 +148,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .price-grid-tours{grid-template-columns:1fr;align-items:stretch}
 .price-card-pending{display:grid;gap:14px;align-items:start}
 .price-card-pending>strong{font-size:22px;line-height:1.15}
+#laguna-oferta{scroll-margin-top:110px}
 .price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:15px;line-height:1.35}
 .price-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
 .price-list li:last-child{border-bottom:none;padding-bottom:0}
@@ -319,7 +320,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <h2 class="section-title" data-i18n="pricesTitle">PRECIOS</h2>
       <p class="section-text" data-i18n="pricesCopy">Tarifas actualizadas por tour, con opciones claras para Laguna Verde y una promoción especial para Ruta Extrema Ausoles.</p>
       <div class="price-grid price-grid-tours">
-        <div class="price-card price-card-pending">
+        <div class="price-card price-card-pending" id="laguna-oferta">
           <strong data-i18n="lagunaPriceTitle">Tour Laguna Verde</strong>
           <em class="price-duration" data-i18n="lagunaDuration">Duración del tour: 1 h 30 min</em>
           <ul class="price-list">
@@ -329,7 +330,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
             <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$75</b></li>
             <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$80</b></li>
             <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$85</b></li>
-            <li id="laguna-oferta"><span data-i18n="buggyFive">Buggy 5 personas</span><b>$95</b></li>
+            <li><span data-i18n="buggyFive">Buggy 5 personas</span><b>$95</b></li>
           </ul>
           <div class="promo-price">
             <div class="price-sale-box">
