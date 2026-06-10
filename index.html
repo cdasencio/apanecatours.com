@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="es">
 <head>
   <meta charset="UTF-8">
@@ -16,6 +16,12 @@ body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradi
 a{color:inherit}
 .promo-bar{background:#ff0059;color:white;text-align:center;padding:16px 20px;font-size:18px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
 .location-bar{background:#ffd000;color:#111827;text-align:center;padding:10px 20px;font-size:14px;font-weight:800}
+.location-bar .location-help{display:block;margin-top:4px}
+.reservation-help-bar{background:#071223;color:#e8f6ff;text-align:center;padding:10px 20px;font-size:14px;font-weight:800;line-height:1.45;border-bottom:1px solid rgba(255,255,255,.08)}
+.reservation-help-bar .help-main{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.reservation-help-bar strong{color:#ffd000;font-weight:950;white-space:nowrap}
+.reservation-help-bar .flag-list{display:inline-flex;align-items:center;gap:6px;font-size:17px;vertical-align:middle}
+.reservation-help-bar .language-note{color:#fff;font-weight:900}
 header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;padding:18px 40px;gap:18px}
 .header-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
 .logo-btn,.top-reserve-btn{background:linear-gradient(135deg,#0ea5ff,#0f172a);padding:14px 24px;border-radius:40px;color:white!important;text-decoration:none;font-size:14px;font-weight:900;letter-spacing:1px;white-space:nowrap;box-shadow:0 0 25px rgba(14,165,255,.35);transition:.3s;border:1px solid rgba(255,255,255,.08)}
@@ -100,17 +106,26 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .summary-send-note{color:#0f172a;font-size:13px;font-weight:800;line-height:1.6;padding:16px 22px;background:#fff7d6;border-top:1px solid rgba(180,154,91,.35)}
 .summary-warning{color:#b45309;font-size:13px;font-weight:900;display:none;padding:0 22px 18px;background:#fff7d6}
 .summary-warning.is-visible{display:block}
+.terms-box{margin-top:18px;background:#071223;border:1px solid rgba(255,208,0,.24);border-radius:20px;padding:18px;color:#d7e7f4}
+.terms-box h4{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;color:#ffd000;margin-bottom:10px}
+.terms-box ul{margin:0 0 14px 18px;color:#b8cadb;line-height:1.65;font-size:13px}
+.terms-check{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:14px;color:#eef8ff;font-size:13px;font-weight:800;line-height:1.55;cursor:pointer}
+.terms-check input{margin-top:3px;accent-color:#ffd000;min-width:18px;width:18px;height:18px}
 .reserve-btn{width:100%;min-height:68px;margin-top:24px;border:none;border-radius:22px;background:linear-gradient(135deg,#ff0059,#ff3b71);color:white;font-size:18px;font-weight:900;letter-spacing:1px;cursor:pointer;transition:.3s;box-shadow:0 18px 35px rgba(255,0,89,.30)}
 .reserve-btn:hover{transform:translateY(-3px)}
 .reserve-btn:disabled{cursor:not-allowed;opacity:.68;transform:none}
 .submit-status{min-height:22px;margin-top:14px;color:#b8cadb;font-size:13px;font-weight:800;line-height:1.5;text-align:center}
 .submit-status.success{color:#86efac}
 .submit-status.warning{color:#ffd000}
+.submit-status.error{color:#fca5a5}
 .feature-strip{max-width:1280px;margin:60px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .feature{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:26px;padding:26px}
 .feature span{font-size:34px}
 .feature h3{margin-top:14px;font-size:22px}
 .feature p{margin-top:10px;color:#b8cadb;line-height:1.7;font-size:14px}
+.visitor-mini{margin-top:18px;padding:16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}
+.visitor-mini strong{display:block;color:#ffd000;font-size:13px;text-transform:uppercase;letter-spacing:.04em;line-height:1.35}
+.visitor-mini p{margin-top:8px;color:#d8e8f7;font-size:13px;line-height:1.65}
 .content{max-width:1280px;margin:auto;padding:60px 20px}
 .content-section{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:38px;margin-bottom:34px}
 .section-title{font-size:42px;margin-bottom:18px}
@@ -118,6 +133,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .safety-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
 .safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px;overflow:hidden}
 .safety-card img{display:block;width:100%;max-width:360px;height:180px;object-fit:cover;border-radius:16px;margin:0 0 18px}
+.recommendations-note{margin-top:18px;color:#f3f8ff;background:rgba(255,208,0,.08);border:1px solid rgba(255,208,0,.28);border-radius:16px;padding:14px 16px;font-weight:850;line-height:1.55}
 .safety-card h3{font-size:22px;margin-bottom:10px}
 .safety-card p{color:#b8cadb;line-height:1.75;font-size:15px}
 .cards{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
@@ -129,14 +145,22 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .price-grid,.review-grid{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
 .price-card,.review{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px}
 .price-card{display:flex;justify-content:space-between;align-items:center}
-.price-grid-tours{grid-template-columns:repeat(auto-fit,minmax(260px,1fr))}
-.price-card-pending{display:grid;gap:10px;align-items:start}
-.price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:14px;line-height:1.45}
-.price-list li{display:flex;justify-content:space-between;gap:12px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
+.price-grid-tours{grid-template-columns:1fr;align-items:stretch}
+.price-card-pending{display:grid;gap:14px;align-items:start}
+.price-card-pending>strong{font-size:22px;line-height:1.15}
+.price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:15px;line-height:1.35}
+.price-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
 .price-list li:last-child{border-bottom:none;padding-bottom:0}
-.price-list b{color:#ffd000;white-space:nowrap}
-.price-card span{color:#ffd000;font-size:24px;font-weight:900}
+.price-list b{color:#ffd000;white-space:nowrap;font-size:22px;line-height:1;font-weight:950;text-shadow:0 8px 22px rgba(255,208,0,.18)}
+.price-card span{color:#ffd000;font-size:36px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.2)}
 .price-card small{color:#8ea7c2;line-height:1.6}
+.price-duration{display:inline-flex;width:max-content;align-items:center;border:1px solid rgba(14,165,233,.28);border-radius:999px;padding:6px 10px;color:#bfe7ff;background:rgba(14,165,233,.1);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.promo-price{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.promo-badge{grid-column:1/-1;width:max-content;border-radius:999px;background:linear-gradient(135deg,#ffd000,#ff8a00);color:#111827;font-size:12px;font-weight:950;letter-spacing:.04em;text-transform:uppercase;padding:7px 10px}
+.price-sale-box{background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:14px}
+.price-sale-box small{display:block;color:#8ea7c2;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.price-sale-box del{display:block;color:#94a3b8;font-size:24px;font-weight:900;text-decoration-thickness:2px}
+.price-sale-box strong{display:block;color:#ffd000;font-size:34px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.18)}
 .destination-gallery-title{margin-top:30px;font-size:26px;font-weight:900}
 .image-gallery{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .image-gallery img{width:100%;height:190px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:#081728}
@@ -147,15 +171,23 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .whatsapp-float{position:fixed;right:24px;bottom:24px;width:64px;height:64px;border-radius:50%;background:#22c55e;color:white;display:flex;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);z-index:200}
 .whatsapp-float svg{width:34px;height:34px}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{grid-template-columns:repeat(3,1fr);width:calc(100% - 32px);padding:18px}.image-gallery{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
+@media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:560px){.nav-center-bar{grid-template-columns:1fr 1fr;border-radius:24px}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}}
-@media(max-width:520px){.promo-bar{font-size:14px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
+@media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
 </head>
 <body>
   <div class="promo-bar" data-i18n="promo">OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA</div>
-  <div class="location-bar" data-i18n="location">¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada</div>
+  <div class="location-bar">
+    <span data-i18n="location">¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada</span>
+    <span class="location-help" data-i18n="locationHelp">Si tienes problemas reservando tu tour puedes llamar para reservar al +503 7883 0399</span>
+  </div>
+  <div class="reservation-help-bar">
+    <span class="help-main">
+      <span class="language-note" data-i18n="reservationLanguages">Atención en español, inglés y francés</span>
+    </span>
+  </div>
 
   <header>
     <div class="header-left">
@@ -178,10 +210,10 @@ input[type="date"],input[type="time"]{color-scheme:dark}
   <nav class="nav-center-bar" aria-label="Secciones">
     <a href="#destinos" data-i18n="navDestinations">Destinos</a>
     <a href="#precios" data-i18n="navPrices">Precios</a>
-    <a href="#recomendaciones" data-i18n="navRecommendations">Recomendaciones</a>
     <a href="#boutique" data-i18n="navBoutique">Boutique</a>
     <a href="#restaurante" data-i18n="navRestaurant">Restaurante</a>
     <a href="#tours" data-i18n="navExperiences">Experiencias</a>
+    <a href="#recomendaciones" data-i18n="navRecommendations">Recomendaciones</a>
   </nav>
 
   <section class="hero">
@@ -200,7 +232,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <button class="booking-tab" type="button" data-i18n="tours">TOURS</button>
     </div>
     <div class="booking-panel">
-      <h2 class="booking-title" id="seleccion-tour" data-i18n="bookingTitle">Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles.</h2>
+      <h2 class="booking-title" id="seleccion-tour" data-i18n="bookingTitle">Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acá abajo.</h2>
       <div class="tour-grid" id="bookingGrid"></div>
     </div>
   </section>
@@ -219,7 +251,11 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     <div class="feature">
       <span aria-hidden="true">🌎</span>
       <h3 data-i18n="featureCareTitle">Atención personalizada</h3>
-      <p data-i18n="featureCareCopy">Reservas adaptadas a cada grupo y experiencia deseada.</p>
+      <p data-i18n="featureCareCopy">Experiencias personalizadas con acompañamiento completo en español, inglés y francés, un valor diferencial que convierte tu tour en una experiencia internacional sin barreras.</p>
+      <div class="visitor-mini">
+        <strong data-i18n="featureVisitorsTitle">Gracias por el apoyo a nuestros clientes viajeros más frecuentes</strong>
+        <p data-i18n="featureVisitorsCopy">El Salvador, Estados Unidos, México, Canadá, República Dominicana, Colombia, Argentina, Brasil, Puerto Rico, Chile, Uruguay, Francia, España, Italia y Centroamérica: Guatemala, Honduras, Nicaragua, Costa Rica, Panamá y Belice.</p>
+      </div>
     </div>
   </section>
 
@@ -242,6 +278,13 @@ input[type="date"],input[type="time"]{color-scheme:dark}
             <p data-i18n="ausolesCopy">Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.</p>
           </div>
         </article>
+        <article class="card">
+          <img src="imagen28.jpg" alt="Ruta del café">
+          <div class="card-content">
+            <h3 data-i18n="cafeTitle">Ruta del café</h3>
+            <p data-i18n="cafeCopy">Ruta del café inspirada en la cultura cafetalera de Apaneca. Pronto agregaremos recorrido, duración, paradas y detalles completos del tour.</p>
+          </div>
+        </article>
       </div>
                         <h3 class="destination-gallery-title">Laguna Verde</h3>
             <div class="image-gallery" aria-label="Galería de Laguna Verde">
@@ -262,46 +305,73 @@ input[type="date"],input[type="time"]{color-scheme:dark}
         <img src="imagen14.jpg" alt="Ruta Extrema (Ausoles Tour)">
         <img src="imagen15.jpg" alt="Ruta Extrema (Ausoles Tour)">
       </div>
+
+      <h3 class="destination-gallery-title" data-i18n="cafeTitle">Ruta del café</h3>
+      <div class="image-gallery" aria-label="Galería de Ruta del café">
+        <img src="imagen27.jpg" alt="Ruta del café">
+        <img src="imagen28.jpg" alt="Ruta del café">
+        <img src="imagen34.jpg" alt="Ruta del café">
+        <img src="imagen42.jpg" alt="Ruta del café">
+      </div>
     </section>
 
     <section class="content-section" id="precios">
       <h2 class="section-title" data-i18n="pricesTitle">PRECIOS</h2>
-      <p class="section-text" data-i18n="pricesCopy">Los precios de Laguna Verde y Ausoles son diferentes. En Laguna Verde el precio depende del vehículo y capacidad seleccionada. En Ausoles el precio es de $100 por persona, ya sea en cuatrimoto o buggy.</p>
+      <p class="section-text" data-i18n="pricesCopy">Tarifas actualizadas por tour, con opciones claras para Laguna Verde y una promoción especial para Ruta Extrema Ausoles.</p>
       <div class="price-grid price-grid-tours">
         <div class="price-card price-card-pending">
           <strong data-i18n="lagunaPriceTitle">Tour Laguna Verde</strong>
+          <em class="price-duration" data-i18n="lagunaDuration">Duración del tour: 1 h 30 min</em>
           <ul class="price-list">
-            <li><span data-i18n="singleAtv">Cuatrimoto sencilla</span><b>$30</b></li>
-            <li><span data-i18n="doubleAtv">Cuatrimoto doble</span><b>$40</b></li>
-            <li><span data-i18n="buggyOne">Buggy 1 persona</span><b>$50</b></li>
-            <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$55</b></li>
-            <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$60</b></li>
-            <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$65</b></li>
-            <li><span data-i18n="buggyFive">Buggy 5 personas</span><b>$75</b></li>
-            <li><span data-i18n="buggySix">Buggy 6 personas</span><b>$90</b></li>
+            <li><span data-i18n="singleAtv">Cuatrimoto sencilla</span><b>$60</b></li>
+            <li><span data-i18n="doubleAtv">Cuatrimoto doble</span><b>$65</b></li>
+            <li><span data-i18n="buggyOne">Buggy 1 persona</span><b>$70</b></li>
+            <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$75</b></li>
+            <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$80</b></li>
+            <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$85</b></li>
+            <li><span data-i18n="buggyFive">Buggy 5 personas</span><b>$95</b></li>
           </ul>
+          <div class="promo-price">
+            <div class="price-sale-box">
+              <small data-i18n="lagunaBeforeLabel">Precio anterior por persona</small>
+              <del>$100</del>
+            </div>
+            <div class="price-sale-box">
+              <small data-i18n="lagunaNowLabel">Precio ahora desde</small>
+              <strong>$60</strong>
+            </div>
+          </div>
         </div>
         <div class="price-card price-card-pending">
-          <strong data-i18n="ausolesPriceTitle">Tour Ausoles</strong>
-          <span>$100</span>
-          <small data-i18n="ausolesPriceNote">Precio por persona, sea en cuatrimoto o buggy.</small>
+          <strong data-i18n="ausolesPriceTitle">Tour Ruta Extrema Ausoles</strong>
+          <em class="price-duration" data-i18n="ausolesDuration">Duración del tour: 3 horas</em>
+          <div class="promo-price">
+            <mark class="promo-badge" data-i18n="ausolesPromoName">Xtreme Adventure Deal</mark>
+            <div class="price-sale-box">
+              <small data-i18n="ausolesBeforeLabel">Precio anterior</small>
+              <del>$189.99</del>
+            </div>
+            <div class="price-sale-box">
+              <small data-i18n="ausolesNowLabel">Precio ahora</small>
+              <strong>$129.99</strong>
+            </div>
+          </div>
         </div>
-      </div>
-    </section>
-
-        <section class="content-section" id="recomendaciones">
-      <h2 class="section-title" data-i18n="recommendationsTitle">RECOMENDACIONES</h2>
-      <p class="section-text" data-i18n="recommendationsCopy">Llevar ropa cómoda, calzado adecuado, protector solar, lentes, agua y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
-      <div class="safety-grid">
-        <article class="safety-card">
-          <img src="imagen16.jpg" alt="Clientes en buggy frente al local Ratatouille">
-          <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
-          <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
-        </article>
-        <article class="safety-card">
-          <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
-          <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
-        </article>
+        <div class="price-card price-card-pending">
+          <strong data-i18n="cafePriceTitle">Ruta del café</strong>
+          <em class="price-duration" data-i18n="cafeDuration">Duración del tour: por confirmar</em>
+          <div class="promo-price">
+            <mark class="promo-badge" data-i18n="cafePromoName">Ruta del café</mark>
+            <div class="price-sale-box">
+              <small data-i18n="cafeBeforeLabel">Precio actual</small>
+              <strong>$0.00</strong>
+            </div>
+            <div class="price-sale-box">
+              <small data-i18n="cafeNowLabel">Precio ahora</small>
+              <strong>$0.00</strong>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -370,12 +440,42 @@ input[type="date"],input[type="time"]{color-scheme:dark}
           <blockquote data-i18n="reviewTwo">El tour a Laguna Verde fue lo mejor de nuestro viaje por Apaneca.</blockquote>
           <figcaption>Carlos R.</figcaption>
         </figure>
+        <figure class="review">
+          <blockquote data-i18n="reviewThree">La aventura en invierno tiene un encanto especial: paisajes verdes, aire fresco y una experiencia inolvidable.</blockquote>
+          <figcaption>Ana M.</figcaption>
+        </figure>
+        <figure class="review">
+          <blockquote data-i18n="reviewFour">Uno de los mejores cafés que he probado en la Ruta del café; excelente aroma, sabor y atención.</blockquote>
+          <figcaption>Kevin C.</figcaption>
+        </figure>
+      </div>
+    </section>
+    
+    <section class="content-section" id="recomendaciones">
+      <h2 class="section-title" data-i18n="recommendationsTitle">RECOMENDACIONES Y TÉRMINOS</h2>
+      <p class="section-text" data-i18n="recommendationsCopy">Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
+      <p class="recommendations-note" data-i18n="termsSectionReminder">Revisa los términos y condiciones al final de esta sección antes de enviar tu reserva.</p>
+      <div class="safety-grid">
+        <article class="safety-card">
+          <img src="imagen16.jpg" alt="Clientes en buggy frente al local Ratatouille">
+          <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
+          <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
+        </article>
+        <article class="safety-card">
+          <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
+          <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
+        </article>
+        <article class="safety-card">
+          <h3 data-i18n="termsTitle">Términos y condiciones</h3>
+          <p data-i18n="termsTourSelection">Selecciona cuidadosamente el tour correcto antes de enviar la orden. Si eliges un tour equivocado, comunícate de inmediato con personal autorizado para corregirlo.</p>
+          <p data-i18n="termsContact">No aceptes información ni indicaciones de personas externas que te quieran promocionar tours; comunícate solo con personal autorizado de nuestro local.</p>
+        </article>
       </div>
     </section>
   </main>
 
   <footer class="footer">
-    <p>© 2026 Xtreme Tours APANECA – Tours, Aventuras y Experiencias. Todos los derechos reservados.</p>
+    <p>© 2025 RATATOUILLE APANECA XTREME TOURS – Tours, Aventuras y Experiencias. Todos los derechos reservados.</p>
     <p data-i18n="copyright">Queda prohibida la reproducción total o parcial sin autorización.</p>
   </footer>
 
@@ -391,20 +491,23 @@ const COMMISSION_REGISTER_KEY = "ratatouille_commission_register_v2";
 const COMMISSION_RATES_KEY = "ratatouille_commission_rates_v2";
 const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
 const DEFAULT_COMMISSION_RATES = {
-  atv: 2.50,
-  buggy: 10.00,
-  ausoles: 20.00
+  atv1: 30.00,
+  atv2: 25.00,
+  buggy: 20.00,
+  ausoles: 29.99,
+  cafe: 0.00
 };
+const AUSOLES_PROMO_PRICE = 129.99;
+const CAFE_ROUTE_PRICE = 0;
 
 const vehicleOptions = [
-  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 30 },
-  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 40 },
-  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 50 },
-  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 55 },
-  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 60 },
-  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 65 },
-  { id: "buggy5", esName: "Buggy", enName: "Buggy", capacity: 5, maxUnits: 4, lagunaPrice: 75 },
-  { id: "buggy6", esName: "Buggy", enName: "Buggy", capacity: 6, maxUnits: 4, lagunaPrice: 90 }
+  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 60, commission: 30 },
+  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 65, commission: 25 },
+  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 70, commission: 20 },
+  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 75, commission: 20 },
+  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 80, commission: 20 },
+  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 85, commission: 20 },
+  { id: "buggy5", esName: "Buggy", enName: "Buggy", capacity: 5, maxUnits: 4, lagunaPrice: 95, commission: 20 }
 ];
 
 const tours = [
@@ -425,39 +528,56 @@ const tours = [
     icon: "🌋",
     es: {
       name: "Ruta Extrema (Ausoles Tour)",
-      description: "Tour lleno de aventura hacia los Ausoles de Ahuachapán. El precio es $100 por persona, ya sea en cuatrimoto o buggy."
+      description: "Tour lleno de aventura hacia los Ausoles de Ahuachapán. Promocion especial Xtreme Adventure Deal: antes $189.99, ahora $129.99 por persona, sea en cuatrimoto o buggy."
     },
     en: {
       name: "Extreme Route (Ausoles Tour)",
-      description: "Adventure route to the Ausoles of Ahuachapán. The price is $100 per person, whether by ATV or buggy."
+      description: "Adventure route to the Ausoles of Ahuachapán. Xtreme Adventure Deal special promotion: was $189.99, now $129.99 per person, whether by ATV or buggy."
+    }
+  },
+  {
+    id: "cafe",
+    icon: "",
+    es: {
+      name: "Ruta del café",
+      description: "Ruta del café inspirada en la cultura cafetalera de Apaneca. Pronto agregaremos recorrido real, duración, paradas y detalles oficiales. Precio actual: $0.00."
+    },
+    en: {
+      name: "Coffee Route",
+      description: "Coffee Route inspired by Apaneca coffee culture. We will add the real route, duration, stops, and official details soon. Current price: $0.00."
     }
   }
 ];
 
 const translatorPrices = {
   verde: 35,
-  ausoles: 60
+  ausoles: 60,
+  cafe: 0
 };
 
 const translations = {
   es: {
     promo: "OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA",
     location: "¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada",
+    locationHelp: "Si tienes problemas reservando tu tour puedes llamar para reservar al +503 7883 0399",
+    reservationHelp: "Reservas por llamada:",
+    reservationLanguages: "Atención en español, inglés y francés",
+    termsReminder: "Términos y condiciones al final del sitio.",
     home: "INICIO",
     reserve: "RESERVAR",
     navDestinations: "Destinos",
     navPrices: "Precios",
-    navRecommendations: "Recomendaciones",
+    navRecommendations: "Recomendaciones y términos",
     navBoutique: "Boutique",
     navRestaurant: "Restaurante",
     navExperiences: "Experiencias",
     heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
-    heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.",
+    heroCopy: "Reserva tu experiencia en Laguna Verde, Ausoles o Ruta del café y vive Apaneca en buggy, cuatrimoto o una ruta cafetalera única.",
     heroCta: "VER OFERTA",
     tours: "TOURS",
-    bookingTitle: "Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles.",
+    bookingTitle: "Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acá abajo.",
     date: "Fecha",
     time: "Hora",
     people: "Personas",
@@ -475,18 +595,18 @@ const translations = {
     buggyThree: "Buggy 3 personas",
     buggyFour: "Buggy 4 personas",
     buggyFive: "Buggy 5 personas",
-    buggySix: "Buggy 6 personas",
-    estimatedTotal: "Total estimado",
+    perPersonShort: "por persona",
+        estimatedTotal: "Total estimado",
     responsible: "Nombre del responsable",
     fullName: "Nombre completo",
     phone: "Número de teléfono",
     phonePlaceholder: "Código país + número",
     email: "Correo electrónico",
     requiredFields: "Campos obligatorios para generar la orden",
-    translatorTitle: "Traducción e interpretación disponible",
-    translatorQuestion: "Disfruta a lo largo de tu tour con servicio de traducción e interpretación disponible en inglés y/o francés por un traductor trilingüe y guía de la zona.",
-    translatorQuestionFinal: "Este es un servicio adicional disponible durante el tour, con el beneficio de contar con interpretación y acompañamiento local durante la experiencia.",
-    translatorOption: "¿Deseas incluir traducción e interpretación?",
+    translatorTitle: "Traducción disponible",
+    translatorQuestion: "Disfruta de todo tu recorrido con servicio de traducción disponible en inglés y/o francés por un traductor trilingüe y guía de la zona.",
+    translatorQuestionFinal: "Este es un servicio adicional, que puedes adquirir junto a tu tour y cuentas con el beneficio de traducción, interpretación y acompañamiento durante tu experiencia.",
+    translatorOption: "¿Deseas incluir guía traductor?",
     translatorLanguages: "Inglés o francés",
     translatorFinalCheck: "Todo el tour con traducción e interpretación disponible en inglés o francés por un traductor trilingüe y guía de la zona, por costo adicional.",
     translatorFee: "Traducción e interpretación",
@@ -503,8 +623,9 @@ const translations = {
     totalCapacity: "Capacidad total seleccionada",
     tourPrice: "Precio del tour",
     pricePending: "Por confirmar",
-    ausolesPersonPriceNote: "Ruta Extrema (Ausoles Tour): $100 por persona.",
-    lagunaVehiclePriceNote: "Tour Laguna Verde: precio según vehículo seleccionado.",
+    ausolesPersonPriceNote: "Ruta Extrema (Ausoles Tour): promocion $129.99 por persona.",
+    lagunaVehiclePriceNote: "Tour Laguna Verde: 1 h 30 min, precio según vehículo seleccionado.",
+    cafePriceNote: "Ruta del café: precio actual $0.00 mientras agregamos los detalles completos del tour.",
     nextStep: "Enviaremos tu orden para confirmar disponibilidad y luego recibirás el link de pago.",
     whatsappSendReminder: "Si se abre WhatsApp como respaldo, revisa la orden cargada y presiona Enviar para que la reserva llegue correctamente.",
     warning: "Selecciona vehículos suficientes para cubrir la cantidad de personas.",
@@ -514,20 +635,35 @@ const translations = {
     featurePremiumTitle: "Experiencias premium",
     featurePremiumCopy: "Vive aventuras diseñadas para turistas nacionales e internacionales.",
     featureCareTitle: "Atención personalizada",
-    featureCareCopy: "Reservas adaptadas a cada grupo y experiencia deseada.",
+    featureCareCopy: "Experiencias personalizadas con acompañamiento completo en español, inglés y francés, un valor diferencial que ningún tour convencional ofrece y que convierte tu aventura en una experiencia internacional sin barreras.",
+    featureVisitorsTitle: "Gracias por el apoyo a nuestros clientes viajeros más frecuentes",
+    featureVisitorsCopy: "El Salvador, Estados Unidos, México, Canadá, República Dominicana, Colombia, Argentina, Brasil, Puerto Rico, Chile, Uruguay, Francia, España, Italia y Centroamérica: Guatemala, Honduras, Nicaragua, Costa Rica, Panamá y Belice.",
     destinationsTitle: "DESTINOS",
     destinationsCopy: "Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.",
     lagunaCopy: "La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montañas, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexión con la naturaleza.",
     ausolesTitle: "Ruta Extrema (Ausoles Tour)",
     ausolesCopy: "Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.",
     pricesTitle: "PRECIOS",
-    pricesCopy: "Los precios de Laguna Verde y Ausoles son diferentes. En Laguna Verde el precio depende del vehículo y capacidad seleccionada. En Ausoles el precio es de $100 por persona, ya sea en cuatrimoto o buggy.",
+    pricesCopy: "Tarifas actualizadas por tour, con opciones claras para Laguna Verde, una promoción especial para Ruta Extrema Ausoles y la Ruta del café.",
     lagunaPriceTitle: "Tour Laguna Verde",
     ausolesPriceTitle: "Ruta Extrema (Ausoles Tour)",
+    cafeTitle: "Ruta del café",
+    cafeCopy: "Ruta del café inspirada en la cultura cafetalera de Apaneca. Pronto agregaremos recorrido, duración, paradas y detalles completos del tour.",
+    cafePriceTitle: "Ruta del café",
+    cafeDuration: "Duración del tour: por confirmar",
+    cafePromoName: "Ruta del café",
+    cafeBeforeLabel: "Precio actual",
+    cafeNowLabel: "Precio ahora",
     lagunaPriceNote: "",
-    ausolesPriceNote: "Precio por persona, sea en cuatrimoto o buggy.",
-    recommendationsTitle: "RECOMENDACIONES",
-    recommendationsCopy: "Llevar ropa cómoda, calzado adecuado, protector solar, lentes, agua y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.",
+    lagunaDuration: "Duración del tour: 1 h 30 min",
+    ausolesDuration: "Duración del tour: 3 horas",
+    lagunaBeforeLabel: "Precio anterior por persona",
+    lagunaNowLabel: "Precio ahora desde",
+    ausolesBeforeLabel: "Precio anterior",
+    ausolesNowLabel: "Precio ahora",
+    recommendationsTitle: "RECOMENDACIONES Y TÉRMINOS",
+    recommendationsCopy: "Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.",
+    termsSectionReminder: "Revisa los términos y condiciones al final de esta sección antes de enviar tu reserva.",
     localVisitTitle: "Preséntate estrictamente en nuestro local",
     localVisitCopy: "Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.",
     avoidScamTitle: "Evita ser estafado",
@@ -542,11 +678,19 @@ const translations = {
     experiencesCopy: "Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.",
     reviewOne: "Una aventura completa, con paisajes increíbles y excelente atención.",
     reviewTwo: "El tour a Laguna Verde fue lo mejor de nuestro viaje por Apaneca.",
+    reviewThree: "La aventura en invierno tiene un encanto especial: paisajes verdes, aire fresco y una experiencia inolvidable.",
+    reviewFour: "Uno de los mejores cafés que he probado en la Ruta del café; excelente aroma, sabor y atención.",
     copyright: "Queda prohibida la reproducción total o parcial sin autorización.",
     alertVehicle: "Selecciona al menos una unidad de vehículo.",
     alertCapacity: "La capacidad seleccionada no cubre la cantidad de personas.",
     alertRequiredClient: "Completa nombre del responsable, número de teléfono y correo electrónico para generar la orden.",
     alertTimeRange: "Selecciona una hora de reserva entre 9:00 AM y 6:00 PM.",
+    termsTitle: "Términos y condiciones",
+    termsTourSelection: "Selecciona cuidadosamente el tour correcto antes de enviar la orden. Si eliges un tour equivocado, comunícate de inmediato con personal autorizado para corregirlo.",
+    termsArrival: "Para recibir el tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.",
+    termsPayment: "La orden queda sujeta a confirmación de disponibilidad y al envío del enlace de pago correspondiente.",
+    termsContact: "No aceptes información ni indicaciones de personas externas que te quieran promocionar tours; comunícate solo con personal autorizado de nuestro local.",
+    termsAccepted: "He leído y comprendido los términos y condiciones, y confirmo que seleccioné cuidadosamente el tour correcto.",
     whatsappGreeting: "Hola, quiero información sobre Xtreme Tours APANECA.",
     emailSubject: "Orden de reserva - Ratatouille Xtreme Tours",
     emailGreeting: "Nueva orden de reserva generada desde la página web.",
@@ -557,21 +701,25 @@ const translations = {
   en: {
     promo: "ADVENTURE DEALS: BOOK YOUR TOUR IN APANECA",
     location: "Visiting from El Salvador or abroad? Book your personalized experience",
+    locationHelp: "If you have trouble booking your tour, you can call to reserve at +503 7883 0399",
+    reservationHelp: "Book by phone:",
+    reservationLanguages: "Assistance in Spanish, English, and French",
+    termsReminder: "Terms and conditions at the end of this site.",
     home: "HOME",
     reserve: "BOOK",
     navDestinations: "Destinations",
     navPrices: "Prices",
-    navRecommendations: "Tips",
+    navRecommendations: "Tips and terms",
     navBoutique: "Boutique",
     navRestaurant: "Restaurant",
     navExperiences: "Experiences",
     heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
-    heroCopy: "Book your Laguna Verde or Ausoles experience and discover Apaneca by buggy or ATV.",
+    heroCopy: "Book your Laguna Verde, Ausoles, or Coffee Route experience and discover Apaneca by buggy, ATV, or a unique coffee route.",
     heroCta: "SEE OFFER",
     tours: "TOURS",
-    bookingTitle: "Book according to your destination",
+    bookingTitle: "Please carefully select the correct tour from the available destinations below.",
     date: "Date",
     time: "Time",
     people: "People",
@@ -589,18 +737,18 @@ const translations = {
     buggyThree: "Buggy 3 people",
     buggyFour: "Buggy 4 people",
     buggyFive: "Buggy 5 people",
-    buggySix: "Buggy 6 people",
-    estimatedTotal: "Estimated total",
+    perPersonShort: "per person",
+        estimatedTotal: "Estimated total",
     responsible: "Responsible guest",
     fullName: "Full name",
     phone: "Phone number",
     phonePlaceholder: "Country code + number",
     email: "Email",
     requiredFields: "Required fields to generate the order",
-    translatorTitle: "Translation and interpretation available",
-    translatorQuestion: "Enjoy your tour with English and/or French translation and interpretation service available by a trilingual translator and local guide.",
-    translatorQuestionFinal: "This is an additional service available during the tour, with the benefit of interpretation and local guidance throughout the experience.",
-    translatorOption: "Would you like to include translation and interpretation?",
+    translatorTitle: "Translation available",
+    translatorQuestion: "Enjoy your entire route with translation service available in English and/or French by a trilingual translator and local guide.",
+    translatorQuestionFinal: "This is an additional service that you can add to your tour, with the benefit of translation, interpretation and guidance during your experience.",
+    translatorOption: "Would you like to include a translator guide?",
     translatorLanguages: "English or French",
     translatorFinalCheck: "Full tour with English or French translation and interpretation available by a trilingual translator and local guide, for an extra fee.",
     translatorFee: "Translation and interpretation",
@@ -617,8 +765,9 @@ const translations = {
     totalCapacity: "Selected total capacity",
     tourPrice: "Tour price",
     pricePending: "To be confirmed",
-    ausolesPersonPriceNote: "Extreme Route (Ausoles Tour): $100 per person.",
-    lagunaVehiclePriceNote: "Laguna Verde Tour: price based on selected vehicle.",
+    ausolesPersonPriceNote: "Extreme Route (Ausoles Tour): promo $129.99 per person.",
+    lagunaVehiclePriceNote: "Laguna Verde Tour: 1 h 30 min, price based on selected vehicle.",
+    cafePriceNote: "Coffee Route: current price $0.00 while we add the complete tour details.",
     nextStep: "We will send your order to confirm availability, then you will receive the payment link.",
     whatsappSendReminder: "If WhatsApp opens as a backup, review the loaded order and press Send so the reservation arrives correctly.",
     warning: "Select enough vehicles to cover the number of guests.",
@@ -628,20 +777,35 @@ const translations = {
     featurePremiumTitle: "Premium experiences",
     featurePremiumCopy: "Enjoy adventures designed for local and international travelers.",
     featureCareTitle: "Personalized care",
-    featureCareCopy: "Bookings adapted to every group and desired experience.",
+    featureCareCopy: "Personalized experiences with full support in Spanish, English, and French, a unique advantage that ordinary tours do not offer and that turns your adventure into an international experience without language barriers.",
+    featureVisitorsTitle: "Thank you to our most frequent traveler customers for your support",
+    featureVisitorsCopy: "El Salvador, the United States, Mexico, Canada, the Dominican Republic, Colombia, Argentina, Brazil, Puerto Rico, Chile, Uruguay, France, Spain, Italy, and Central America: Guatemala, Honduras, Nicaragua, Costa Rica, Panama, and Belize.",
     destinationsTitle: "DESTINATIONS",
     destinationsCopy: "Explore the best tourist spots in Apaneca and enjoy unforgettable adventures surrounded by nature and mountains.",
     lagunaCopy: "Laguna Verde in Apaneca feels like a postcard destination. Surrounded by mountains, cloud forests and fresh weather, it offers peace, adventure and connection with nature.",
     ausolesTitle: "Extreme Route (Ausoles Tour)",
     ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles and geothermal energy surrounded by mountains and extreme nature.",
     pricesTitle: "PRICES",
-    pricesCopy: "Laguna Verde and Ausoles have different prices. Laguna Verde pricing depends on the selected vehicle and capacity. Ausoles costs $100 per person, whether by ATV or buggy.",
+    pricesCopy: "Updated tour rates with clear Laguna Verde options, a special Extreme Route Ausoles promotion, and the Coffee Route.",
     lagunaPriceTitle: "Laguna Verde Tour",
     ausolesPriceTitle: "Extreme Route (Ausoles Tour)",
+    cafeTitle: "Coffee Route",
+    cafeCopy: "Coffee Route inspired by Apaneca coffee culture. We will add the real route, duration, stops, and official details soon.",
+    cafePriceTitle: "Coffee Route",
+    cafeDuration: "Tour duration: to be confirmed",
+    cafePromoName: "Coffee Route",
+    cafeBeforeLabel: "Current price",
+    cafeNowLabel: "Now",
     lagunaPriceNote: "",
-    ausolesPriceNote: "Price per person, whether by ATV or buggy.",
-    recommendationsTitle: "TIPS",
-    recommendationsCopy: "Wear comfortable clothes, proper shoes, sunscreen, sunglasses, bring water and book in advance. Arriving a few minutes early is recommended.",
+    lagunaDuration: "Tour duration: 1 h 30 min",
+    ausolesDuration: "Tour duration: 3 hours",
+    lagunaBeforeLabel: "Previous price per person",
+    lagunaNowLabel: "Now from",
+    ausolesBeforeLabel: "Regular price",
+    ausolesNowLabel: "Now",
+    recommendationsTitle: "TIPS AND TERMS",
+    recommendationsCopy: "Wear comfortable clothes and book in advance. Arriving a few minutes before your selected time is recommended.",
+    termsSectionReminder: "Review the terms and conditions at the end of this section before sending your booking.",
     localVisitTitle: "Come directly to our official location",
     localVisitCopy: "To receive your tour, instructions, and official assistance, please come directly to our Ratatouille Apaneca location.",
     avoidScamTitle: "Avoid being scammed",
@@ -656,11 +820,19 @@ const translations = {
     experiencesCopy: "Comments, experiences and opinions from customers who already lived our routes. We show real reviews and observations to keep improving.",
     reviewOne: "A complete adventure, with incredible views and excellent attention.",
     reviewTwo: "The Laguna Verde tour was the best part of our trip through Apaneca.",
+    reviewThree: "The winter adventure has a special charm: green landscapes, fresh air, and an unforgettable experience.",
+    reviewFour: "One of the best coffees I have tried on the Coffee Route; excellent aroma, flavor, and service.",
     copyright: "Total or partial reproduction without authorization is prohibited.",
     alertVehicle: "Select at least one vehicle unit.",
     alertCapacity: "The selected capacity does not cover the number of guests.",
     alertRequiredClient: "Complete responsible guest name, phone number and email to generate the order.",
     alertTimeRange: "Select a booking time between 9:00 AM and 6:00 PM.",
+    termsTitle: "Terms and conditions",
+    termsTourSelection: "Carefully select the correct tour before sending the order. If you choose the wrong tour, contact authorized staff immediately so it can be corrected.",
+    termsArrival: "To receive the tour, instructions, and official assistance, come directly to our Ratatouille Apaneca location.",
+    termsPayment: "The order is subject to availability confirmation and the corresponding payment link being sent.",
+    termsContact: "Do not accept information or instructions from outside people trying to promote tours to you; communicate only with authorized staff from our location.",
+    termsAccepted: "I have read and understood the terms and conditions, and I confirm that I carefully selected the correct tour.",
     whatsappGreeting: "Hello, I want information about Xtreme Tours APANECA.",
     emailSubject: "Booking order - Ratatouille Xtreme Tours",
     emailGreeting: "New booking order generated from the website.",
@@ -681,14 +853,17 @@ function vehicleName(vehicle) {
 }
 
 function vehiclePrice(vehicle, tourId) {
-  return tourId === "ausoles" ? 100 : vehicle.lagunaPrice;
+  if (tourId === "ausoles") return AUSOLES_PROMO_PRICE;
+  if (tourId === "cafe") return CAFE_ROUTE_PRICE;
+  return vehicle.lagunaPrice;
 }
 
 function tourTotalPrice(tourId, selectedVehicles, people) {
   if (tourId === "ausoles") {
     const selectedCapacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
-    return Math.max(people, selectedCapacity) * 100;
+    return Math.max(people, selectedCapacity) * AUSOLES_PROMO_PRICE;
   }
+  if (tourId === "cafe") return CAFE_ROUTE_PRICE;
   return selectedVehicles.reduce((total, vehicle) => total + vehicle.lagunaPrice * vehicle.units, 0);
 }
 
@@ -697,7 +872,9 @@ function translatorPrice(tourId) {
 }
 
 function formatPrice(value) {
-  return `$${value}`;
+  const amount = Number(value || 0);
+  if (amount === 0) return "$0.00";
+  return `${Number.isInteger(amount) ? amount : amount.toFixed(2)}`;
 }
 
 function createOrderNumber() {
@@ -714,7 +891,7 @@ function buildBookingCards() {
     return `
       <form class="tour-card" data-tour-id="${tour.id}">
         <div class="tour-header">
-          <h3>${tour.icon} ${detail.name}</h3>
+          <h3>${tour.icon ? `${tour.icon} ` : ""}${detail.name}</h3>
           <p>${detail.description}</p>
         </div>
         <div class="form-grid">
@@ -741,7 +918,7 @@ function buildBookingCards() {
               <div class="vehicle-row">
                 <div class="vehicle-name">
                   <strong>${vehicleName(vehicle)}</strong>
-                  <small>${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()} · ${tour.id === "ausoles" ? `${t("pricePerPerson")}: $100` : `${t("pricePerUnit")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}`}</small>
+                  <small>${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()} · ${tour.id === "ausoles" ? `${t("pricePerPerson")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}` : `${t("pricePerUnit")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}`} </small>
                 </div>
                 <select name="${vehicle.id}" data-capacity="${vehicle.capacity}" data-label="${vehicleName(vehicle)} ${vehicle.capacity}">
                   <option value="">${t("units")}</option>
@@ -794,9 +971,20 @@ function buildBookingCards() {
             <div class="summary-price-item"><span>${t("translatorFee")}</span><strong data-summary-translator>$0</strong></div>
             <div class="summary-price-item total"><span>${t("estimatedTotal")}</span><strong data-summary-price>$0</strong></div>
           </div>
-          <p class="summary-note">${tour.id === "ausoles" ? t("ausolesPersonPriceNote") : t("lagunaVehiclePriceNote")}</p>
+          <p class="summary-note">${tour.id === "ausoles" ? t("ausolesPersonPriceNote") : tour.id === "cafe" ? t("cafePriceNote") : t("lagunaVehiclePriceNote")}</p>
           <p class="summary-send-note">${t("nextStep")}</p>
           <p class="summary-warning" data-summary-warning>${t("warning")}</p>
+        </div>
+        <div class="terms-box">
+          <h4>${t("termsTitle")}</h4>
+          <ul>
+            <li>${t("termsTourSelection")}</li>
+            <li>${t("termsContact")}</li>
+          </ul>
+          <label class="terms-check">
+            <input type="checkbox" name="termsAccepted" required>
+            <span>${t("termsAccepted")}</span>
+          </label>
         </div>
         <button type="submit" class="reserve-btn">${t("reserveNow")}</button>
         <p class="submit-status" data-submit-status aria-live="polite"></p>
@@ -835,7 +1023,7 @@ function selectedVehicleText(summary, tourId) {
   }
 
   return summary.selectedVehicles.map((vehicle) => {
-    const priceText = tourId === "ausoles" ? "$100 por persona" : `${formatPrice(vehiclePrice(vehicle, tourId))} c/u`;
+    const priceText = tourId === "ausoles" ? `${formatPrice(AUSOLES_PROMO_PRICE)} ${t("perPersonShort")}` : `${formatPrice(vehiclePrice(vehicle, tourId))} c/u`;
     return `${vehicle.units} x ${vehicleName(vehicle)} (${vehicle.capacity} ${t("people").toLowerCase()}) - ${priceText}`;
   }).join(" | ");
 }
@@ -925,7 +1113,7 @@ function getVehicleOrderDetails(form) {
   const selectedLines = vehicleOptions.map((vehicle) => {
     const units = Number(form.elements[vehicle.id].value || 0);
     if (!units) return "";
-    const priceText = form.dataset.tourId === "ausoles" ? "$100 por persona" : `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} c/u`;
+    const priceText = form.dataset.tourId === "ausoles" ? `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} ${t("perPersonShort")}` : `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} c/u`;
     return [
       `${vehicleName(vehicle)}`,
       `${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()}`,
@@ -935,6 +1123,18 @@ function getVehicleOrderDetails(form) {
   }).filter(Boolean);
 
   return selectedLines.length ? selectedLines.join("\n") : t("noVehiclesSelected");
+}
+function getVehicleSelectionsPayload(form, summary) {
+  return summary.selectedVehicles.map((vehicle) => ({
+    id: vehicle.id,
+    label: `${vehicleName(vehicle)}${vehicle.capacity > 1 ? ` ${vehicle.capacity} pax` : ""}`,
+    esName: vehicle.esName,
+    enName: vehicle.enName,
+    capacity: vehicle.capacity,
+    units: vehicle.units,
+    unitPrice: vehiclePrice(vehicle, form.dataset.tourId),
+    commission: form.dataset.tourId === "ausoles" ? DEFAULT_COMMISSION_RATES.ausoles : form.dataset.tourId === "cafe" ? DEFAULT_COMMISSION_RATES.cafe : vehicle.commission
+  }));
 }
 
 function fieldValue(value, fallback) {
@@ -1010,16 +1210,29 @@ function tourIsAusoles(tourId, tourName) {
   return value.includes("ausoles") || value.includes("extrema") || value.includes("extreme");
 }
 
+function tourIsCafe(tourId, tourName) {
+  const value = `${tourId || ""} ${tourName || ""}`.toLowerCase();
+  return value.includes("cafe") || value.includes("café") || value.includes("coffee");
+}
+
 function makeCommissionId(orderNumber) {
   return `order-${String(orderNumber || Date.now()).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
 }
 
 function calculateCommissionRecord(order) {
   const rates = loadCommissionRates();
+  const rateForVehicle = (id) => id === "atv1" ? Number(rates.atv1 || 0) : id === "atv2" ? Number(rates.atv2 || 0) : Number(rates.buggy || 0);
   if (tourIsAusoles(order.tourId, order.tour)) {
-    return Number(rates.ausoles || 0);
+    return Number(order.people || 1) * Number(rates.ausoles || 0);
   }
-  return (Number(order.atvUnits || 0) * Number(rates.atv || 0)) + (Number(order.buggyUnits || 0) * Number(rates.buggy || 0));
+  if (tourIsCafe(order.tourId, order.tour)) {
+    return Number(order.people || 1) * Number(rates.cafe || 0);
+  }
+  const selections = Array.isArray(order.vehicleSelections) ? order.vehicleSelections : [];
+  if (selections.length) {
+    return selections.reduce((total, vehicle) => total + Number(vehicle.units || 0) * rateForVehicle(vehicle.id), 0);
+  }
+  return (Number(order.atvUnits || 0) * Number(rates.atv1 || rates.atv || 0)) + (Number(order.buggyUnits || 0) * Number(rates.buggy || 0));
 }
 
 function buildCommissionRecord(payload) {
@@ -1027,11 +1240,13 @@ function buildCommissionRecord(payload) {
     id: makeCommissionId(payload.orderNumber),
     orderNumber: payload.orderNumber,
     date: new Date().toISOString().slice(0, 10),
-    tour: tourIsAusoles(payload.tourId, payload.tour) ? "Ruta Extrema (Ausoles Tour)" : "Laguna Verde",
+    tour: tourIsAusoles(payload.tourId, payload.tour) ? "Ruta Extrema (Ausoles Tour)" : tourIsCafe(payload.tourId, payload.tour) ? "Ruta del café" : "Laguna Verde",
     tourId: payload.tourId,
     customerName: payload.customerName || "Cliente",
     atvUnits: Number(payload.atvUnits || 0),
     buggyUnits: Number(payload.buggyUnits || 0),
+    people: Number(payload.people || 0),
+    vehicleSelections: Array.isArray(payload.vehicleSelections) ? payload.vehicleSelections : [],
     status: "pending",
     notes: "Orden real creada desde la pagina de tours.",
     createdAt: new Date().toISOString()
@@ -1119,12 +1334,16 @@ async function handleBookingSubmit(event) {
   const summary = getFormSummary(form);
 
   if (!summary.selectedVehicles.length) {
-    alert(t("alertVehicle"));
+    setSubmitStatus(form, t("alertVehicle"), "error");
+    const firstVehicleInput = form.querySelector(".vehicle-row select");
+    if (firstVehicleInput) firstVehicleInput.focus();
     return;
   }
 
   if (summary.capacity < summary.people) {
-    alert(t("alertCapacity"));
+    setSubmitStatus(form, t("alertCapacity"), "error");
+    const firstVehicleInput = form.querySelector(".vehicle-row select");
+    if (firstVehicleInput) firstVehicleInput.focus();
     return;
   }
 
@@ -1132,6 +1351,7 @@ async function handleBookingSubmit(event) {
   const orderNumber = createOrderNumber();
   const orderSummaryText = getOrderSummaryText(form, summary);
   const vehicleOrderDetails = getVehicleOrderDetails(form);
+  const vehicleSelections = getVehicleSelectionsPayload(form, summary);
   const atvUnits = summary.selectedVehicles
     .filter((vehicle) => vehicle.id.startsWith("atv"))
     .reduce((total, vehicle) => total + vehicle.units, 0);
@@ -1190,8 +1410,11 @@ async function handleBookingSubmit(event) {
     atvUnits,
     buggyUnits,
     vehicleOrderDetails,
+    vehicleSelections,
     orderSummaryText,
-    total: formatPrice(summary.totalPrice),
+    total: summary.totalPrice,
+    basePriceNumber: summary.basePrice,
+    totalNumber: summary.totalPrice,
     destinationEmail: RESERVATION_EMAIL
   };
 
@@ -1246,6 +1469,10 @@ applyTranslations();
   </script>
 </body>
 </html>
+
+
+
+
 
 
 
