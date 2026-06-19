@@ -191,7 +191,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .restaurant-gallery img{height:210px}
 .video-section{padding:0;overflow:hidden}
 .video-copy{padding:38px 38px 24px}
-.experience-video{display:block;width:100%;height:auto;max-height:none;object-fit:contain;background:#000;border-top:1px solid rgba(255,255,255,.08)}
+.experience-video{display:block;width:100%;height:clamp(360px,48vw,620px);object-fit:contain;object-position:center;background:#000;border-top:1px solid rgba(255,255,255,.08)}
 .video-note{margin-top:10px;color:#8ea7c2;font-size:13px;font-weight:700}
 .review blockquote{color:#d7e7f4;line-height:1.7}
 .review figcaption{margin-top:12px;color:#8ea7c2;font-weight:800}
@@ -200,6 +200,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .whatsapp-float svg{width:34px;height:34px}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{grid-template-columns:repeat(3,1fr);width:calc(100% - 32px);padding:18px}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
+@media(max-width:850px){.experience-video{height:auto;max-height:none}}
 @media(max-width:560px){.nav-center-bar{grid-template-columns:1fr 1fr;border-radius:24px}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
