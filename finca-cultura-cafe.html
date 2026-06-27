@@ -219,7 +219,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:24px;padding:12px}.nav-center-bar summary{display:flex;align-items:center;justify-content:space-between}.nav-center-bar summary::after{content:"▾";font-size:18px}.nav-center-bar[open] summary::after{content:"▴"}.nav-links{display:none;grid-template-columns:1fr;margin-top:12px}.nav-center-bar[open] .nav-links{display:grid}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -273,7 +273,8 @@ input[type="date"],input[type="time"]{color-scheme:dark}
   <main class="content page-content">
     <section class="content-section" id="finca-cultura-cafe">
           <h2 class="section-title" data-i18n="coffeeBoutiqueTitle">FINCA Y CULTURA DEL CAFÉ</h2>
-          <p class="section-text" data-i18n="coffeeBoutiqueCopy">Conoce la finca, los cultivos y la cultura del café en Apaneca a través de imágenes que muestran el entorno natural, las plantas y el vivero cafetalero.</p>
+          <span class="coming-soon-note" data-i18n="comingSoon">Espéralo pronto / Coming soon</span>
+          <p class="section-text" data-i18n="coffeeBoutiqueCopy">Próximamente, nuestras rutas en buggy estarán llegando hacia estos asombrosos lugares para que puedas conocerlos, disfrutar sus paisajes y vivir de cerca la cultura del café en Apaneca.</p>
           <div class="image-gallery" aria-label="Galería de finca y cultura del café">
             <img src="imagen620.jpg" alt="Plantas de café bajo sombra en finca" loading="lazy">
             <img src="imagen621.jpg" alt="Árbol y entorno natural de la finca cafetalera" loading="lazy">
@@ -323,7 +324,8 @@ const translations = {
     navRecommendations: "Recomendaciones",
     navTerms: "Términos y condiciones",
     coffeeBoutiqueTitle: "FINCA Y CULTURA DEL CAFÉ",
-    coffeeBoutiqueCopy: "Conoce la finca, los cultivos y la cultura del café en Apaneca a través de imágenes que muestran el entorno natural, las plantas y el vivero cafetalero.",
+    comingSoon: "Espéralo pronto / Coming soon",
+    coffeeBoutiqueCopy: "Próximamente, nuestras rutas en buggy estarán llegando hacia estos asombrosos lugares para que puedas conocerlos, disfrutar sus paisajes y vivir de cerca la cultura del café en Apaneca.",
     copyright: "Queda prohibida la reproducción total o parcial sin autorización."
   },
   en: {
@@ -346,7 +348,8 @@ const translations = {
     navRecommendations: "Recommendations",
     navTerms: "Terms and Conditions",
     coffeeBoutiqueTitle: "COFFEE FARM AND CULTURE",
-    coffeeBoutiqueCopy: "Discover the farm, the crops, and Apaneca's coffee culture through images of the natural setting, the plants, and the coffee nursery.",
+    comingSoon: "Coming soon",
+    coffeeBoutiqueCopy: "Coming soon, our buggy routes will be reaching these amazing places so you can discover them, enjoy their landscapes, and experience Apaneca's coffee culture up close.",
     copyright: "Total or partial reproduction without authorization is prohibited."
   }
 };
