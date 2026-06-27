@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vehiculos | Xtreme Tours APANECA</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:#020817;color:white;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(rgba(2,8,23,.84),rgba(2,8,23,.96))}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at top left,rgba(14,165,255,.16),transparent 35%),radial-gradient(circle at bottom right,rgba(255,0,89,.13),transparent 35%)}
+a{color:inherit}
+.promo-bar{background:#ff0059;color:white;text-align:center;padding:16px 20px;font-size:18px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.location-bar{background:#ffd000;color:#111827;text-align:center;padding:10px 20px;font-size:14px;font-weight:800}
+.location-bar .location-help{display:block;margin-top:4px}
+.reservation-help-bar{background:#071223;color:#e8f6ff;text-align:center;padding:10px 20px;font-size:14px;font-weight:800;line-height:1.45;border-bottom:1px solid rgba(255,255,255,.08)}
+.reservation-help-bar .help-main{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.reservation-help-bar strong{color:#ffd000;font-weight:950;white-space:nowrap}
+.reservation-help-bar .flag-list{display:inline-flex;align-items:center;gap:6px;font-size:17px;vertical-align:middle}
+.reservation-help-bar .language-note{color:#fff;font-weight:900}
+header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;padding:18px 40px;gap:18px}
+.header-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo-btn,.top-reserve-btn{background:linear-gradient(135deg,#0ea5ff,#0f172a);padding:14px 24px;border-radius:40px;color:white!important;text-decoration:none;font-size:14px;font-weight:900;letter-spacing:1px;white-space:nowrap;box-shadow:0 0 25px rgba(14,165,255,.35);transition:.3s;border:1px solid rgba(255,255,255,.08)}
+.logo-btn:hover,.top-reserve-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(14,165,255,.55)}
+.contact-panel{display:flex;align-items:center;gap:18px;color:#d7e7f4;line-height:1.35}
+.contact-panel::before{content:"📞";color:white;font-size:22px;font-weight:900;line-height:1}
+.contact-numbers{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.contact-link{display:inline-flex;align-items:center;gap:7px;color:#d7e7f4;text-decoration:none;transition:.25s;white-space:nowrap}
+.contact-link::before{content:"";width:6px;height:6px;border-radius:50%;background:#8ea7c2;display:inline-block}
+.contact-link span{display:none}
+.contact-link strong{color:#eef8ff;font-size:14px;font-weight:900;letter-spacing:.8px}
+.contact-link:hover{color:white}
+.contact-link:hover strong{text-decoration:underline;text-underline-offset:4px}
+.contact-link.primary strong{color:#eef8ff;font-size:17px}
+.contact-link.primary::before{width:8px;height:8px;background:#22c55e;box-shadow:0 0 12px rgba(34,197,94,.45)}
+.nav{display:flex;align-items:center;gap:16px}
+.language-select{background:#071b2e;color:white;border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:10px 14px;font-family:'Montserrat',sans-serif;font-weight:800;outline:none;cursor:pointer}
+.language-select option{background:#071b2e;color:white}
+.whatsapp-btn{background:#22c55e;color:white!important;padding:12px 20px;border-radius:24px;font-weight:900;text-decoration:none;box-shadow:0 0 22px rgba(34,197,94,.30);transition:.3s}
+.whatsapp-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(34,197,94,.45)}
+.nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
+.nav-center-bar summary{display:none;color:#e8f6ff;font-size:15px;font-weight:900;list-style:none;cursor:pointer;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.nav-center-bar summary::-webkit-details-marker{display:none}
+.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
+.nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
+.hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('imagen10.jpg');background-size:cover;background-position:center}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(circle at center,rgba(0,0,0,.08),rgba(0,0,0,.34) 72%)}
+.hero-content{max-width:940px;position:relative;z-index:2;margin:auto}
+.hero-sale{display:inline-flex;align-items:center;justify-content:center;background:#ffd000;color:#06111f;padding:12px 22px;border-radius:0;font-size:14px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;box-shadow:0 15px 35px rgba(0,0,0,.28)}
+.hero-badge{display:block;margin-top:22px;margin-bottom:14px;color:#fff;font-size:15px;font-weight:900;letter-spacing:3px;text-transform:uppercase;text-shadow:0 8px 24px rgba(0,0,0,.55)}
+.hero h1{max-width:940px;margin:auto;font-size:clamp(64px,11vw,132px);font-weight:900;line-height:.86;text-transform:uppercase;text-shadow:0 16px 42px rgba(0,0,0,.64)}
+.hero p{max-width:680px;margin:24px auto 0;font-size:clamp(18px,2vw,24px);color:#fff;line-height:1.5;text-shadow:0 8px 24px rgba(0,0,0,.58)}
+.hero-actions{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-primary{background:#ffd000;color:#06111f;text-decoration:none;border-radius:0;padding:19px 34px;font-size:15px;font-weight:900;letter-spacing:1.6px;box-shadow:0 18px 35px rgba(0,0,0,.32);transition:.3s;text-transform:uppercase}
+.hero-primary:hover{transform:translateY(-3px)}
+.booking-wrapper{max-width:1280px;margin:42px auto 0;padding:0 20px;position:relative;z-index:10;scroll-margin-top:150px}
+.booking-top{display:flex;margin-left:30px}
+.booking-tab{background:#071b2e;color:white;border:none;padding:16px 28px;border-radius:18px 18px 0 0;font-size:14px;font-weight:900;letter-spacing:1px}
+.booking-panel{background:linear-gradient(145deg,rgba(7,15,30,.98),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.08);border-radius:36px;padding:34px;box-shadow:0 25px 55px rgba(0,0,0,.45)}
+.booking-title{font-size:30px;font-weight:900;margin-bottom:28px}
+.tour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.tour-card{background:#081728;border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:28px;box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.tour-card.is-coming-soon,.card.is-coming-soon,.price-card.coming-soon-price{position:relative;overflow:hidden;border-color:rgba(250,204,21,.34);background:linear-gradient(145deg,rgba(8,23,40,.96),rgba(31,24,10,.92));opacity:.92}
+.tour-card.is-coming-soon::after,.card.is-coming-soon::after,.price-card.coming-soon-price::after{content:"Espéralo pronto / Coming soon";position:absolute;top:18px;right:-46px;transform:rotate(35deg);background:#facc15;color:#08111f;font-size:12px;font-weight:1000;letter-spacing:.5px;text-transform:uppercase;padding:8px 48px;box-shadow:0 12px 24px rgba(0,0,0,.28)}
+.coming-soon-note,.coming-soon-badge{display:inline-flex;width:auto;max-width:100%;margin-top:14px;background:#facc15;color:#08111f;border-radius:18px;padding:10px 14px;font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.3px;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.tour-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.tour-header h3{font-size:30px;font-weight:900;margin-bottom:12px}
+.tour-header p{color:#b8cadb;line-height:1.8;font-size:15px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{background:#071223;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:16px}
+.field.full{grid-column:1/-1}
+.field label{display:block;color:#8ea7c2;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.field input,.field select{width:100%;background:none;border:none;outline:none;color:white;font-size:16px;font-family:'Montserrat',sans-serif}
+.field input::placeholder{color:#6f8396}
+.field select option{background:#071223;color:white}
+input[type="date"],input[type="time"]{color-scheme:dark}
+.vehicles-box{margin-top:22px;background:#071223;border:1px solid rgba(255,255,255,.06);border-radius:24px;padding:22px}
+.vehicles-title{color:#8ea7c2;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.7px;margin-bottom:16px}
+.vehicle-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vehicle-row{background:#081728;border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:15px;display:grid;grid-template-columns:1fr 108px;gap:12px;align-items:center}
+.vehicle-name strong{display:block;font-size:15px;margin-bottom:5px}
+.vehicle-name small{color:#8ea7c2;font-size:12px}
+.vehicle-row select{width:100%;background:#020817;color:white;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:10px;font-family:'Montserrat',sans-serif}
+.client-info{margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.translator-box{margin-top:20px;background:linear-gradient(135deg,rgba(255,208,0,.10),rgba(14,165,255,.08));border:1px solid rgba(255,208,0,.28);border-radius:24px;padding:22px}
+.translator-title{color:#ffd000;font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.translator-copy{color:#d7e7f4;line-height:1.7;font-size:14px;margin-bottom:16px}
+.summary-box{margin-top:20px;border-radius:18px;background:#f8fafc;color:#101827;border:1px solid rgba(255,255,255,.16);padding:0;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.30)}
+.summary-pass-head{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:start;padding:22px 22px 18px;background:white}
+.summary-brand{display:block;color:#b49a5b;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.summary-heading{display:block;color:#101827;font-size:26px;font-weight:900;line-height:1.05;text-transform:uppercase;letter-spacing:0}
+.summary-order-code{margin-top:8px;color:#64748b;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.summary-barcode{height:54px;border-radius:4px;background:repeating-linear-gradient(90deg,#111827 0 3px,transparent 3px 6px,#111827 6px 8px,transparent 8px 13px,#111827 13px 17px,transparent 17px 20px);opacity:.95}
+.summary-section-title{background:#b49a5b;color:white;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:9px 22px}
+.order-summary-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin:0;padding:18px 22px;background:white}
+.order-summary-list li{min-width:0}
+.order-summary-list span:first-child{display:block;color:#b49a5b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.order-summary-list span:last-child{display:block;color:#101827;font-size:18px;font-weight:900;line-height:1.25;word-break:break-word}
+.order-summary-list li.is-wide{grid-column:1/-1}
+.order-summary-list li.is-wide span:last-child{font-size:14px;line-height:1.55}
+.summary-price-panel{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px;padding:18px 22px;background:#f8fafc}
+.summary-price-item span{display:block;color:#b49a5b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.summary-price-item strong{display:block;color:#101827;font-size:20px;font-weight:900}
+.summary-price-item.total{border-left:1px solid rgba(180,154,91,.35);padding-left:18px}
+.summary-price-item.total strong{color:#0f172a;font-size:30px}
+.summary-note{color:#475569;font-size:13px;line-height:1.6;padding:0 22px 18px;background:#f8fafc}
+.summary-send-note{color:#0f172a;font-size:13px;font-weight:800;line-height:1.6;padding:16px 22px;background:#fff7d6;border-top:1px solid rgba(180,154,91,.35)}
+.summary-warning{color:#b45309;font-size:13px;font-weight:900;display:none;padding:0 22px 18px;background:#fff7d6}
+.summary-warning.is-visible{display:block}
+.terms-box{margin-top:18px;background:#071223;border:1px solid rgba(255,208,0,.24);border-radius:20px;padding:18px;color:#d7e7f4}
+.terms-box h4{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;color:#ffd000;margin-bottom:10px}
+.terms-box ul{margin:0 0 14px 18px;color:#b8cadb;line-height:1.65;font-size:13px}
+.vehicle-showcase{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
+.vehicle-showcase-card{overflow:hidden;background:#07182a;border:1px solid rgba(14,165,255,.2);border-radius:8px}
+.vehicle-showcase-card img{display:block;width:100%;height:180px;object-fit:cover}
+.vehicle-showcase-card h3{padding:14px 16px 0;font-size:18px;color:#fff;margin-bottom:6px}
+.vehicle-showcase-card p{padding:0 16px 16px;font-size:13px;color:#a9bfd1;line-height:1.55}
+.referral-box{margin-top:18px;background:#071223;border:1px solid rgba(14,165,255,.30);border-radius:18px;padding:20px}
+.referral-box h4{font-size:14px;font-weight:900;text-transform:uppercase;color:#7dd3fc;margin-bottom:14px}
+.referral-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.referral-choice{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:112px;padding:16px 12px;border:2px solid rgba(255,255,255,.12);border-radius:14px;background:#0a1b2d;color:#f4f9ff;font-size:13px;font-weight:850;line-height:1.3;text-align:center;cursor:pointer;transition:.2s}
+.referral-choice:hover{border-color:rgba(125,211,252,.65);background:#0c2238;transform:translateY(-2px)}
+.referral-choice:has(input:checked){border-color:#38bdf8;background:linear-gradient(145deg,#0b2943,#0b1f34);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
+.referral-choice input{width:20px;height:20px;margin:0;accent-color:#0ea5ff}
+.referral-label{display:block;max-width:150px}
+.social-badges{display:inline-flex;gap:4px}
+.social-badge{display:grid;place-items:center;width:22px;height:22px;border-radius:5px;color:#fff;font-weight:900}
+.social-facebook{background:#1877f2}
+.social-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.agent-field{grid-column:1/-1;margin-top:14px;background:transparent;border:none;padding:0}
+.agent-field label{color:#b8cadb}
+.agent-field input{width:100%;min-height:48px;margin-top:10px;padding:12px 14px;border:2px solid #fff;border-radius:12px;background:#fff;color:#0f172a;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.agent-field input:focus{border-color:#38bdf8;box-shadow:0 0 0 4px rgba(56,189,248,.18);outline:none}
+.terms-check{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:14px;color:#eef8ff;font-size:13px;font-weight:800;line-height:1.55;cursor:pointer}
+.terms-check input{margin-top:3px;accent-color:#ffd000;min-width:18px;width:18px;height:18px}
+.reserve-btn{width:100%;min-height:68px;margin-top:24px;border:none;border-radius:22px;background:linear-gradient(135deg,#ff0059,#ff3b71);color:white;font-size:18px;font-weight:900;letter-spacing:1px;cursor:pointer;transition:.3s;box-shadow:0 18px 35px rgba(255,0,89,.30)}
+.reserve-btn:hover{transform:translateY(-3px)}
+.reserve-btn:disabled{cursor:not-allowed;opacity:.68;transform:none}
+.submit-status{min-height:22px;margin-top:14px;color:#b8cadb;font-size:13px;font-weight:800;line-height:1.5;text-align:center}
+.submit-status.success{color:#86efac}
+.submit-status.warning{color:#ffd000}
+.submit-status.error{color:#fca5a5}
+.feature-strip{max-width:1280px;margin:60px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:26px;padding:26px}
+.feature span{font-size:34px}
+.feature h3{margin-top:14px;font-size:22px}
+.feature p{margin-top:10px;color:#b8cadb;line-height:1.7;font-size:14px}
+.visitor-mini{margin-top:18px;padding:16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}
+.visitor-mini strong{display:block;color:#ffd000;font-size:13px;text-transform:uppercase;letter-spacing:.04em;line-height:1.35}
+.visitor-mini p{margin-top:8px;color:#d8e8f7;font-size:13px;line-height:1.65}
+.content{max-width:1280px;margin:auto;padding:60px 20px}
+.content-section{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:38px;margin-bottom:34px}
+.section-title{font-size:42px;margin-bottom:18px}
+.section-text{color:#b8cadb;line-height:1.8}
+.safety-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px;overflow:hidden}
+.safety-card img{display:block;width:100%;max-width:360px;height:180px;object-fit:cover;border-radius:16px;margin:0 0 18px}
+.recommendations-note{margin-top:18px;color:#f3f8ff;background:rgba(255,208,0,.08);border:1px solid rgba(255,208,0,.28);border-radius:16px;padding:14px 16px;font-weight:850;line-height:1.55}
+.safety-card h3{font-size:22px;margin-bottom:10px}
+.safety-card p{color:#b8cadb;line-height:1.75;font-size:15px}
+.cards{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden}
+.card img{width:100%;height:260px;object-fit:cover}
+.card-content{padding:24px}
+.card-content h3{font-size:28px;margin-bottom:16px}
+.card-content p{color:#b8cadb;line-height:1.9;font-size:15px}
+.price-grid,.review-grid{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.price-card,.review{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px}
+.price-card{display:flex;justify-content:space-between;align-items:center}
+.price-grid-tours{grid-template-columns:1fr;align-items:stretch}
+.price-card-pending{display:grid;gap:14px;align-items:start}
+.price-card-pending>strong{font-size:22px;line-height:1.15}
+.price-card-pending>*{min-width:0}.price-card-pending .section-text{max-width:100%;overflow-wrap:break-word}.price-card.coming-soon-price{padding-top:54px}.price-card.coming-soon-price::after{top:13px;right:-54px;font-size:10px;padding:6px 42px;letter-spacing:.35px}
+#laguna-oferta{scroll-margin-top:110px}
+.price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:15px;line-height:1.35}
+.price-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
+.price-list li:last-child{border-bottom:none;padding-bottom:0}
+.price-list b{color:#ffd000;white-space:nowrap;font-size:22px;line-height:1;font-weight:950;text-shadow:0 8px 22px rgba(255,208,0,.18)}
+.price-card span{color:#ffd000;font-size:36px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.2)}
+.price-card small{color:#8ea7c2;line-height:1.6}
+.price-duration{display:inline-flex;width:max-content;align-items:center;border:1px solid rgba(14,165,233,.28);border-radius:999px;padding:6px 10px;color:#bfe7ff;background:rgba(14,165,233,.1);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.promo-price{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.promo-badge{grid-column:1/-1;width:max-content;border-radius:999px;background:linear-gradient(135deg,#ffd000,#ff8a00);color:#111827;font-size:12px;font-weight:950;letter-spacing:.04em;text-transform:uppercase;padding:7px 10px}
+.price-sale-box{background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:14px}
+.price-sale-box small{display:block;color:#8ea7c2;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.price-sale-box del{display:block;color:#94a3b8;font-size:24px;font-weight:900;text-decoration-thickness:2px}
+.price-sale-box strong{display:block;color:#ffd000;font-size:34px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.18)}
+.destination-gallery-title{margin-top:30px;font-size:26px;font-weight:900}
+.image-gallery{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.image-gallery img{width:100%;height:190px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:#081728}
+.image-gallery.single-image{grid-template-columns:1fr}
+.image-gallery.single-image img{height:clamp(230px,42vw,520px)}
+.restaurant-gallery img{height:210px}
+.video-section{padding:0;overflow:hidden}
+.video-copy{padding:38px 38px 24px}
+.experience-video{display:block;width:min(100%,560px);height:clamp(220px,24vw,315px);margin:0 auto 34px;object-fit:contain;object-position:center;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:18px}
+.video-note{margin-top:10px;color:#8ea7c2;font-size:13px;font-weight:700}
+.home-experience-band{background:#020817;color:white;padding:54px 20px 20px}
+.home-experience{max-width:1280px;margin:0 auto;background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:0;padding:26px 26px 32px}
+.home-experience .section-title{color:white;font-size:clamp(28px,3vw,36px);margin-bottom:18px}
+.home-experience .section-text,.home-experience .video-note{display:none}
+.home-experience .experience-video{display:block;width:min(100%,900px);height:clamp(320px,52vw,620px);margin:0 auto;border-radius:0;border:0;background:#000;object-fit:contain;box-shadow:none}
+.review blockquote{color:#d7e7f4;line-height:1.7}
+.review figcaption{margin-top:12px;color:#8ea7c2;font-weight:800}
+
+.legal-content{background:rgba(8,23,40,.72);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:28px;color:#d7e7f4;line-height:1.8}
+.legal-content h3,.legal-content h4{color:#fff;margin:18px 0 8px;font-weight:1000}
+.legal-content h3{font-size:24px;margin-top:0}
+.legal-content ul{margin:10px 0 18px 22px;color:#b8cadb}
+.legal-content p{margin:0 0 14px;color:#c8d9e8}
+.footer{background:#020817;border-top:1px solid rgba(255,255,255,.08);padding:30px 20px;text-align:center;color:#8ea7c2;font-size:13px;line-height:1.7}
+.whatsapp-float{position:fixed;right:24px;bottom:24px;width:64px;height:64px;border-radius:50%;background:#22c55e;color:white;display:flex;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);z-index:200}
+.whatsapp-float svg{width:34px;height:34px}
+@media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
+@media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
+@media(max-width:560px){.nav-center-bar{border-radius:24px;padding:12px}.nav-center-bar summary{display:flex;align-items:center;justify-content:space-between}.nav-center-bar summary::after{content:"▾";font-size:18px}.nav-center-bar[open] summary::after{content:"▴"}.nav-links{display:none;grid-template-columns:1fr;margin-top:12px}.nav-center-bar[open] .nav-links{display:grid}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
+
+  </style>
+</head>
+<body>
+  <div class="promo-bar" data-i18n="promo">OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA</div>
+  <div class="location-bar">
+    <span data-i18n="location">¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada</span>
+    <span class="location-help" data-i18n="locationHelp">Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399</span>
+  </div>
+  <div class="reservation-help-bar">
+    <span class="help-main">
+      <span class="language-note" data-i18n="reservationLanguages">Atención en español, inglés y francés</span>
+    </span>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <a href="index.html#reservas" class="logo-btn" data-i18n="home">INICIO</a>
+      <div class="contact-panel" aria-label="Números de contacto">
+        <a href="https://wa.me/50378830399" class="contact-link primary" target="_blank" rel="noopener"><span>Reservas</span><strong>+503 7883 0399</strong></a>
+        <a href="tel:+50372558194" class="contact-link"><span>Contacto</span><strong>+503 7255 8194</strong></a>
+      </div>
+    </div>
+    <nav class="nav" aria-label="Navegación principal">
+      <a href="index.html#reservar-tour" class="top-reserve-btn" data-i18n="reserve">RESERVAR</a>
+      <select class="language-select" id="languageSelect" aria-label="Idioma">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+      <a href="https://wa.me/" class="whatsapp-btn js-whatsapp-link" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </header>
+
+  <details class="nav-center-bar" aria-label="Secciones" open>
+    <summary data-i18n="navMenu">Menú de secciones</summary>
+    <nav class="nav-links" aria-label="Secciones">
+    <a href="acerca.html" data-i18n="navAbout">Acerca de</a>
+    <a href="destinos.html" data-i18n="navDestinations">Destinos</a>
+    <a href="precios.html" data-i18n="navPrices">Precios</a>
+    <a href="vehiculos.html" data-i18n="navVehicles">Vehículos</a>
+    <a href="boutique.html" data-i18n="navBoutique">Boutique</a>
+    <a href="restaurante.html" data-i18n="navRestaurant">Restaurante</a>
+    <a href="finca-cultura-cafe.html" data-i18n="navCoffeeBoutique">Finca y cultura del café</a>
+    <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+    <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
+    <a href="terminos.html" data-i18n="navTerms">Términos y condiciones</a>
+    </nav>
+  </details>
+
+  <main class="content page-content">
+    <section class="content-section" id="vehiculos">
+          <h2 class="section-title" data-i18n="vehiclesSectionTitle">VEHÍCULOS</h2>
+          <p class="section-text" data-i18n="vehiclesSectionCopy">Elige la opción ideal para tu grupo y disfruta la ruta con comodidad, aventura y el estilo de conducción que prefieras.</p>
+          <div class="vehicle-showcase">
+            <article class="vehicle-showcase-card">
+              <img src="imagen280.jpg" alt="Cuatrimotos Xtreme Tours">
+              <h3 data-i18n="atvVehicleTitle">Cuatrimotos</h3>
+              <p data-i18n="singleAtvVehicleCopy">Ágiles y divertidas para recorrer nuestras rutas.</p>
+            </article>
+            <article class="vehicle-showcase-card">
+              <img src="imagen290.jpg" alt="Buggy para grupos">
+              <h3 data-i18n="buggiesVehicleTitle">Buggies</h3>
+              <p data-i18n="buggiesVehicleCopy">Opciones para parejas, familias y grupos de hasta cuatro personas.</p>
+            </article>
+            <article class="vehicle-showcase-card">
+              <img src="imagen300.jpg" alt="UTV 4x4">
+              <h3>UTV 4x4</h3>
+              <p data-i18n="utvVehicleCopy">Mayor espacio y comodidad para grupos de cinco o seis personas.</p>
+            </article>
+          </div>
+        </section>
+  </main>
+
+  <footer class="footer">
+    <p>© 2025 RATATOUILLE APANECA XTREME TOURS – Tours, Aventuras y Experiencias. Todos los derechos reservados.</p>
+    <p data-i18n="copyright">Queda prohibida la reproducción total o parcial sin autorización.</p>
+  </footer>
+
+  <a href="https://wa.me/" class="whatsapp-float js-whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 8.003 0C3.58 0 0 3.58 0 8c0 1.408.367 2.783 1.066 3.998L0 16l4.148-1.084A7.963 7.963 0 0 0 8.003 16c4.423 0 8.003-3.58 8.003-8a7.95 7.95 0 0 0-2.405-5.674zM8.003 14.5a6.46 6.46 0 0 1-3.287-.894l-.236-.14-2.46.643.656-2.398-.154-.246A6.466 6.466 0 0 1 1.5 8c0-3.59 2.913-6.5 6.503-6.5 1.736 0 3.367.676 4.594 1.902A6.455 6.455 0 0 1 14.5 8c0 3.59-2.913 6.5-6.497 6.5zm3.58-4.855c-.196-.098-1.158-.572-1.337-.637-.18-.065-.31-.098-.44.098-.131.196-.506.637-.62.768-.114.131-.228.147-.424.049-.196-.098-.827-.305-1.576-.973-.583-.52-.977-1.163-1.091-1.359-.114-.196-.012-.302.086-.4.088-.087.196-.228.294-.343.098-.114.131-.196.196-.327.065-.131.033-.245-.016-.343-.049-.098-.44-1.06-.604-1.452-.16-.385-.323-.333-.44-.339-.114-.006-.245-.007-.376-.007-.131 0-.343.049-.522.245-.18.196-.686.67-.686 1.633s.702 1.895.8 2.026c.098.131 1.38 2.108 3.345 2.955.468.202.833.322 1.118.412.47.15.898.129 1.236.078.377-.056 1.158-.474 1.321-.932.163-.458.163-.85.114-.932-.049-.082-.18-.131-.376-.229z"/></svg>
+  </a>
+
+  <script>
+const WHATSAPP_NUMBER = "50378830399";
+const baseUrl = `https://wa.me/${WHATSAPP_NUMBER}`;
+document.querySelectorAll(".js-whatsapp-link").forEach((link) => {
+  link.href = baseUrl;
+});
+
+const translations = {
+  es: {
+    promo: "OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA",
+    location: "¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada",
+    locationHelp: "Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399",
+    reservationLanguages: "Atención en español, inglés y francés",
+    home: "INICIO",
+    reserve: "RESERVAR",
+    navMenu: "Menú de secciones",
+    navAbout: "Acerca de",
+    navDestinations: "Destinos",
+    navPrices: "Precios",
+    navVehicles: "Vehículos",
+    navBoutique: "Boutique",
+    navRestaurant: "Restaurante",
+    navCoffeeBoutique: "Finca y cultura del café",
+    navExperiences: "Experiencias",
+    navRecommendations: "Recomendaciones",
+    navTerms: "Términos y condiciones",
+    aboutTitle: "ACERCA DE NOSOTROS",
+    aboutCopy: "Ratatouille Apaneca Xtreme Tours reúne aventura, naturaleza, cultura del café y hospitalidad local en experiencias cuidadosamente organizadas para viajeros nacionales e internacionales.",
+    boutiqueTitle: "BOUTIQUE",
+    boutiqueCopy: "Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.",
+    destinationsTitle: "DESTINOS",
+    destinationsCopy: "Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.",
+    lagunaTitle: "Laguna Verde",
+    lagunaCopy: "La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montañas, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexión con la naturaleza.",
+    ausolesTitle: "Ruta Extrema (Ausoles Tour)",
+    ausolesCopy: "Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.",
+    cafeBasicTitle: "Ruta del café: Tour del café Básico hacia Tizapa",
+    cafeBasicCopy: "Una experiencia para conocer el entorno cafetalero de Tizapa, sus paisajes y el proceso que da vida a uno de los productos más representativos de la zona.",
+    cafeExtremeTitle: "Tour Extremo del café Tizapa - Juayua",
+    cafeExtremeCopy: "Una ruta de aventura y cultura cafetalera que conecta Tizapa con una finca de café premium en Juayua, disponible en buggy o cuatrimoto.",
+    comingSoon: "Espéralo pronto / Coming soon",
+    experiencesTitle: "TOURS Y EXPERIENCIAS",
+    experiencesCopy: "Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.",
+    reviewOne: "Una aventura completa, con paisajes increíbles y excelente atención.",
+    reviewTwo: "El tour a Laguna Verde fue lo mejor de nuestro viaje por Apaneca.",
+    reviewThree: "La aventura en invierno tiene un encanto especial: paisajes verdes, aire fresco y una experiencia inolvidable.",
+    reviewFour: "Uno de los mejores cafés que he probado en la Ruta del café; excelente aroma, sabor y atención.",
+    pricesTitle: "PRECIOS",
+    pricesCopy: "Tarifas actualizadas por tour, con opciones claras para Laguna Verde y una promoción especial para Ruta Extrema Ausoles.",
+    lagunaPriceTitle: "Tour Laguna Verde",
+    lagunaDuration: "Duración del tour: 1 h 30 min",
+    singleAtv: "Cuatrimoto sencilla",
+    doubleAtv: "Cuatrimoto doble",
+    buggyOne: "Buggy 1 persona",
+    buggyTwo: "Buggy 2 personas",
+    buggyThree: "Buggy 3 personas",
+    buggyFour: "Buggy 4 personas",
+    utvFive: "UTV 5 personas",
+    lagunaBeforeLabel: "Precio anterior por persona",
+    lagunaNowLabel: "Precio ahora desde",
+    ausolesPriceTitle: "Tour Ruta Extrema Ausoles",
+    ausolesDuration: "Duración del tour: 3 horas",
+    ausolesPromoName: "Xtreme Adventure Deal",
+    ausolesBeforeLabel: "Precio anterior",
+    ausolesNowLabel: "Precio ahora",
+    cafeBasicPriceTitle: "Tour del café Básico hacia Tizapa",
+    cafeExtremePriceTitle: "Tour Extremo del café Tizapa - Juayua",
+    coffeeToursSoonCopy: "Estamos preparando esta experiencia para ofrecerla con el estándar correcto. Pronto estará disponible para reservas.",
+    restaurantTitle: "RESTAURANTE",
+    restaurantCopy: "Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.",
+    vehiclesSectionTitle: "VEHÍCULOS",
+    vehiclesSectionCopy: "Elige la opción ideal para tu grupo y disfruta la ruta con comodidad, aventura y el estilo de conducción que prefieras.",
+    atvVehicleTitle: "Cuatrimotos",
+    singleAtvVehicleCopy: "Ágiles y divertidas para recorrer nuestras rutas.",
+    buggiesVehicleTitle: "Buggies",
+    buggiesVehicleCopy: "Opciones para parejas, familias y grupos de hasta cuatro personas.",
+    utvVehicleCopy: "Mayor espacio y comodidad para grupos de cinco o seis personas.",
+    copyright: "Queda prohibida la reproducción total o parcial sin autorización."
+  },
+  en: {
+    promo: "ADVENTURE DEALS: BOOK YOUR TOUR IN APANECA",
+    location: "Visiting from El Salvador or abroad? Book your personalized experience",
+    locationHelp: "If you have trouble booking any of our tours, call +503 7883 0399 for assistance",
+    reservationLanguages: "Service available in Spanish, English, and French",
+    home: "HOME",
+    reserve: "BOOK NOW",
+    navMenu: "Section menu",
+    navAbout: "About",
+    navDestinations: "Destinations",
+    navPrices: "Prices",
+    navVehicles: "Vehicles",
+    navBoutique: "Boutique",
+    navRestaurant: "Restaurant",
+    navCoffeeBoutique: "Coffee Farm and Culture",
+    navExperiences: "Experiences",
+    navRecommendations: "Recommendations",
+    navTerms: "Terms and Conditions",
+    aboutTitle: "ABOUT US",
+    aboutCopy: "Ratatouille Apaneca Xtreme Tours brings together adventure, nature, coffee culture, and local hospitality through carefully organized experiences for national and international travelers.",
+    boutiqueTitle: "BOUTIQUE",
+    boutiqueCopy: "Find El Salvador souvenirs, traditional keepsakes, and Salvadoran crafts to take home a special memory from your visit.",
+    destinationsTitle: "DESTINATIONS",
+    destinationsCopy: "Explore the best tourist places in Apaneca and enjoy unforgettable adventures surrounded by nature, mountains, and extreme experiences.",
+    lagunaTitle: "Laguna Verde",
+    lagunaCopy: "Laguna Verde in Apaneca is one of those destinations that feels like a postcard. Surrounded by mountains, cloud forest, and refreshing weather, it offers peace, adventure, and a deep connection with nature.",
+    ausolesTitle: "Extreme Route (Ausoles Tour)",
+    ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles, and geothermal energy surrounded by mountains and wild nature.",
+    cafeBasicTitle: "Coffee Route: Basic Coffee Tour to Tizapa",
+    cafeBasicCopy: "An experience to discover Tizapa's coffee-growing environment, its landscapes, and the process behind one of the area's most representative products.",
+    cafeExtremeTitle: "Extreme Coffee Tour Tizapa - Juayua",
+    cafeExtremeCopy: "An adventure and coffee-culture route connecting Tizapa with a premium coffee farm in Juayua, available by buggy or ATV.",
+    comingSoon: "Coming soon",
+    experiencesTitle: "TOURS AND EXPERIENCES",
+    experiencesCopy: "Comments, experiences, and opinions from customers who have already enjoyed our routes. We share real reviews and observations to keep improving.",
+    reviewOne: "A complete adventure with incredible landscapes and excellent service.",
+    reviewTwo: "The Laguna Verde tour was the best part of our trip through Apaneca.",
+    reviewThree: "The winter adventure has a special charm: green landscapes, fresh air, and an unforgettable experience.",
+    reviewFour: "One of the best coffees I have tasted on the Coffee Route; excellent aroma, flavor, and service.",
+    pricesTitle: "PRICES",
+    pricesCopy: "Updated tour rates, with clear options for Laguna Verde and a special promotion for the Extreme Route Ausoles.",
+    lagunaPriceTitle: "Laguna Verde Tour",
+    lagunaDuration: "Tour duration: 1 h 30 min",
+    singleAtv: "Single ATV",
+    doubleAtv: "Double ATV",
+    buggyOne: "Buggy 1 person",
+    buggyTwo: "Buggy 2 people",
+    buggyThree: "Buggy 3 people",
+    buggyFour: "Buggy 4 people",
+    utvFive: "UTV 5 people",
+    lagunaBeforeLabel: "Previous price per person",
+    lagunaNowLabel: "Now from",
+    ausolesPriceTitle: "Extreme Route Ausoles Tour",
+    ausolesDuration: "Tour duration: 3 hours",
+    ausolesPromoName: "Xtreme Adventure Deal",
+    ausolesBeforeLabel: "Previous price",
+    ausolesNowLabel: "Now",
+    cafeBasicPriceTitle: "Basic Coffee Tour to Tizapa",
+    cafeExtremePriceTitle: "Extreme Coffee Tour Tizapa - Juayua",
+    coffeeToursSoonCopy: "We are preparing this experience so it can be offered with the right standard. It will be available for reservations soon.",
+    restaurantTitle: "RESTAURANT",
+    restaurantCopy: "Enjoy a dining experience that perfectly complements your adventure in Apaneca, with options designed for national and international visitors.",
+    vehiclesSectionTitle: "VEHICLES",
+    vehiclesSectionCopy: "Choose the ideal option for your group and enjoy the route with comfort, adventure, and the driving style you prefer.",
+    atvVehicleTitle: "ATVs",
+    singleAtvVehicleCopy: "Agile and fun vehicles for exploring our routes.",
+    buggiesVehicleTitle: "Buggies",
+    buggiesVehicleCopy: "Options for couples, families, and groups of up to four people.",
+    utvVehicleCopy: "More space and comfort for groups of five or six people.",
+    copyright: "Total or partial reproduction without authorization is prohibited."
+  }
+};
+
+const pageTitles = {
+  es: {
+    "acerca.html": "Acerca de | Xtreme Tours APANECA",
+    "boutique.html": "Boutique | Xtreme Tours APANECA",
+    "destinos.html": "Destinos | Xtreme Tours APANECA",
+    "experiencias.html": "Experiencias | Xtreme Tours APANECA",
+    "precios.html": "Precios | Xtreme Tours APANECA",
+    "restaurante.html": "Restaurante | Xtreme Tours APANECA",
+    "vehiculos.html": "Vehículos | Xtreme Tours APANECA"
+  },
+  en: {
+    "acerca.html": "About | Xtreme Tours APANECA",
+    "boutique.html": "Boutique | Xtreme Tours APANECA",
+    "destinos.html": "Destinations | Xtreme Tours APANECA",
+    "experiencias.html": "Experiences | Xtreme Tours APANECA",
+    "precios.html": "Prices | Xtreme Tours APANECA",
+    "restaurante.html": "Restaurant | Xtreme Tours APANECA",
+    "vehiculos.html": "Vehicles | Xtreme Tours APANECA"
+  }
+};
+
+const languageSelect = document.getElementById("languageSelect");
+const applyTranslations = (language) => {
+  const dictionary = translations[language] || translations.es;
+  document.documentElement.lang = language;
+  const pageName = window.location.pathname.split("/").pop() || "index.html";
+  if (pageTitles[language] && pageTitles[language][pageName]) {
+    document.title = pageTitles[language][pageName];
+  }
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    const key = element.dataset.i18n;
+    if (dictionary[key]) element.textContent = dictionary[key];
+  });
+  if (languageSelect) languageSelect.value = language;
+};
+
+const savedLanguage = localStorage.getItem("ratatouilleLanguage") || "es";
+applyTranslations(savedLanguage);
+
+if (languageSelect) {
+  languageSelect.addEventListener("change", (event) => {
+    const selectedLanguage = event.target.value;
+    localStorage.setItem("ratatouilleLanguage", selectedLanguage);
+    applyTranslations(selectedLanguage);
+  });
+}
+
+const menu = document.querySelector(".nav-center-bar");
+if (menu) {
+  const syncMenuState = () => {
+    if (window.innerWidth > 560) menu.setAttribute("open", "");
+  };
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 560) menu.removeAttribute("open");
+    });
+  });
+  window.addEventListener("resize", syncMenuState);
+  syncMenuState();
+}
+  </script>
+
+</body>
+</html>
