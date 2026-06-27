@@ -221,7 +221,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:24px;padding:12px}.nav-center-bar summary{display:flex;align-items:center;justify-content:space-between}.nav-center-bar summary::after{content:"▾";font-size:18px}.nav-center-bar[open] summary::after{content:"▴"}.nav-links{display:none;grid-template-columns:1fr;margin-top:12px}.nav-center-bar[open] .nav-links{display:grid}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -256,8 +256,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     </nav>
   </header>
 
-  <details class="nav-center-bar" aria-label="Secciones" open>
-    <summary data-i18n="navMenu">Menú de secciones</summary>
+  <div class="nav-center-bar" aria-label="Secciones">
     <nav class="nav-links" aria-label="Secciones">
     <a href="acerca.html" data-i18n="navAbout">Acerca de</a>
     <a href="destinos.html" data-i18n="navDestinations">Destinos</a>
@@ -270,7 +269,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
     <a href="terminos.html" data-i18n="navTerms">Términos y condiciones</a>
     </nav>
-  </details>
+  </div>
 
   <div class="home-page" id="reservas">
   <section class="hero">
@@ -440,7 +439,6 @@ const translations = {
     home: "INICIO",
     reserve: "RESERVAR",
     navHome: "Reservas",
-    navMenu: "Menú de secciones",
     navAbout: "Acerca de",
     navDestinations: "Destinos",
     navPrices: "Precios",
@@ -628,7 +626,6 @@ const translations = {
     home: "HOME",
     reserve: "BOOK",
     navHome: "Bookings",
-    navMenu: "Section menu",
     navAbout: "About us",
     navDestinations: "Destinations",
     navPrices: "Prices",
@@ -1531,28 +1528,6 @@ function initExperienceVideo() {
   startPlayback();
 }
 
-function initSectionMenu() {
-  const menu = document.querySelector(".nav-center-bar");
-  if (!menu) return;
-
-  const syncMenuState = () => {
-    if (window.innerWidth <= 560) {
-      menu.removeAttribute("open");
-    } else {
-      menu.setAttribute("open", "");
-    }
-  };
-
-  menu.querySelectorAll("a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 560) menu.removeAttribute("open");
-    });
-  });
-
-  window.addEventListener("resize", syncMenuState);
-  syncMenuState();
-}
-
 document.getElementById("languageSelect").addEventListener("change", (event) => {
   currentLanguage = event.target.value;
   applyTranslations();
@@ -1560,7 +1535,6 @@ document.getElementById("languageSelect").addEventListener("change", (event) => 
 
 initWhatsAppLinks();
 initExperienceVideo();
-initSectionMenu();
 applyTranslations();
 
   </script>
