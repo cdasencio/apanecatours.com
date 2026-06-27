@@ -157,10 +157,13 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .content-section{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:38px;margin-bottom:34px}
 .section-title{font-size:42px;margin-bottom:18px}
 .section-text{color:#b8cadb;line-height:1.8}
-.safety-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
-.safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px;overflow:hidden}
-.safety-card img{display:block;width:100%;max-width:360px;height:180px;object-fit:cover;border-radius:16px;margin:0 0 18px}
-.recommendations-note{margin-top:18px;color:#f3f8ff;background:rgba(255,208,0,.08);border:1px solid rgba(255,208,0,.28);border-radius:16px;padding:14px 16px;font-weight:850;line-height:1.55}
+.recommendations-lead{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;color:#d7e7f4;font-weight:800;line-height:1.65;padding:22px;margin:0 0 24px}
+.recommendations-photo{width:100%;height:260px;object-fit:cover;border-radius:18px;display:block;margin:20px 0}
+.safety-grid{margin-top:28px;display:grid;grid-template-columns:1fr;gap:4px}
+.safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:22px;overflow:hidden;display:grid;align-content:start;gap:12px;min-width:0}
+
+.safety-card-body{display:grid;align-content:start;gap:10px}
+.recommendations-note{display:none}
 .safety-card h3{font-size:22px;margin-bottom:10px}
 .safety-card p{color:#b8cadb;line-height:1.75;font-size:15px}
 .cards{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
@@ -219,7 +222,8 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:24px;padding:12px}.nav-center-bar summary{display:flex;align-items:center;justify-content:space-between}.nav-center-bar summary::after{content:"▾";font-size:18px}.nav-center-bar[open] summary::after{content:"▴"}.nav-links{display:none;grid-template-columns:1fr;margin-top:12px}.nav-center-bar[open] .nav-links{display:grid}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:760px){.safety-grid{grid-template-columns:1fr}.recommendations-photo{height:210px}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -273,19 +277,22 @@ input[type="date"],input[type="time"]{color-scheme:dark}
   <main class="content page-content">
     <section class="content-section" id="recomendaciones">
           <h2 class="section-title" data-i18n="recommendationsTitle">RECOMENDACIONES</h2>
-          <p class="section-text" data-i18n="recommendationsCopy">Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
-          <p class="recommendations-note" data-i18n="termsSectionReminder">Revisa nuestra página de términos y condiciones antes de enviar tu reserva.</p>
           <div class="safety-grid">
             <article class="safety-card">
-              <img src="imagen720.jpg" alt="Entrada oficial de Ratatouille Apaneca">
-              <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
-              <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
+              <div class="safety-card-body">
+                <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
+                <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
+              </div>
             </article>
+            <img class="recommendations-photo" src="imagen720.jpg" alt="Entrada de Ratatouille Apaneca">
             <article class="safety-card">
-              <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
-              <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
+              <div class="safety-card-body">
+                <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
+                <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
+              </div>
             </article>
-</div>
+            <p class="recommendations-lead" data-i18n="recommendationsCopy">Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
+          </div>
         </section>
 
 
