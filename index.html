@@ -42,7 +42,10 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .language-select option{background:#071b2e;color:white}
 .whatsapp-btn{background:#22c55e;color:white!important;padding:12px 20px;border-radius:24px;font-weight:900;text-decoration:none;box-shadow:0 0 22px rgba(34,197,94,.30);transition:.3s}
 .whatsapp-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(34,197,94,.45)}
-.nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
+.nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
+.nav-center-bar summary{display:none;color:#e8f6ff;font-size:15px;font-weight:900;list-style:none;cursor:pointer;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.nav-center-bar summary::-webkit-details-marker{display:none}
+.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
 .nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
 .nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
 .hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('imagen10.jpg');background-size:cover;background-position:center}
@@ -60,8 +63,11 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .booking-tab{background:#071b2e;color:white;border:none;padding:16px 28px;border-radius:18px 18px 0 0;font-size:14px;font-weight:900;letter-spacing:1px}
 .booking-panel{background:linear-gradient(145deg,rgba(7,15,30,.98),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.08);border-radius:36px;padding:34px;box-shadow:0 25px 55px rgba(0,0,0,.45)}
 .booking-title{font-size:30px;font-weight:900;margin-bottom:28px}
-.tour-grid{display:grid;grid-template-columns:1fr 1fr;gap:26px}
+.tour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
 .tour-card{background:#081728;border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:28px;box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.tour-card.is-coming-soon,.card.is-coming-soon,.price-card.coming-soon-price{position:relative;overflow:hidden;border-color:rgba(250,204,21,.34);background:linear-gradient(145deg,rgba(8,23,40,.96),rgba(31,24,10,.92));opacity:.92}
+.tour-card.is-coming-soon::after,.card.is-coming-soon::after,.price-card.coming-soon-price::after{content:"Espéralo pronto / Coming soon";position:absolute;top:18px;right:-46px;transform:rotate(35deg);background:#facc15;color:#08111f;font-size:12px;font-weight:1000;letter-spacing:.5px;text-transform:uppercase;padding:8px 48px;box-shadow:0 12px 24px rgba(0,0,0,.28)}
+.coming-soon-note,.coming-soon-badge{display:inline-flex;width:auto;max-width:100%;margin-top:14px;background:#facc15;color:#08111f;border-radius:18px;padding:10px 14px;font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.3px;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere}
 .tour-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
 .tour-header h3{font-size:30px;font-weight:900;margin-bottom:12px}
 .tour-header p{color:#b8cadb;line-height:1.8;font-size:15px}
@@ -108,6 +114,8 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .summary-warning.is-visible{display:block}
 .terms-box{margin-top:18px;background:#071223;border:1px solid rgba(255,208,0,.24);border-radius:20px;padding:18px;color:#d7e7f4}
 .terms-box h4{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;color:#ffd000;margin-bottom:10px}
+.terms-box h4 a{color:inherit;text-decoration:none}
+.terms-box h4 a:hover,.terms-box h4 a:focus{text-decoration:underline;text-underline-offset:4px}
 .terms-box ul{margin:0 0 14px 18px;color:#b8cadb;line-height:1.65;font-size:13px}
 .vehicle-showcase{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
 .vehicle-showcase-card{overflow:hidden;background:#07182a;border:1px solid rgba(14,165,255,.2);border-radius:8px}
@@ -169,6 +177,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .price-grid-tours{grid-template-columns:1fr;align-items:stretch}
 .price-card-pending{display:grid;gap:14px;align-items:start}
 .price-card-pending>strong{font-size:22px;line-height:1.15}
+.price-card-pending>*{min-width:0}.price-card-pending .section-text{max-width:100%;overflow-wrap:break-word}.price-card.coming-soon-price{padding-top:54px}.price-card.coming-soon-price::after{top:13px;right:-54px;font-size:10px;padding:6px 42px;letter-spacing:.35px}
 #laguna-oferta{scroll-margin-top:110px}
 .price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:15px;line-height:1.35}
 .price-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
@@ -191,17 +200,28 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .restaurant-gallery img{height:210px}
 .video-section{padding:0;overflow:hidden}
 .video-copy{padding:38px 38px 24px}
-.experience-video{display:block;width:min(100%,760px);height:clamp(300px,32vw,430px);margin:0 auto 34px;object-fit:contain;object-position:center;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:18px}
+.experience-video{display:block;width:min(100%,560px);height:clamp(220px,24vw,315px);margin:0 auto 34px;object-fit:contain;object-position:center;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:18px}
 .video-note{margin-top:10px;color:#8ea7c2;font-size:13px;font-weight:700}
+.home-experience-band{background:#020817;color:white;padding:54px 20px 20px}
+.home-experience{max-width:1280px;margin:0 auto;background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:0;padding:26px 26px 32px}
+.home-experience .section-title{color:white;font-size:clamp(28px,3vw,36px);margin-bottom:18px}
+.home-experience .section-text,.home-experience .video-note{display:none}
+.home-experience .experience-video{display:block;width:min(100%,900px);height:clamp(320px,52vw,620px);margin:0 auto;border-radius:0;border:0;background:#000;object-fit:contain;box-shadow:none}
 .review blockquote{color:#d7e7f4;line-height:1.7}
 .review figcaption{margin-top:12px;color:#8ea7c2;font-weight:800}
+
+.legal-content{background:rgba(8,23,40,.72);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:28px;color:#d7e7f4;line-height:1.8}
+.legal-content h3,.legal-content h4{color:#fff;margin:18px 0 8px;font-weight:1000}
+.legal-content h3{font-size:24px;margin-top:0}
+.legal-content ul{margin:10px 0 18px 22px;color:#b8cadb}
+.legal-content p{margin:0 0 14px;color:#c8d9e8}
 .footer{background:#020817;border-top:1px solid rgba(255,255,255,.08);padding:30px 20px;text-align:center;color:#8ea7c2;font-size:13px;line-height:1.7}
 .whatsapp-float{position:fixed;right:24px;bottom:24px;width:64px;height:64px;border-radius:50%;background:#22c55e;color:white;display:flex;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);z-index:200}
 .whatsapp-float svg{width:34px;height:34px}
-@media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{grid-template-columns:repeat(3,1fr);width:calc(100% - 32px);padding:18px}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{grid-template-columns:1fr 1fr;border-radius:24px}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:24px;padding:12px}.nav-center-bar summary{display:flex;align-items:center;justify-content:space-between}.nav-center-bar summary::after{content:"▾";font-size:18px}.nav-center-bar[open] summary::after{content:"▴"}.nav-links{display:none;grid-template-columns:1fr;margin-top:12px}.nav-center-bar[open] .nav-links{display:grid}.nav-center-bar a{font-size:13px;padding:14px 10px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -210,7 +230,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
   <div class="promo-bar" data-i18n="promo">OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA</div>
   <div class="location-bar">
     <span data-i18n="location">¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada</span>
-    <span class="location-help" data-i18n="locationHelp">Si tienes problemas reservando tu tour puedes llamar para reservar al +503 7883 0399</span>
+    <span class="location-help" data-i18n="locationHelp">Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399</span>
   </div>
   <div class="reservation-help-bar">
     <span class="help-main">
@@ -220,14 +240,14 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 
   <header>
     <div class="header-left">
-      <a href="#" class="logo-btn" data-i18n="home">INICIO</a>
+      <a href="index.html#reservas" class="logo-btn" data-i18n="home">INICIO</a>
       <div class="contact-panel" aria-label="Números de contacto">
         <a href="https://wa.me/50378830399" class="contact-link primary" target="_blank" rel="noopener"><span>Reservas</span><strong>+503 7883 0399</strong></a>
         <a href="tel:+50372558194" class="contact-link"><span>Contacto</span><strong>+503 7255 8194</strong></a>
       </div>
     </div>
     <nav class="nav" aria-label="Navegación principal">
-      <a href="#reservas" class="top-reserve-btn" data-i18n="reserve">RESERVAR</a>
+      <a href="index.html#reservar-tour" class="top-reserve-btn" data-i18n="reserve">RESERVAR</a>
       <select class="language-select" id="languageSelect" aria-label="Idioma">
         <option value="es">Español</option>
         <option value="en">English</option>
@@ -236,30 +256,47 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     </nav>
   </header>
 
-  <nav class="nav-center-bar" aria-label="Secciones">
-    <a href="#acerca" data-i18n="navAbout">Acerca de</a>
-    <a href="#destinos" data-i18n="navDestinations">Destinos</a>
-    <a href="#precios" data-i18n="navPrices">Precios</a>
-    <a href="#vehiculos" data-i18n="navVehicles">Vehículos</a>
-    <a href="#boutique" data-i18n="navBoutique">Boutique</a>
-    <a href="#restaurante" data-i18n="navRestaurant">Restaurante</a>
-    <a href="#boutique-cafe" data-i18n="navCoffeeBoutique">Boutique del café</a>
-    <a href="#tours" data-i18n="navExperiences">Experiencias</a>
-    <a href="#recomendaciones" data-i18n="navRecommendations">Recomendaciones</a>
-  </nav>
+  <details class="nav-center-bar" aria-label="Secciones" open>
+    <summary data-i18n="navMenu">Menú de secciones</summary>
+    <nav class="nav-links" aria-label="Secciones">
+    <a href="acerca.html" data-i18n="navAbout">Acerca de</a>
+    <a href="destinos.html" data-i18n="navDestinations">Destinos</a>
+    <a href="precios.html" data-i18n="navPrices">Precios</a>
+    <a href="vehiculos.html" data-i18n="navVehicles">Vehículos</a>
+    <a href="boutique.html" data-i18n="navBoutique">Boutique</a>
+    <a href="restaurante.html" data-i18n="navRestaurant">Restaurante</a>
+    <a href="finca-cultura-cafe.html" data-i18n="navCoffeeBoutique">Finca y cultura del café</a>
+    <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+    <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
+    <a href="terminos.html" data-i18n="navTerms">Términos y condiciones</a>
+    </nav>
+  </details>
 
+  <div class="home-page" id="reservas">
   <section class="hero">
     <div class="hero-content">
       <div class="hero-badge" data-i18n="heroBadge">RATATOUILLE APANECA</div>
       <h1 data-i18n="heroTitle">XTREME TOURS</h1>
       <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.</p>
       <div class="hero-actions">
-        <a href="#laguna-oferta" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
+        <a href="precios.html#laguna-oferta" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
       </div>
     </div>
   </section>
 
-  <section class="booking-wrapper" id="reservas">
+  <section class="home-experience-band" aria-labelledby="homeExperienceTitle">
+    <div class="home-experience">
+      <h2 class="section-title" id="homeExperienceTitle">¡Vive Apaneca al máximo!<br>¡Reserva hoy tu próxima aventura!</h2>
+      <p class="section-text">Conoce la aventura de Ratatouille Apaneca Xtreme Tours.</p>
+      <p class="video-note">El video se reproduce automáticamente sin sonido. Puedes activar el audio desde sus controles.</p>
+      <video class="experience-video" autoplay muted loop playsinline controls preload="metadata" poster="imagen10.jpg">
+        <source src="imagen40.mp4" type="video/mp4">
+        Tu navegador no admite la reproducción de video.
+      </video>
+    </div>
+  </section>
+
+  <section class="booking-wrapper" id="reservar-tour">
     <div class="booking-top">
       <button class="booking-tab" type="button" data-i18n="tours">TOURS</button>
     </div>
@@ -268,6 +305,8 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <div class="tour-grid" id="bookingGrid"></div>
     </div>
   </section>
+
+  </div>
 
   <section class="feature-strip" aria-label="Beneficios">
     <div class="feature">
@@ -291,295 +330,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     </div>
   </section>
 
-  <main class="content">
-    <section class="content-section" id="acerca">
-      <h2 class="section-title" data-i18n="aboutTitle">ACERCA DE NOSOTROS</h2>
-      <p class="section-text" data-i18n="aboutCopy">Ratatouille Apaneca Xtreme Tours reúne aventura, naturaleza, cultura del café y hospitalidad local en experiencias cuidadosamente organizadas para viajeros nacionales e internacionales.</p>
-      <div class="image-gallery" aria-label="Galería acerca de Ratatouille Apaneca">
-        <img src="imagen20.jpg" alt="Visitante y miembro del equipo Ratatouille" loading="lazy">
-        <img src="imagen30.jpg" alt="Visitantes con el equipo de Ratatouille Apaneca" loading="lazy">
-        <img src="imagen31.jpg" alt="Visitantes en la boutique Ratatouille" loading="lazy">
-        <img src="imagen32.jpg" alt="Experiencia de visitantes en la boutique" loading="lazy">
-        <img src="imagen33.jpg" alt="Visitantes y atención en Ratatouille Apaneca" loading="lazy">
-      </div>
-    </section>
 
-    <section class="content-section video-section" aria-labelledby="experienceVideoTitle">
-      <div class="video-copy">
-        <h2 class="section-title" id="experienceVideoTitle">VIVE LA EXPERIENCIA</h2>
-        <p class="section-text">Conoce la aventura de Ratatouille Apaneca Xtreme Tours.</p>
-        <p class="video-note">El video se reproduce automáticamente sin sonido. Puedes activar el audio desde sus controles.</p>
-      </div>
-      <video class="experience-video" autoplay muted loop playsinline controls preload="metadata" poster="imagen10.jpg">
-        <source src="imagen40.mp4" type="video/mp4">
-        Tu navegador no admite la reproducción de video.
-      </video>
-    </section>
-
-    <section class="content-section" id="destinos">
-      <h2 class="section-title" data-i18n="destinationsTitle">DESTINOS</h2>
-      <p class="section-text" data-i18n="destinationsCopy">Explora los mejores lugares turísticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaña y experiencias extremas.</p>
-      <div class="cards">
-        <article class="card">
-          <img src="imagen50.jpg" alt="Cuatrimoto junto a Laguna Verde">
-          <div class="card-content">
-            <h3>Laguna Verde</h3>
-            <p data-i18n="lagunaCopy">La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montañas, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexión con la naturaleza.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="imagen60.jpg" alt="Ruta Extrema de Xtreme Tours">
-          <div class="card-content">
-            <h3 data-i18n="ausolesTitle">Ruta Extrema (Ausoles Tour)</h3>
-            <p data-i18n="ausolesCopy">Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="imagen70.jpg" alt="Plantas de café en Tizapa">
-          <div class="card-content">
-            <h3 data-i18n="cafeBasicTitle">Ruta del café: Tour del café Básico hacia Tizapa</h3>
-            <p data-i18n="cafeBasicCopy">Una experiencia para conocer el entorno cafetalero de Tizapa, sus paisajes y el proceso que da vida a uno de los productos más representativos de la zona.</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="imagen80.jpg" alt="Paisaje de la Ruta del café">
-          <div class="card-content">
-            <h3 data-i18n="cafeExtremeTitle">Tour Extremo del café Tizapa - Juayua</h3>
-            <p data-i18n="cafeExtremeCopy">Una ruta de aventura y cultura cafetalera que conecta Tizapa con una finca de café premium en Juayua, disponible en buggy o cuatrimoto.</p>
-          </div>
-        </article>
-      </div>
-                        <h3 class="destination-gallery-title">Laguna Verde</h3>
-            <div class="image-gallery" aria-label="Galería de Laguna Verde">
-        <img src="imagen90.jpg" alt="Salida hacia Laguna Verde" loading="lazy">
-        <img src="imagen110.jpg" alt="Buggy en Laguna Verde" loading="lazy">
-        <img src="imagen120.jpg" alt="Familia disfrutando Laguna Verde en UTV" loading="lazy">
-        <img src="imagen130.jpg" alt="Visitantes en UTV en Laguna Verde" loading="lazy">
-        <img src="imagen140.jpg" alt="Recorrido en UTV por Laguna Verde" loading="lazy">
-        <img src="imagen150.jpg" alt="Cuatrimoto durante el recorrido natural" loading="lazy">
-      </div>
-
-      <h3 class="destination-gallery-title">Ruta Extrema (Ausoles Tour)</h3>
-            <div class="image-gallery" aria-label="Galería de Ruta Extrema (Ausoles Tour)">
-        <img src="imagen160.jpg" alt="Salida de cuatrimotos desde Ratatouille" loading="lazy">
-        <img src="imagen170.jpg" alt="Pareja en cuatrimoto doble" loading="lazy">
-        <img src="imagen180.jpg" alt="Flota de cuatrimotos Xtreme Tours" loading="lazy">
-        <img src="imagen190.jpg" alt="Visitantes en UTV frente a Ratatouille" loading="lazy">
-        <img src="imagen200.jpg" alt="Buggy rojo listo para la aventura" loading="lazy">
-        <img src="imagen210.jpg" alt="Grupo iniciando recorrido en buggy" loading="lazy">
-      </div>
-
-      <h3 class="destination-gallery-title" data-i18n="cafeBasicTitle">Ruta del café: Tour del café Básico hacia Tizapa</h3>
-      <div class="image-gallery single-image" aria-label="Galería de Tour del café Básico hacia Tizapa">
-        <img src="imagen220.jpg" alt="Cultivo de café en Tizapa" loading="lazy">
-      </div>
-      <h3 class="destination-gallery-title" data-i18n="cafeExtremeTitle">Tour Extremo del café Tizapa - Juayua</h3>
-      <div class="image-gallery single-image" aria-label="Galería de Tour Extremo del café Tizapa - Juayua">
-        <img src="imagen240.jpg" alt="Paisaje cafetalero entre Tizapa y Juayúa" loading="lazy">
-      </div>
-    </section>
-
-    <section class="content-section" id="precios">
-      <h2 class="section-title" data-i18n="pricesTitle">PRECIOS</h2>
-      <p class="section-text" data-i18n="pricesCopy">Tarifas actualizadas por tour, con opciones claras para Laguna Verde y una promoción especial para Ruta Extrema Ausoles.</p>
-      <div class="price-grid price-grid-tours">
-        <div class="price-card price-card-pending" id="laguna-oferta">
-          <strong data-i18n="lagunaPriceTitle">Tour Laguna Verde</strong>
-          <em class="price-duration" data-i18n="lagunaDuration">Duración del tour: 1 h 30 min</em>
-          <ul class="price-list">
-            <li><span data-i18n="singleAtv">Cuatrimoto sencilla</span><b>$40</b></li>
-            <li><span data-i18n="doubleAtv">Cuatrimoto doble</span><b>$60</b></li>
-            <li><span data-i18n="buggyOne">Buggy 1 persona</span><b>$70</b></li>
-            <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$75</b></li>
-            <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$80</b></li>
-            <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$85</b></li>
-            <li><span data-i18n="utvFive">UTV 5 personas</span><b>$95</b></li>
-          </ul>
-          <div class="promo-price">
-            <div class="price-sale-box">
-              <small data-i18n="lagunaBeforeLabel">Precio anterior por persona</small>
-              <del>$100</del>
-            </div>
-            <div class="price-sale-box">
-              <small data-i18n="lagunaNowLabel">Precio ahora desde</small>
-              <strong>$40</strong>
-            </div>
-          </div>
-        </div>
-        <div class="price-card price-card-pending">
-          <strong data-i18n="ausolesPriceTitle">Tour Ruta Extrema Ausoles</strong>
-          <em class="price-duration" data-i18n="ausolesDuration">Duración del tour: 3 horas</em>
-          <div class="promo-price">
-            <mark class="promo-badge" data-i18n="ausolesPromoName">Xtreme Adventure Deal</mark>
-            <div class="price-sale-box">
-              <small data-i18n="ausolesBeforeLabel">Precio anterior</small>
-              <del>$189.99</del>
-            </div>
-            <div class="price-sale-box">
-              <small data-i18n="ausolesNowLabel">Precio ahora</small>
-              <strong>$129.99</strong>
-            </div>
-          </div>
-        </div>
-        <div class="price-card price-card-pending">
-          <strong data-i18n="cafeBasicPriceTitle">Tour del café Básico hacia Tizapa</strong>
-          <p class="section-text" data-i18n="cafeBasicEntrance">Estos precios incluyen el cargo de entrada de $5 USD por persona a la finca del café.</p>
-          <ul class="price-list">
-            <li><span data-i18n="buggyOne">Buggy 1 persona</span><b>$70</b></li>
-            <li><span data-i18n="buggyTwo">Buggy 2 personas</span><b>$80</b></li>
-            <li><span data-i18n="buggyThree">Buggy 3 personas</span><b>$95</b></li>
-            <li><span data-i18n="buggyFour">Buggy 4 personas</span><b>$105</b></li>
-            <li><span data-i18n="utvFive">UTV 5 personas</span><b>$115</b></li>
-            <li><span data-i18n="utvSix">UTV 6 personas</span><b>$125</b></li>
-          </ul>
-        </div>
-        <div class="price-card price-card-pending">
-          <strong data-i18n="cafeExtremePriceTitle">Tour Extremo del café Tizapa - Juayua</strong>
-          <p class="section-text" data-i18n="cafeExtremeEntrance">Este precio incluye el cargo de entrada de $10 USD por persona a la finca de café premium en Juayua.</p>
-          <div class="promo-price">
-            <mark class="promo-badge" data-i18n="cafeExtremePromoName">Coffee Xtreme Deal</mark>
-            <div class="price-sale-box">
-              <small data-i18n="cafeExtremeBeforeLabel">Precio anterior por persona</small>
-              <del>$189.99</del>
-            </div>
-            <div class="price-sale-box">
-              <small data-i18n="cafeExtremeNowLabel">Precio ahora por persona</small>
-              <strong>$129.99</strong>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="content-section" id="vehiculos">
-      <h2 class="section-title" data-i18n="vehiclesSectionTitle">VEHÍCULOS</h2>
-      <p class="section-text" data-i18n="vehiclesSectionCopy">Elige la opción ideal para tu grupo y disfruta la ruta con comodidad, aventura y el estilo de conducción que prefieras.</p>
-      <div class="vehicle-showcase">
-        <article class="vehicle-showcase-card">
-          <img src="imagen280.jpg" alt="Cuatrimotos Xtreme Tours">
-          <h3 data-i18n="singleAtv">Cuatrimotos</h3>
-          <p data-i18n="singleAtvVehicleCopy">Ágiles y divertidas para recorrer nuestras rutas.</p>
-        </article>
-        <article class="vehicle-showcase-card">
-          <img src="imagen290.jpg" alt="Buggy para grupos">
-          <h3 data-i18n="buggiesVehicleTitle">Buggies</h3>
-          <p data-i18n="buggiesVehicleCopy">Opciones para parejas, familias y grupos de hasta cuatro personas.</p>
-        </article>
-        <article class="vehicle-showcase-card">
-          <img src="imagen300.jpg" alt="UTV 4x4">
-          <h3>UTV 4x4</h3>
-          <p data-i18n="utvVehicleCopy">Mayor espacio y comodidad para grupos de cinco o seis personas.</p>
-        </article>
-      </div>
-    </section>
-
-    <section class="content-section" id="boutique">
-      <h2 class="section-title" data-i18n="boutiqueTitle">BOUTIQUE</h2>
-      <p class="section-text" data-i18n="boutiqueCopy">Encuentra souvenirs de El Salvador, recuerdos típicos y artesanías salvadoreñas para llevar contigo un detalle especial de tu visita.</p>
-            <div class="image-gallery" aria-label="Galería de boutique">
-        <img src="imagen309.jpg" alt="Visitantes en la boutique Ratatouille" loading="lazy">
-        <img src="imagen310.jpg" alt="Casitas decorativas de recuerdo" loading="lazy">
-        <img src="imagen320.jpg" alt="Bolsos artesanales en boutique" loading="lazy">
-        <img src="imagen330.jpg" alt="Decoración artesanal de frutas" loading="lazy">
-        <img src="imagen340.jpg" alt="Termo decorativo en boutique" loading="lazy">
-        <img src="imagen350.jpg" alt="Vaso decorativo en boutique" loading="lazy">
-        <img src="imagen360.jpg" alt="Recuerdos coloridos de El Salvador" loading="lazy">
-        <img src="imagen370.jpg" alt="Cartera artesanal salvadoreña" loading="lazy">
-        <img src="imagen380.jpg" alt="Tazas de recuerdo salvadoreñas" loading="lazy">
-        <img src="imagen390.jpg" alt="Decoración artesanal de frutas en tienda" loading="lazy">
-        <img src="imagen400.jpg" alt="Artesanías de madera" loading="lazy">
-        <img src="imagen410.jpg" alt="Termo de El Salvador" loading="lazy">
-        <img src="imagen420.jpg" alt="Cliente eligiendo recuerdos en boutique" loading="lazy">
-      </div>
-    </section>
-
-    <section class="content-section" id="restaurante">
-      <h2 class="section-title" data-i18n="restaurantTitle">RESTAURANTE</h2>
-      <p class="section-text" data-i18n="restaurantCopy">Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.</p>
-                        <div class="image-gallery restaurant-gallery" aria-label="Galería de restaurante">
-        <img src="imagen430.jpg" alt="Logo del restaurante Ratatouille" loading="lazy">
-        <img src="imagen440.jpg" alt="Entrada de Ratatouille al atardecer" loading="lazy">
-        <img src="imagen450.jpg" alt="Jardín del restaurante Ratatouille por la noche" loading="lazy">
-        <img src="imagen460.jpg" alt="Ambiente nocturno del restaurante" loading="lazy">
-        <img src="imagen470.jpg" alt="Familias disfrutando el restaurante" loading="lazy">
-        <img src="imagen480.jpg" alt="Fachada de Ratatouille iluminada" loading="lazy">
-        <img src="imagen490.jpg" alt="Ratatouille Apaneca por la noche" loading="lazy">
-        <img src="imagen500.jpg" alt="Terraza y jardín del restaurante" loading="lazy">
-        <img src="imagen510.jpg" alt="Salón con visitantes en Ratatouille" loading="lazy">
-        <img src="imagen520.jpg" alt="Espacio de café Ratatouille" loading="lazy">
-        <img src="imagen530.jpg" alt="Café servido en el jardín" loading="lazy">
-        <img src="imagen540.jpg" alt="Preparación de café de especialidad" loading="lazy">
-        <img src="imagen550.jpg" alt="Taza de café en Ratatouille" loading="lazy">
-        <img src="imagen560.jpg" alt="Pupusas del restaurante Ratatouille" loading="lazy">
-        <img src="imagen570.jpg" alt="Cliente con pizza artesanal" loading="lazy">
-        <img src="imagen580.jpg" alt="Nachos especiales de Ratatouille" loading="lazy">
-        <img src="imagen590.jpg" alt="Nachos con frijoles y vegetales" loading="lazy">
-        <img src="imagen600.jpg" alt="Alitas con papas fritas" loading="lazy">
-        <img src="imagen610.jpg" alt="Visitante disfrutando café en Ratatouille" loading="lazy">
-      </div>
-    </section>
-
-    <section class="content-section" id="boutique-cafe">
-      <h2 class="section-title" data-i18n="coffeeBoutiqueTitle">BOUTIQUE DEL CAFÉ</h2>
-      <p class="section-text" data-i18n="coffeeBoutiqueCopy">Descubre recuerdos, utensilios y detalles inspirados en la tradición cafetalera de Apaneca.</p>
-      <div class="image-gallery" aria-label="Galería de boutique del café">
-        <img src="imagen620.jpg" alt="Plantas de café" loading="lazy">
-      </div>
-    </section>
-
-    <section class="content-section" id="tours">
-      <h2 class="section-title" data-i18n="experiencesTitle">TOURS Y EXPERIENCIAS</h2>
-      <p class="section-text" data-i18n="experiencesCopy">Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.</p>
-                  <div class="image-gallery" aria-label="Galería de experiencias">
-        <img src="imagen650.jpg" alt="Grupo de visitantes junto a buggies en Laguna Verde" loading="lazy">
-        <img src="imagen660.jpg" alt="Familia disfrutando buggy en Laguna Verde" loading="lazy">
-        <img src="imagen670.jpg" alt="Visitantes en UTV durante la experiencia" loading="lazy">
-        <img src="imagen680.jpg" alt="Clientes posando en buggy rojo" loading="lazy">
-        <img src="imagen690.jpg" alt="Clientes con lentes de tour en buggy rojo" loading="lazy">
-        <img src="imagen700.jpg" alt="Visitantes sonriendo en buggy" loading="lazy">
-        <img src="imagen710.jpg" alt="Pareja disfrutando un buggy Xtreme" loading="lazy">
-      </div>      <div class="review-grid">
-        <figure class="review">
-          <blockquote data-i18n="reviewOne">Una aventura completa, con paisajes increíbles y excelente atención.</blockquote>
-          <figcaption>María G.</figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote data-i18n="reviewTwo">El tour a Laguna Verde fue lo mejor de nuestro viaje por Apaneca.</blockquote>
-          <figcaption>Carlos R.</figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote data-i18n="reviewThree">La aventura en invierno tiene un encanto especial: paisajes verdes, aire fresco y una experiencia inolvidable.</blockquote>
-          <figcaption>Ana M.</figcaption>
-        </figure>
-        <figure class="review">
-          <blockquote data-i18n="reviewFour">Uno de los mejores cafés que he probado en la Ruta del café; excelente aroma, sabor y atención.</blockquote>
-          <figcaption>Kevin C.</figcaption>
-        </figure>
-      </div>
-    </section>
-    
-    <section class="content-section" id="recomendaciones">
-      <h2 class="section-title" data-i18n="recommendationsTitle">RECOMENDACIONES Y TÉRMINOS</h2>
-      <p class="section-text" data-i18n="recommendationsCopy">Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.</p>
-      <p class="recommendations-note" data-i18n="termsSectionReminder">Revisa los términos y condiciones al final de esta sección antes de enviar tu reserva.</p>
-      <div class="safety-grid">
-        <article class="safety-card">
-          <img src="imagen720.jpg" alt="Entrada oficial de Ratatouille Apaneca">
-          <h3 data-i18n="localVisitTitle">Preséntate estrictamente en nuestro local</h3>
-          <p data-i18n="localVisitCopy">Para recibir tu tour, indicaciones y atención oficial, preséntate directamente en nuestro local de Ratatouille Apaneca.</p>
-        </article>
-        <article class="safety-card">
-          <h3 data-i18n="avoidScamTitle">Evita ser estafado</h3>
-          <p data-i18n="avoidScamCopy">Comunícate solo con personal autorizado de nuestro local. No aceptes información ni indicaciones de personas externas que te quieran promocionar tours.</p>
-        </article>
-        <article class="safety-card">
-          <h3 data-i18n="termsTitle">Términos y condiciones</h3>
-          <p data-i18n="termsTourSelection">Selecciona cuidadosamente el tour correcto antes de enviar la orden. Si eliges un tour equivocado, comunícate de inmediato con personal autorizado para corregirlo.</p>
-          <p data-i18n="termsContact">No aceptes información ni indicaciones de personas externas que te quieran promocionar tours; comunícate solo con personal autorizado de nuestro local.</p>
-        </article>
-      </div>
-    </section>
-  </main>
 
   <footer class="footer">
     <p>© 2025 RATATOUILLE APANECA XTREME TOURS – Tours, Aventuras y Experiencias. Todos los derechos reservados.</p>
@@ -608,12 +359,12 @@ const AUSOLES_PROMO_PRICE = 129.99;
 const COFFEE_EXTREME_PRICE = 129.99;
 
 const vehicleOptions = [
-  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 40, cafeBasicPrice: null, commission: 30 },
-  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 60, cafeBasicPrice: null, commission: 25 },
-  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 70, cafeBasicPrice: 70, commission: 20 },
-  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 75, cafeBasicPrice: 80, commission: 20 },
-  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 80, cafeBasicPrice: 95, commission: 20 },
-  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 85, cafeBasicPrice: 105, commission: 20 },
+  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 45, cafeBasicPrice: null, commission: 30 },
+  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 65, cafeBasicPrice: null, commission: 25 },
+  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 75, cafeBasicPrice: 70, commission: 20 },
+  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 80, cafeBasicPrice: 80, commission: 20 },
+  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 85, cafeBasicPrice: 95, commission: 20 },
+  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 90, cafeBasicPrice: 105, commission: 20 },
   { id: "utv5", esName: "UTV", enName: "UTV", capacity: 5, maxUnits: 4, lagunaPrice: 95, cafeBasicPrice: 115, commission: 20 },
   { id: "utv6", esName: "UTV", enName: "UTV", capacity: 6, maxUnits: 4, lagunaPrice: null, cafeBasicPrice: 125, commission: 20 }
 ];
@@ -645,26 +396,28 @@ const tours = [
   },
   {
     id: "cafe-basico",
+    comingSoon: true,
     icon: "",
     es: {
       name: "Ruta del café: Tour del café Básico hacia Tizapa",
-      description: "Recorrido por la cultura cafetalera de Tizapa. Los precios incluyen el cargo de entrada de $5 USD por persona a la finca del café."
+      description: "Espéralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estándar correcto."
     },
     en: {
       name: "Coffee Route: Basic Coffee Tour to Tizapa",
-      description: "A journey through Tizapa's coffee culture. Prices include the $5 USD per-person admission to the coffee farm."
+      description: "Coming soon. We are preparing this experience so it can be offered with the right standard."
     }
   },
   {
     id: "cafe-extremo",
+    comingSoon: true,
     icon: "",
     es: {
       name: "Tour Extremo del café Tizapa - Juayúa",
-      description: "Experiencia extendida entre Tizapa y una finca de café premium en Juayúa. Precio promocional de $129.99 por persona, sea en buggy o cuatrimoto, con entrada de $10 USD incluida."
+      description: "Espéralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estándar correcto."
     },
     en: {
       name: "Extreme Coffee Tour Tizapa - Juayua",
-      description: "An extended experience from Tizapa to a premium coffee farm in Juayua. Promotional price of $129.99 per person by buggy or ATV, including the $10 USD admission."
+      description: "Coming soon. We are preparing this experience so it can be offered with the right standard."
     }
   }
 ];
@@ -680,25 +433,28 @@ const translations = {
   es: {
     promo: "OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA",
     location: "¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada",
-    locationHelp: "Si tienes problemas reservando tu tour puedes llamar para reservar al +503 7883 0399",
+    locationHelp: "Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399",
     reservationHelp: "Reservas por llamada:",
     reservationLanguages: "Atención en español, inglés y francés",
     termsReminder: "Términos y condiciones al final del sitio.",
     home: "INICIO",
     reserve: "RESERVAR",
+    navHome: "Reservas",
+    navMenu: "Menú de secciones",
     navAbout: "Acerca de",
     navDestinations: "Destinos",
     navPrices: "Precios",
     navVehicles: "Vehículos",
-    navRecommendations: "Recomendaciones y términos",
+    navRecommendations: "Recomendaciones",
+    navTerms: "Términos y condiciones",
     navBoutique: "Boutique",
     navRestaurant: "Restaurante",
-    navCoffeeBoutique: "Boutique del café",
+    navCoffeeBoutique: "Finca y cultura del café",
     navExperiences: "Experiencias",
     heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
-    heroCopy: "Reserva tu experiencia en Laguna Verde, Ausoles o Ruta del café y vive Apaneca en buggy, cuatrimoto o una ruta cafetalera única.",
+    heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.",
     heroCta: "VER OFERTA",
     tours: "TOURS",
     bookingTitle: "Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acá abajo.",
@@ -776,11 +532,11 @@ const translations = {
     ausolesTitle: "Ruta Extrema (Ausoles Tour)",
     ausolesCopy: "Descubre un fenómeno natural impresionante con vapor, fumarolas y energía geotérmica rodeada de montañas y naturaleza extrema.",
     cafeBasicTitle: "Ruta del café: Tour del café Básico hacia Tizapa",
-    cafeBasicCopy: "Una experiencia para conocer el entorno cafetalero de Tizapa, sus paisajes y el proceso que da vida a uno de los productos más representativos de la zona.",
+    cafeBasicCopy: "Espéralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estándar correcto.",
     cafeExtremeTitle: "Tour Extremo del café Tizapa - Juayúa",
-    cafeExtremeCopy: "Una ruta de aventura y cultura cafetalera que conecta Tizapa con una finca de café premium en Juayúa, disponible en buggy o cuatrimoto.",
+    cafeExtremeCopy: "Espéralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estándar correcto.",
     pricesTitle: "PRECIOS",
-    pricesCopy: "Tarifas actualizadas para Laguna Verde, Ruta Extrema Ausoles, Tour del café Básico hacia Tizapa y Tour Extremo del café Tizapa - Juayúa.",
+    pricesCopy: "Tarifas actualizadas para Laguna Verde y Ruta Extrema Ausoles. Los tours del café estarán disponibles próximamente.",
     lagunaPriceTitle: "Tour Laguna Verde",
     ausolesPriceTitle: "Ruta Extrema (Ausoles Tour)",
     cafeBasicPriceTitle: "Tour del café Básico hacia Tizapa",
@@ -814,7 +570,7 @@ const translations = {
     buggiesVehicleTitle: "Buggies",
     buggiesVehicleCopy: "Opciones para parejas, familias y grupos de hasta cuatro personas.",
     utvVehicleCopy: "Mayor espacio y comodidad para grupos de cinco o seis personas.",
-    recommendationsTitle: "RECOMENDACIONES Y TÉRMINOS",
+    recommendationsTitle: "RECOMENDACIONES",
     recommendationsCopy: "Llevar ropa cómoda y reservar con anticipación. Se recomienda llegar unos minutos antes de la hora seleccionada.",
     termsSectionReminder: "Revisa los términos y condiciones al final de esta sección antes de enviar tu reserva.",
     localVisitTitle: "Preséntate estrictamente en nuestro local",
@@ -827,8 +583,10 @@ const translations = {
     accessoriesCopy: "Artesanías y artículos tradicionales salvadoreños para visitantes.",
     restaurantTitle: "RESTAURANTE",
     restaurantCopy: "Disfruta una experiencia gastronómica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.",
-    coffeeBoutiqueTitle: "BOUTIQUE DEL CAFÉ",
-    coffeeBoutiqueCopy: "Descubre recuerdos, utensilios y detalles inspirados en la tradición cafetalera de Apaneca.",
+    coffeeBoutiqueTitle: "FINCA Y CULTURA DEL CAFÉ",
+    coffeeBoutiqueCopy: "Conoce la finca, los cultivos y la cultura del café en Apaneca a través de imágenes que muestran el entorno natural, las plantas y el vivero cafetalero.",
+    comingSoon: "Espéralo pronto / Coming soon",
+    coffeeToursSoonCopy: "Estamos preparando esta experiencia para ofrecerla con el estándar correcto. Pronto estará disponible para reservas.",
     experiencesTitle: "TOURS Y EXPERIENCIAS",
     experiencesCopy: "Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseñas y observaciones reales para seguir mejorando.",
     reviewOne: "Una aventura completa, con paisajes increíbles y excelente atención.",
@@ -863,25 +621,28 @@ const translations = {
   en: {
     promo: "ADVENTURE DEALS: BOOK YOUR TOUR IN APANECA",
     location: "Visiting from El Salvador or abroad? Book your personalized experience",
-    locationHelp: "If you have trouble booking your tour, you can call to reserve at +503 7883 0399",
+    locationHelp: "If you have trouble booking any of our tours, you can call to reserve at +503 7883 0399",
     reservationHelp: "Book by phone:",
     reservationLanguages: "Assistance in Spanish, English, and French",
     termsReminder: "Terms and conditions at the end of this site.",
     home: "HOME",
     reserve: "BOOK",
+    navHome: "Bookings",
+    navMenu: "Section menu",
     navAbout: "About us",
     navDestinations: "Destinations",
     navPrices: "Prices",
     navVehicles: "Vehicles",
-    navRecommendations: "Tips and terms",
+    navRecommendations: "Recommendations",
+    navTerms: "Terms and Conditions",
     navBoutique: "Boutique",
     navRestaurant: "Restaurant",
-    navCoffeeBoutique: "Coffee Boutique",
+    navCoffeeBoutique: "Coffee farm and culture",
     navExperiences: "Experiences",
     heroSale: "",
     heroBadge: "RATATOUILLE APANECA",
     heroTitle: "XTREME TOURS",
-    heroCopy: "Book your Laguna Verde, Ausoles, or Coffee Route experience and discover Apaneca by buggy, ATV, or a unique coffee route.",
+    heroCopy: "Book your Laguna Verde or Ausoles experience and discover Apaneca by buggy or ATV.",
     heroCta: "SEE OFFER",
     tours: "TOURS",
     bookingTitle: "Please carefully select the correct tour from the available destinations below.",
@@ -959,11 +720,11 @@ const translations = {
     ausolesTitle: "Extreme Route (Ausoles Tour)",
     ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles and geothermal energy surrounded by mountains and extreme nature.",
     cafeBasicTitle: "Coffee Route: Basic Coffee Tour to Tizapa",
-    cafeBasicCopy: "An experience created to discover Tizapa's coffee landscape, scenery, and the process behind one of the region's most representative products.",
+    cafeBasicCopy: "Coming soon. We are preparing this experience so it can be offered with the right standard.",
     cafeExtremeTitle: "Extreme Coffee Tour Tizapa - Juayua",
-    cafeExtremeCopy: "An adventure and coffee culture route connecting Tizapa with a premium coffee farm in Juayua, available by buggy or ATV.",
+    cafeExtremeCopy: "Coming soon. We are preparing this experience so it can be offered with the right standard.",
     pricesTitle: "PRICES",
-    pricesCopy: "Updated rates for Laguna Verde, Extreme Route Ausoles, the Basic Coffee Tour to Tizapa, and the Extreme Coffee Tour Tizapa - Juayua.",
+    pricesCopy: "Updated rates for Laguna Verde and Extreme Route Ausoles. Coffee tours will be available soon.",
     lagunaPriceTitle: "Laguna Verde Tour",
     ausolesPriceTitle: "Extreme Route (Ausoles Tour)",
     cafeBasicPriceTitle: "Basic Coffee Tour to Tizapa",
@@ -997,9 +758,9 @@ const translations = {
     buggiesVehicleTitle: "Buggies",
     buggiesVehicleCopy: "Options for couples, families, and groups of up to four people.",
     utvVehicleCopy: "More room and comfort for groups of five or six people.",
-    recommendationsTitle: "TIPS AND TERMS",
+    recommendationsTitle: "RECOMMENDATIONS",
     recommendationsCopy: "Wear comfortable clothes and book in advance. Arriving a few minutes before your selected time is recommended.",
-    termsSectionReminder: "Review the terms and conditions at the end of this section before sending your booking.",
+    termsSectionReminder: "Review our Terms and Conditions page before submitting your reservation.",
     localVisitTitle: "Come directly to our official location",
     localVisitCopy: "To receive your tour, instructions, and official assistance, please come directly to our Ratatouille Apaneca location.",
     avoidScamTitle: "Avoid being scammed",
@@ -1010,8 +771,10 @@ const translations = {
     accessoriesCopy: "Salvadoran crafts and traditional items for visitors.",
     restaurantTitle: "RESTAURANT",
     restaurantCopy: "Enjoy a food experience to complement your adventure in Apaneca, with options for local and international visitors.",
-    coffeeBoutiqueTitle: "COFFEE BOUTIQUE",
-    coffeeBoutiqueCopy: "Discover keepsakes, utensils, and details inspired by Apaneca's coffee tradition.",
+    coffeeBoutiqueTitle: "COFFEE FARM AND CULTURE",
+    coffeeBoutiqueCopy: "Discover the farm, the crops, and Apaneca coffee culture through images of the natural setting, the plants, and the coffee nursery.",
+    comingSoon: "Coming soon",
+    coffeeToursSoonCopy: "We are preparing this experience so it can be offered with the right standard. It will be available for bookings soon.",
     experiencesTitle: "TOURS AND EXPERIENCES",
     experiencesCopy: "Comments, experiences and opinions from customers who already lived our routes. We show real reviews and observations to keep improving.",
     reviewOne: "A complete adventure, with incredible views and excellent attention.",
@@ -1116,6 +879,18 @@ function buildBookingCards() {
   const grid = document.getElementById("bookingGrid");
   grid.innerHTML = tours.map((tour) => {
     const detail = tour[currentLanguage];
+    if (tour.comingSoon) {
+      return `
+      <article class="tour-card is-coming-soon" data-tour-id="${tour.id}" aria-disabled="true">
+        <div class="tour-header">
+          <h3>${tour.icon ? `${tour.icon} ` : ""}${detail.name}</h3>
+          <p>${detail.description}</p>
+          <span class="coming-soon-badge">${t("comingSoon")}</span>
+        </div>
+        <p class="section-text">${t("coffeeToursSoonCopy")}</p>
+      </article>
+    `;
+    }
     return `
       <form class="tour-card" data-tour-id="${tour.id}">
         <div class="tour-header">
@@ -1229,7 +1004,7 @@ function buildBookingCards() {
           </div>
         </div>
         <div class="terms-box">
-          <h4>${t("termsTitle")}</h4>
+          <h4><a href="terminos.html#terminos">${t("termsTitle")}</a></h4>
           <ul>
             <li>${t("termsTourSelection")}</li>
             <li>${t("termsContact")}</li>
@@ -1245,7 +1020,7 @@ function buildBookingCards() {
     `;
   }).join("");
 
-  grid.querySelectorAll(".tour-card").forEach((form) => {
+  grid.querySelectorAll("form.tour-card").forEach((form) => {
     form.addEventListener("change", () => updateSummary(form));
     form.addEventListener("input", () => updateSummary(form));
     form.addEventListener("submit", handleBookingSubmit);
@@ -1756,6 +1531,28 @@ function initExperienceVideo() {
   startPlayback();
 }
 
+function initSectionMenu() {
+  const menu = document.querySelector(".nav-center-bar");
+  if (!menu) return;
+
+  const syncMenuState = () => {
+    if (window.innerWidth <= 560) {
+      menu.removeAttribute("open");
+    } else {
+      menu.setAttribute("open", "");
+    }
+  };
+
+  menu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 560) menu.removeAttribute("open");
+    });
+  });
+
+  window.addEventListener("resize", syncMenuState);
+  syncMenuState();
+}
+
 document.getElementById("languageSelect").addEventListener("change", (event) => {
   currentLanguage = event.target.value;
   applyTranslations();
@@ -1763,6 +1560,7 @@ document.getElementById("languageSelect").addEventListener("change", (event) => 
 
 initWhatsAppLinks();
 initExperienceVideo();
+initSectionMenu();
 applyTranslations();
 
   </script>
