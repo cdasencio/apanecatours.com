@@ -96,9 +96,12 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .hero-badge{display:block;margin-top:22px;margin-bottom:14px;color:#fff;font-size:15px;font-weight:900;letter-spacing:3px;text-transform:uppercase;text-shadow:0 8px 24px rgba(0,0,0,.55)}
 .hero h1{max-width:940px;margin:auto;font-size:clamp(64px,11vw,132px);font-weight:900;line-height:.86;text-transform:uppercase;text-shadow:0 16px 42px rgba(0,0,0,.64)}
 .hero p{max-width:680px;margin:24px auto 0;font-size:clamp(18px,2vw,24px);color:#fff;line-height:1.5;text-shadow:0 8px 24px rgba(0,0,0,.58)}
-.hero-actions{margin-top:34px;display:flex;justify-content:center;align-items:center;gap:14px;flex-wrap:wrap}
+.hero-actions{margin-top:34px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
 .hero-primary{background:#ffd000;color:#06111f;text-decoration:none;border-radius:0;padding:19px 34px;font-size:15px;font-weight:900;letter-spacing:1.6px;box-shadow:0 18px 35px rgba(0,0,0,.32);transition:.3s;text-transform:uppercase}
 .hero-primary:hover{transform:translateY(-3px)}
+.hero-tiktok{display:inline-flex;align-items:center;gap:9px;color:var(--light);font-size:14px;font-weight:900;text-transform:uppercase;text-decoration:none;letter-spacing:0;background:rgba(2,10,22,.58);border:1px solid rgba(123,210,255,.4);padding:10px 16px;box-shadow:0 10px 24px rgba(0,0,0,.24);transition:.25s}
+.hero-tiktok::before{content:"♪";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#050505;color:#fff;font-size:16px;line-height:1;text-shadow:1px 0 #fe2c55,-1px 0 #25f4ee;box-shadow:2px 0 0 #fe2c55,-2px 0 0 #25f4ee}
+.hero-tiktok:hover{color:var(--accent);border-color:rgba(255,211,0,.7);transform:translateY(-2px)}
 .booking-wrapper{max-width:1280px;margin:42px auto 0;padding:0 20px;position:relative;z-index:10;scroll-margin-top:150px}
 .booking-top{display:flex;margin-left:30px}
 .booking-tab{background:#071b2e;color:white;border:none;padding:16px 28px;border-radius:18px 18px 0 0;font-size:14px;font-weight:900;letter-spacing:1px}
@@ -165,7 +168,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .vehicle-showcase-card p{padding:0 16px 16px;font-size:13px;color:#a9bfd1;line-height:1.55}
 .referral-box{margin-top:18px;background:#071223;border:1px solid rgba(14,165,255,.30);border-radius:18px;padding:20px}
 .referral-box h4{font-size:14px;font-weight:900;text-transform:uppercase;color:#7dd3fc;margin-bottom:14px}
-.referral-options{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.referral-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
 .referral-choice{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:112px;padding:16px 12px;border:2px solid rgba(255,255,255,.12);border-radius:14px;background:#0a1b2d;color:#f4f9ff;font-size:13px;font-weight:850;line-height:1.3;text-align:center;cursor:pointer;transition:.2s}
 .referral-choice:hover{border-color:rgba(125,211,252,.65);background:#0c2238;transform:translateY(-2px)}
 .referral-choice:has(input:checked){border-color:#38bdf8;background:linear-gradient(145deg,#0b2943,#0b1f34);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
@@ -175,6 +178,8 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .social-badge{display:grid;place-items:center;width:22px;height:22px;border-radius:5px;color:#fff;font-weight:900}
 .social-facebook{background:#1877f2}
 .social-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.social-tiktok{position:relative;background:#050505;color:transparent;overflow:hidden}
+.social-tiktok::before{content:"♪";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:15px;line-height:1;text-shadow:1px 0 #fe2c55,-1px 0 #25f4ee}
 .agent-field{grid-column:1/-1;margin-top:14px;background:transparent;border:none;padding:0}
 .agent-field label{color:#b8cadb}
 .agent-field input{width:100%;min-height:48px;margin-top:10px;padding:12px 14px;border:2px solid #fff;border-radius:12px;background:#fff;color:#0f172a;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.2)}
@@ -261,6 +266,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .whatsapp-float svg{width:34px;height:34px}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
+@media(max-width:850px){.referral-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
 @media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
@@ -320,15 +326,16 @@ input[type="date"],input[type="time"]{color-scheme:dark}
       <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.</p>
       <div class="hero-actions">
         <a href="precios.html#laguna-oferta" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
+        <a href="https://www.tiktok.com/@ratatouille_xtreme?_r=1&amp;_t=ZS-97vZCdP4nDD" class="hero-tiktok" target="_blank" rel="noopener" data-i18n="heroTikTok">Síguenos en TikTok</a>
       </div>
     </div>
   </section>
 
   <section class="home-experience-band" aria-labelledby="homeExperienceTitle">
     <div class="home-experience">
-      <h2 class="section-title" id="homeExperienceTitle">¡Vive Apaneca al máximo!<br>¡Reserva hoy tu próxima aventura!</h2>
-      <p class="section-text">Conoce la aventura de Ratatouille Apaneca Xtreme Tours.</p>
-      <p class="video-note">El video se reproduce automáticamente sin sonido. Puedes activar el audio desde sus controles.</p>
+      <h2 class="section-title" id="homeExperienceTitle" data-i18n-html="homeExperienceTitle">¡Vive Apaneca al máximo!<br>¡Reserva hoy tu próxima aventura!</h2>
+      <p class="section-text" data-i18n="homeExperienceText">Conoce la aventura de Ratatouille Apaneca Xtreme Tours.</p>
+      <p class="video-note" data-i18n="homeExperienceVideoNote">El video se reproduce automáticamente sin sonido. Puedes activar el audio desde sus controles.</p>
       <video class="experience-video" autoplay muted loop playsinline controls preload="metadata" poster="imagen10.jpg">
         <source src="imagen40.mp4" type="video/mp4">
         Tu navegador no admite la reproducción de video.
@@ -495,6 +502,10 @@ const translations = {
     heroTitle: "XTREME TOURS",
     heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.",
     heroCta: "VER OFERTA",
+      heroTikTok: "Síguenos en TikTok",
+      homeExperienceTitle: "¡Vive Apaneca al máximo!<br>¡Reserva hoy tu próxima aventura!",
+      homeExperienceText: "Conoce la aventura de Ratatouille Apaneca Xtreme Tours.",
+      homeExperienceVideoNote: "El video se reproduce automáticamente sin sonido. Puedes activar el audio desde sus controles.",
     tours: "TOURS",
     bookingTitle: "Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acá abajo.",
     aboutTitle: "ACERCA DE NOSOTROS",
@@ -645,6 +656,7 @@ const translations = {
     termsAccepted: "He leído y comprendido los términos y condiciones, y confirmo que seleccioné cuidadosamente el tour correcto.",
     referralTitle: "¿Cómo te enteraste de nosotros?",
     referralSocial: "Facebook o Instagram",
+      referralTikTok: "TikTok",
     referralWebsite: "Nuestra página web",
     referralAgent: "Otra / Atendido por un agente",
     referralAgentName: "Atendido por agente:",
@@ -682,6 +694,10 @@ const translations = {
     heroTitle: "XTREME TOURS",
     heroCopy: "Book your Laguna Verde or Ausoles experience and discover Apaneca by buggy or ATV.",
     heroCta: "SEE OFFER",
+      heroTikTok: "Follow us on TikTok",
+      homeExperienceTitle: "Experience Apaneca to the fullest!<br>Book your next adventure today!",
+      homeExperienceText: "Discover the adventure of Ratatouille Apaneca Xtreme Tours.",
+      homeExperienceVideoNote: "The video plays automatically without sound. You can turn on the audio from its controls.",
     tours: "TOURS",
     bookingTitle: "Please carefully select the correct tour from the available destinations below.",
     aboutTitle: "ABOUT US",
@@ -832,6 +848,7 @@ const translations = {
     termsAccepted: "I have read and understood the terms and conditions, and I confirm that I carefully selected the correct tour.",
     referralTitle: "How did you hear about us?",
     referralSocial: "Facebook or Instagram",
+      referralTikTok: "TikTok",
     referralWebsite: "Our website",
     referralAgent: "Other / Assisted by an agent",
     referralAgentName: "Assisted by agent:",
@@ -1028,6 +1045,13 @@ function buildBookingCards() {
               <span class="referral-label">${t("referralSocial")}</span>
             </label>
             <label class="referral-choice">
+              <input type="radio" name="referralSource" value="tiktok" required>
+              <span class="social-badges" aria-hidden="true">
+                <span class="social-badge social-tiktok">TikTok</span>
+              </span>
+              <span class="referral-label">${t("referralTikTok")}</span>
+            </label>
+            <label class="referral-choice">
               <input type="radio" name="referralSource" value="website" required>
               <span class="referral-label">${t("referralWebsite")}</span>
             </label>
@@ -1104,6 +1128,7 @@ function getReferralDetails(form) {
   const selected = form.querySelector('input[name="referralSource"]:checked');
   const labels = {
     social: t("referralSocial"),
+    tiktok: t("referralTikTok"),
     website: t("referralWebsite"),
     agent: t("referralAgent")
   };
@@ -1538,6 +1563,9 @@ function applyTranslations() {
   document.documentElement.lang = currentLanguage;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = t(element.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    element.innerHTML = t(element.dataset.i18nHtml);
   });
   buildBookingCards();
 }
