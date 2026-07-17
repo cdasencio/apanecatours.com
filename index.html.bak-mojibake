@@ -1,0 +1,1638 @@
+﻿<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Ratatouille Xtreme Tours Apaneca | Tours en Buggy, Cuatrimotos y Aventuras</title>
+
+  <meta name="description" content="Reserva tours de aventura en Apaneca con Ratatouille Xtreme Tours. Vive experiencias en buggy y cuatrimoto hacia Laguna Verde y Ruta Extrema Ausoles en El Salvador.">
+
+  <link rel="canonical" href="https://apanecatours.com/">
+  <link rel="image_src" href="https://apanecatours.com/google-preview.jpg">
+
+  <!-- Open Graph -->
+  <meta property="og:locale" content="es_SV">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Ratatouille Xtreme Tours Apaneca">
+  <meta property="og:title" content="Ratatouille Xtreme Tours Apaneca | Tours en Buggy, Cuatrimotos y Aventuras">
+  <meta property="og:description" content="Reserva tours de aventura en Apaneca con Ratatouille Xtreme Tours. Descubre Laguna Verde, Ruta Extrema Ausoles y vive la mejor experiencia en buggy y cuatrimoto.">
+  <meta property="og:url" content="https://apanecatours.com/">
+  <meta property="og:image" content="https://apanecatours.com/google-preview.jpg">
+  <meta property="og:image:secure_url" content="https://apanecatours.com/google-preview.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="Ratatouille Xtreme Tours Apaneca - Tours en Buggy y Cuatrimotos">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Ratatouille Xtreme Tours Apaneca | Tours en Buggy y Cuatrimoto">
+  <meta name="twitter:description" content="Reserva tours de aventura en Apaneca hacia Laguna Verde y Ruta Extrema Ausoles.">
+  <meta name="twitter:image" content="https://apanecatours.com/google-preview.jpg">
+
+  <!-- Nombre del sitio -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebSite",
+    "name":"Ratatouille Xtreme Tours Apaneca",
+    "alternateName":[
+      "Ratatouille Xtreme Tours",
+      "Xtreme Tours Apaneca"
+    ],
+    "url":"https://apanecatours.com/"
+  }
+  </script>
+
+  <!-- Negocio -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"TouristAttraction",
+    "name":"Ratatouille Xtreme Tours Apaneca",
+    "alternateName":"Xtreme Tours Apaneca",
+    "url":"https://apanecatours.com/",
+    "description":"Tours de aventura en Apaneca con buggies, cuatrimotos, Laguna Verde, Ruta Extrema Ausoles y experiencias al aire libre.",
+    "image": [
+      "https://apanecatours.com/google-preview.jpg",
+      "https://apanecatours.com/google-preview-laguna.jpg",
+      "https://apanecatours.com/imagen160.jpg"
+    ],
+    "telephone": "+50378830399",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Apaneca",
+      "addressRegion": "AhuachapÃ¡n",
+      "addressCountry": "SV"
+    },
+    "areaServed": "Apaneca, El Salvador"
+  }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:'Montserrat',sans-serif;background:#020817;color:white;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-2;background:linear-gradient(rgba(2,8,23,.84),rgba(2,8,23,.96))}
+body::after{content:"";position:fixed;inset:0;z-index:-1;background:radial-gradient(circle at top left,rgba(14,165,255,.16),transparent 35%),radial-gradient(circle at bottom right,rgba(255,0,89,.13),transparent 35%)}
+a{color:inherit}
+.promo-bar{background:#ff0059;color:white;text-align:center;padding:16px 20px;font-size:18px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.location-bar{background:#ffd000;color:#111827;text-align:center;padding:10px 20px;font-size:14px;font-weight:800}
+.location-bar .location-help{display:block;margin-top:4px}
+.reservation-help-bar{background:#071223;color:#e8f6ff;text-align:center;padding:10px 20px;font-size:14px;font-weight:800;line-height:1.45;border-bottom:1px solid rgba(255,255,255,.08)}
+.reservation-help-bar .help-main{display:inline-flex;align-items:center;justify-content:center;gap:9px;flex-wrap:wrap}
+.reservation-help-bar strong{color:#ffd000;font-weight:950;white-space:nowrap}
+.reservation-help-bar .flag-list{display:inline-flex;align-items:center;gap:6px;font-size:17px;vertical-align:middle}
+.reservation-help-bar .language-note{color:#fff;font-weight:900}
+header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08);display:flex;justify-content:space-between;align-items:center;padding:18px 40px;gap:18px}
+.header-left{display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+.logo-btn,.top-reserve-btn{background:linear-gradient(135deg,#0ea5ff,#0f172a);padding:14px 24px;border-radius:40px;color:white!important;text-decoration:none;font-size:14px;font-weight:900;letter-spacing:1px;white-space:nowrap;box-shadow:0 0 25px rgba(14,165,255,.35);transition:.3s;border:1px solid rgba(255,255,255,.08)}
+.logo-btn:hover,.top-reserve-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(14,165,255,.55)}
+.contact-panel{display:flex;align-items:center;gap:18px;color:#d7e7f4;line-height:1.35}
+.contact-panel::before{content:"ðŸ“ž";color:white;font-size:22px;font-weight:900;line-height:1}
+.contact-numbers{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
+.contact-link{display:inline-flex;align-items:center;gap:7px;color:#d7e7f4;text-decoration:none;transition:.25s;white-space:nowrap}
+.contact-link::before{content:"";width:6px;height:6px;border-radius:50%;background:#8ea7c2;display:inline-block}
+.contact-link span{display:none}
+.contact-link strong{color:#eef8ff;font-size:14px;font-weight:900;letter-spacing:.8px}
+.contact-link:hover{color:white}
+.contact-link:hover strong{text-decoration:underline;text-underline-offset:4px}
+.contact-link.primary strong{color:#eef8ff;font-size:17px}
+.contact-link.primary::before{width:8px;height:8px;background:#22c55e;box-shadow:0 0 12px rgba(34,197,94,.45)}
+.nav{display:flex;align-items:center;gap:16px}
+.language-select{background:#071b2e;color:white;border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:10px 14px;font-family:'Montserrat',sans-serif;font-weight:800;outline:none;cursor:pointer}
+.language-select option{background:#071b2e;color:white}
+.whatsapp-btn{background:#22c55e;color:white!important;padding:12px 20px;border-radius:24px;font-weight:900;text-decoration:none;box-shadow:0 0 22px rgba(34,197,94,.30);transition:.3s}
+.whatsapp-btn:hover{transform:translateY(-2px);box-shadow:0 0 35px rgba(34,197,94,.45)}
+.nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
+.nav-center-bar summary{display:none;color:#e8f6ff;font-size:15px;font-weight:900;list-style:none;cursor:pointer;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
+.nav-center-bar summary::-webkit-details-marker{display:none}
+.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
+.nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
+.hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('imagen10.jpg');background-size:cover;background-position:center}
+.hero::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(circle at center,rgba(0,0,0,.08),rgba(0,0,0,.34) 72%)}
+.hero-content{max-width:940px;position:relative;z-index:2;margin:auto}
+.hero-sale{display:inline-flex;align-items:center;justify-content:center;background:#ffd000;color:#06111f;padding:12px 22px;border-radius:0;font-size:14px;font-weight:900;letter-spacing:1.8px;text-transform:uppercase;box-shadow:0 15px 35px rgba(0,0,0,.28)}
+.hero-badge{display:block;margin-top:22px;margin-bottom:14px;color:#fff;font-size:15px;font-weight:900;letter-spacing:3px;text-transform:uppercase;text-shadow:0 8px 24px rgba(0,0,0,.55)}
+.hero h1{max-width:940px;margin:auto;font-size:clamp(64px,11vw,132px);font-weight:900;line-height:.86;text-transform:uppercase;text-shadow:0 16px 42px rgba(0,0,0,.64)}
+.hero p{max-width:680px;margin:24px auto 0;font-size:clamp(18px,2vw,24px);color:#fff;line-height:1.5;text-shadow:0 8px 24px rgba(0,0,0,.58)}
+.hero-actions{margin-top:34px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+.hero-primary{background:#ffd000;color:#06111f;text-decoration:none;border-radius:0;padding:19px 34px;font-size:15px;font-weight:900;letter-spacing:1.6px;box-shadow:0 18px 35px rgba(0,0,0,.32);transition:.3s;text-transform:uppercase}
+.hero-primary:hover{transform:translateY(-3px)}
+.hero-tiktok{display:inline-flex;align-items:center;gap:9px;color:var(--light);font-size:14px;font-weight:900;text-transform:uppercase;text-decoration:none;letter-spacing:0;background:rgba(2,10,22,.58);border:1px solid rgba(123,210,255,.4);padding:10px 16px;box-shadow:0 10px 24px rgba(0,0,0,.24);transition:.25s}
+.hero-tiktok::before{content:"â™ª";display:grid;place-items:center;width:22px;height:22px;border-radius:50%;background:#050505;color:#fff;font-size:16px;line-height:1;text-shadow:1px 0 #fe2c55,-1px 0 #25f4ee;box-shadow:2px 0 0 #fe2c55,-2px 0 0 #25f4ee}
+.hero-tiktok:hover{color:var(--accent);border-color:rgba(255,211,0,.7);transform:translateY(-2px)}
+.booking-wrapper{max-width:1280px;margin:42px auto 0;padding:0 20px;position:relative;z-index:10;scroll-margin-top:150px}
+.booking-top{display:flex;margin-left:30px}
+.booking-tab{background:#071b2e;color:white;border:none;padding:16px 28px;border-radius:18px 18px 0 0;font-size:14px;font-weight:900;letter-spacing:1px}
+.booking-panel{background:linear-gradient(145deg,rgba(7,15,30,.98),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.08);border-radius:36px;padding:34px;box-shadow:0 25px 55px rgba(0,0,0,.45)}
+.booking-title{font-size:30px;font-weight:900;margin-bottom:28px}
+.tour-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:26px}
+.tour-card{background:#081728;border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:28px;box-shadow:0 15px 35px rgba(0,0,0,.25)}
+.tour-card.is-coming-soon,.card.is-coming-soon,.price-card.coming-soon-price{position:relative;overflow:hidden;border-color:rgba(250,204,21,.34);background:linear-gradient(145deg,rgba(8,23,40,.96),rgba(31,24,10,.92));opacity:.92}
+.tour-card.is-coming-soon::after,.card.is-coming-soon::after,.price-card.coming-soon-price::after{content:"EspÃ©ralo pronto / Coming soon";position:absolute;top:18px;right:-46px;transform:rotate(35deg);background:#facc15;color:#08111f;font-size:12px;font-weight:1000;letter-spacing:.5px;text-transform:uppercase;padding:8px 48px;box-shadow:0 12px 24px rgba(0,0,0,.28)}
+.coming-soon-note,.coming-soon-badge{display:inline-flex;width:auto;max-width:100%;margin-top:14px;background:#facc15;color:#08111f;border-radius:18px;padding:10px 14px;font-size:13px;font-weight:1000;text-transform:uppercase;letter-spacing:.3px;line-height:1.2;text-align:center;white-space:normal;overflow-wrap:anywhere}
+.tour-header{margin-bottom:24px;padding-bottom:20px;border-bottom:1px solid rgba(255,255,255,.08)}
+.tour-header h3{font-size:30px;font-weight:900;margin-bottom:12px}
+.tour-header p{color:#b8cadb;line-height:1.8;font-size:15px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.field{background:#071223;border:1px solid rgba(255,255,255,.06);border-radius:18px;padding:16px}
+.field.full{grid-column:1/-1}
+.field label{display:block;color:#8ea7c2;font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.field input,.field select{width:100%;background:none;border:none;outline:none;color:white;font-size:16px;font-family:'Montserrat',sans-serif}
+.field input::placeholder{color:#6f8396}
+.field select option{background:#071223;color:white}
+input[type="date"],input[type="time"]{color-scheme:dark}
+.vehicles-box{margin-top:22px;background:#071223;border:1px solid rgba(255,255,255,.06);border-radius:24px;padding:22px}
+.vehicles-title{color:#8ea7c2;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:.7px;margin-bottom:16px}
+.vehicle-list{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.vehicle-row{background:#081728;border:1px solid rgba(255,255,255,.05);border-radius:18px;padding:15px;display:grid;grid-template-columns:1fr 108px;gap:12px;align-items:center}
+.vehicle-name strong{display:block;font-size:15px;margin-bottom:5px}
+.vehicle-name small{color:#8ea7c2;font-size:12px}
+.vehicle-row select{width:100%;background:#020817;color:white;border:1px solid rgba(255,255,255,.06);border-radius:12px;padding:10px;font-family:'Montserrat',sans-serif}
+.client-info{margin-top:20px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:16px}
+.translator-box{margin-top:20px;background:linear-gradient(135deg,rgba(255,208,0,.10),rgba(14,165,255,.08));border:1px solid rgba(255,208,0,.28);border-radius:24px;padding:22px}
+.translator-title{color:#ffd000;font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
+.translator-copy{color:#d7e7f4;line-height:1.7;font-size:14px;margin-bottom:16px}
+.summary-box{margin-top:20px;border-radius:18px;background:#f8fafc;color:#101827;border:1px solid rgba(255,255,255,.16);padding:0;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.30)}
+.summary-pass-head{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:start;padding:22px 22px 18px;background:white}
+.summary-brand{display:block;color:#b49a5b;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
+.summary-heading{display:block;color:#101827;font-size:26px;font-weight:900;line-height:1.05;text-transform:uppercase;letter-spacing:0}
+.summary-order-code{margin-top:8px;color:#64748b;font-size:12px;font-weight:900;letter-spacing:1px;text-transform:uppercase}
+.summary-barcode{height:54px;border-radius:4px;background:repeating-linear-gradient(90deg,#111827 0 3px,transparent 3px 6px,#111827 6px 8px,transparent 8px 13px,#111827 13px 17px,transparent 17px 20px);opacity:.95}
+.summary-section-title{background:#b49a5b;color:white;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:9px 22px}
+.order-summary-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);gap:18px 20px;margin:0;padding:18px 22px;background:white}
+.order-summary-list li{min-width:0}
+.order-summary-list span:first-child{display:block;color:#b49a5b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.order-summary-list span:last-child{display:block;color:#101827;font-size:18px;font-weight:900;line-height:1.25;word-break:break-word}
+.order-summary-list li.is-wide{grid-column:1/-1}
+.order-summary-list li.is-wide span:last-child{font-size:14px;line-height:1.55}
+.summary-price-panel{display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px;padding:18px 22px;background:#f8fafc}
+.summary-price-item span{display:block;color:#b49a5b;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:6px}
+.summary-price-item strong{display:block;color:#101827;font-size:20px;font-weight:900}
+.summary-price-item.total{border-left:1px solid rgba(180,154,91,.35);padding-left:18px}
+.summary-price-item.total strong{color:#0f172a;font-size:30px}
+.summary-note{color:#475569;font-size:13px;line-height:1.6;padding:0 22px 18px;background:#f8fafc}
+.summary-send-note{color:#0f172a;font-size:13px;font-weight:800;line-height:1.6;padding:16px 22px;background:#fff7d6;border-top:1px solid rgba(180,154,91,.35)}
+.summary-warning{color:#b45309;font-size:13px;font-weight:900;display:none;padding:0 22px 18px;background:#fff7d6}
+.summary-warning.is-visible{display:block}
+.terms-box{margin-top:18px;background:#071223;border:1px solid rgba(255,208,0,.24);border-radius:20px;padding:18px;color:#d7e7f4}
+.terms-box h4{font-size:14px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;color:#ffd000;margin-bottom:10px}
+.terms-box h4 a{color:inherit;text-decoration:none}
+.terms-box h4 a:hover,.terms-box h4 a:focus{text-decoration:underline;text-underline-offset:4px}
+.terms-box ul{margin:0 0 14px 18px;color:#b8cadb;line-height:1.65;font-size:13px}
+.vehicle-showcase{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin-top:28px}
+.vehicle-showcase-card{overflow:hidden;background:#07182a;border:1px solid rgba(14,165,255,.2);border-radius:8px}
+.vehicle-showcase-card img{display:block;width:100%;height:180px;object-fit:cover}
+.vehicle-showcase-card h3{padding:14px 16px 0;font-size:18px;color:#fff;margin-bottom:6px}
+.vehicle-showcase-card p{padding:0 16px 16px;font-size:13px;color:#a9bfd1;line-height:1.55}
+.referral-box{margin-top:18px;background:#071223;border:1px solid rgba(14,165,255,.30);border-radius:18px;padding:20px}
+.referral-box h4{font-size:14px;font-weight:900;text-transform:uppercase;color:#7dd3fc;margin-bottom:14px}
+.referral-options{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.referral-choice{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;min-height:112px;padding:16px 12px;border:2px solid rgba(255,255,255,.12);border-radius:14px;background:#0a1b2d;color:#f4f9ff;font-size:13px;font-weight:850;line-height:1.3;text-align:center;cursor:pointer;transition:.2s}
+.referral-choice:hover{border-color:rgba(125,211,252,.65);background:#0c2238;transform:translateY(-2px)}
+.referral-choice:has(input:checked){border-color:#38bdf8;background:linear-gradient(145deg,#0b2943,#0b1f34);box-shadow:0 0 0 3px rgba(56,189,248,.12)}
+.referral-choice input{width:20px;height:20px;margin:0;accent-color:#0ea5ff}
+.referral-label{display:block;max-width:150px}
+.social-badges{display:inline-flex;gap:4px}
+.social-badge{display:grid;place-items:center;width:22px;height:22px;border-radius:5px;color:#fff;font-weight:900}
+.social-facebook{background:#1877f2}
+.social-instagram{background:linear-gradient(135deg,#833ab4,#fd1d1d,#fcb045)}
+.social-tiktok{position:relative;background:#050505;color:transparent;overflow:hidden}
+.social-tiktok::before{content:"â™ª";position:absolute;inset:0;display:grid;place-items:center;color:#fff;font-size:15px;line-height:1;text-shadow:1px 0 #fe2c55,-1px 0 #25f4ee}
+.agent-field{grid-column:1/-1;margin-top:14px;background:transparent;border:none;padding:0}
+.agent-field label{color:#b8cadb}
+.agent-field input{width:100%;min-height:48px;margin-top:10px;padding:12px 14px;border:2px solid #fff;border-radius:12px;background:#fff;color:#0f172a;font-weight:800;box-shadow:0 5px 18px rgba(0,0,0,.2)}
+.agent-field input:focus{border-color:#38bdf8;box-shadow:0 0 0 4px rgba(56,189,248,.18);outline:none}
+.terms-check{display:flex;align-items:flex-start;gap:12px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.07);border-radius:16px;padding:14px;color:#eef8ff;font-size:13px;font-weight:800;line-height:1.55;cursor:pointer}
+.terms-check input{margin-top:3px;accent-color:#ffd000;min-width:18px;width:18px;height:18px}
+.reserve-btn{width:100%;min-height:68px;margin-top:24px;border:none;border-radius:22px;background:linear-gradient(135deg,#ff0059,#ff3b71);color:white;font-size:18px;font-weight:900;letter-spacing:1px;cursor:pointer;transition:.3s;box-shadow:0 18px 35px rgba(255,0,89,.30)}
+.reserve-btn:hover{transform:translateY(-3px)}
+.reserve-btn:disabled{cursor:not-allowed;opacity:.68;transform:none}
+.submit-status{min-height:22px;margin-top:14px;color:#b8cadb;font-size:13px;font-weight:800;line-height:1.5;text-align:center}
+.submit-status.success{color:#86efac}
+.submit-status.warning{color:#ffd000}
+.submit-status.error{color:#fca5a5}
+.feature-strip{max-width:1280px;margin:60px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.feature{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:26px;padding:26px}
+.feature span{font-size:34px}
+.feature h3{margin-top:14px;font-size:22px}
+.feature p{margin-top:10px;color:#b8cadb;line-height:1.7;font-size:14px}
+.visitor-mini{margin-top:18px;padding:16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}
+.visitor-mini strong{display:block;color:#ffd000;font-size:13px;text-transform:uppercase;letter-spacing:.04em;line-height:1.35}
+.visitor-mini p{margin-top:8px;color:#d8e8f7;font-size:13px;line-height:1.65}
+.content{max-width:1280px;margin:auto;padding:60px 20px}
+.content-section{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:30px;padding:38px;margin-bottom:34px}
+.section-title{font-size:42px;margin-bottom:18px}
+.section-text{color:#b8cadb;line-height:1.8}
+.safety-grid{margin-top:24px;display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:18px}
+.safety-card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px;overflow:hidden}
+.safety-card img{display:block;width:100%;max-width:360px;height:180px;object-fit:cover;border-radius:16px;margin:0 0 18px}
+.recommendations-note{margin-top:18px;color:#f3f8ff;background:rgba(255,208,0,.08);border:1px solid rgba(255,208,0,.28);border-radius:16px;padding:14px 16px;font-weight:850;line-height:1.55}
+.safety-card h3{font-size:22px;margin-bottom:10px}
+.safety-card p{color:#b8cadb;line-height:1.75;font-size:15px}
+.cards{margin-top:30px;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:24px}
+.card{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:24px;overflow:hidden}
+.card img{width:100%;height:260px;object-fit:cover}
+.card-content{padding:24px}
+.card-content h3{font-size:28px;margin-bottom:16px}
+.card-content p{color:#b8cadb;line-height:1.9;font-size:15px}
+.price-grid,.review-grid{margin-top:26px;display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:16px}
+.price-card,.review{background:#081728;border:1px solid rgba(255,255,255,.06);border-radius:20px;padding:20px}
+.price-card{display:flex;justify-content:space-between;align-items:center}
+.price-grid-tours{grid-template-columns:1fr;align-items:stretch}
+.price-card-pending{display:grid;gap:14px;align-items:start}
+.price-card-pending>strong{font-size:22px;line-height:1.15}
+.price-card-pending>*{min-width:0}.price-card-pending .section-text{max-width:100%;overflow-wrap:break-word}.price-card.coming-soon-price{padding-top:54px}.price-card.coming-soon-price::after{top:13px;right:-54px;font-size:10px;padding:6px 42px;letter-spacing:.35px}
+#laguna-oferta{scroll-margin-top:110px}
+.price-list{list-style:none;display:grid;gap:8px;color:#d7e7f4;font-size:15px;line-height:1.35}
+.price-list li{display:flex;justify-content:space-between;align-items:center;gap:14px;border-bottom:1px solid rgba(255,255,255,.06);padding-bottom:8px}
+.price-list li:last-child{border-bottom:none;padding-bottom:0}
+.price-list b{color:#ffd000;white-space:nowrap;font-size:22px;line-height:1;font-weight:950;text-shadow:0 8px 22px rgba(255,208,0,.18)}
+.price-card span{color:#ffd000;font-size:36px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.2)}
+.price-card small{color:#8ea7c2;line-height:1.6}
+.price-duration{display:inline-flex;width:max-content;align-items:center;border:1px solid rgba(14,165,233,.28);border-radius:999px;padding:6px 10px;color:#bfe7ff;background:rgba(14,165,233,.1);font-size:12px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.promo-price{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:4px}
+.promo-badge{grid-column:1/-1;width:max-content;border-radius:999px;background:linear-gradient(135deg,#ffd000,#ff8a00);color:#111827;font-size:12px;font-weight:950;letter-spacing:.04em;text-transform:uppercase;padding:7px 10px}
+.price-sale-box{background:#071223;border:1px solid rgba(255,255,255,.07);border-radius:18px;padding:14px}
+.price-sale-box small{display:block;color:#8ea7c2;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}
+.price-sale-box del{display:block;color:#94a3b8;font-size:24px;font-weight:900;text-decoration-thickness:2px}
+.price-sale-box strong{display:block;color:#ffd000;font-size:34px;line-height:1;font-weight:950;text-shadow:0 10px 26px rgba(255,208,0,.18)}
+.destination-gallery-title{margin-top:30px;font-size:26px;font-weight:900}
+.image-gallery{margin-top:26px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.image-gallery img{width:100%;height:190px;object-fit:cover;border-radius:18px;border:1px solid rgba(255,255,255,.07);background:#081728}
+.image-gallery.single-image{grid-template-columns:1fr}
+.image-gallery.single-image img{height:clamp(230px,42vw,520px)}
+.restaurant-gallery img{height:210px}
+.video-section{padding:0;overflow:hidden}
+.video-copy{padding:38px 38px 24px}
+.experience-video{display:block;width:min(100%,560px);height:clamp(220px,24vw,315px);margin:0 auto 34px;object-fit:contain;object-position:center;background:#000;border:1px solid rgba(255,255,255,.08);border-radius:18px}
+.video-note{margin-top:10px;color:#8ea7c2;font-size:13px;font-weight:700}
+.home-experience-band{background:#020817;color:white;padding:54px 20px 20px}
+.home-experience{max-width:1280px;margin:0 auto;background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:0;padding:26px 26px 32px}
+.home-experience .section-title{color:white;font-size:clamp(28px,3vw,36px);margin-bottom:18px}
+.home-experience .section-text,.home-experience .video-note{display:none}
+.home-experience .experience-video{display:block;width:min(100%,900px);height:clamp(320px,52vw,620px);margin:0 auto;border-radius:0;border:0;background:#000;object-fit:contain;box-shadow:none}
+.review blockquote{color:#d7e7f4;line-height:1.7}
+.review figcaption{margin-top:12px;color:#8ea7c2;font-weight:800}
+
+.legal-content{background:rgba(8,23,40,.72);border:1px solid rgba(255,255,255,.08);border-radius:28px;padding:28px;color:#d7e7f4;line-height:1.8}
+.legal-content h3,.legal-content h4{color:#fff;margin:18px 0 8px;font-weight:1000}
+.legal-content h3{font-size:24px;margin-top:0}
+.legal-content ul{margin:10px 0 18px 22px;color:#b8cadb}
+.legal-content p{margin:0 0 14px;color:#c8d9e8}
+.footer{background:#020817;border-top:1px solid rgba(255,255,255,.08);padding:30px 20px;text-align:center;color:#8ea7c2;font-size:13px;line-height:1.7}
+.whatsapp-float{position:fixed;right:24px;bottom:24px;width:64px;height:64px;border-radius:50%;background:#22c55e;color:white;display:flex;justify-content:center;align-items:center;text-decoration:none;box-shadow:0 10px 30px rgba(0,0,0,.35);z-index:200}
+.whatsapp-float svg{width:34px;height:34px}
+@media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
+@media(max-width:850px){.referral-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
+
+  </style>
+</head>
+<body>
+  <div class="promo-bar" data-i18n="promo">OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA</div>
+  <div class="location-bar">
+    <span data-i18n="location">Â¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada</span>
+    <span class="location-help" data-i18n="locationHelp">Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399</span>
+  </div>
+  <div class="reservation-help-bar">
+    <span class="help-main">
+      <span class="language-note" data-i18n="reservationLanguages">AtenciÃ³n en espaÃ±ol, inglÃ©s y francÃ©s</span>
+    </span>
+  </div>
+
+  <header>
+    <div class="header-left">
+      <a href="index.html#reservas" class="logo-btn" data-i18n="home">INICIO</a>
+      <div class="contact-panel" aria-label="NÃºmeros de contacto">
+        <a href="https://wa.me/50378830399" class="contact-link primary" target="_blank" rel="noopener"><span>Reservas</span><strong>+503 7883 0399</strong></a>
+        <a href="tel:+50372558194" class="contact-link"><span>Contacto</span><strong>+503 7255 8194</strong></a>
+      </div>
+    </div>
+    <nav class="nav" aria-label="NavegaciÃ³n principal">
+      <a href="index.html#reservar-tour" class="top-reserve-btn" data-i18n="reserve">RESERVAR</a>
+      <select class="language-select" id="languageSelect" aria-label="Idioma">
+        <option value="es">EspaÃ±ol</option>
+        <option value="en">English</option>
+      </select>
+      <a href="https://wa.me/50378830399" class="whatsapp-btn js-whatsapp-link" target="_blank" rel="noopener">WhatsApp</a>
+    </nav>
+  </header>
+
+  <div class="nav-center-bar" aria-label="Secciones">
+    <nav class="nav-links" aria-label="Secciones">
+    <a href="acerca.html" data-i18n="navAbout">Acerca de</a>
+    <a href="destinos.html" data-i18n="navDestinations">Destinos</a>
+    <a href="precios.html" data-i18n="navPrices">Precios</a>
+    <a href="vehiculos.html" data-i18n="navVehicles">VehÃ­culos</a>
+    <a href="boutique.html" data-i18n="navBoutique">Boutique</a>
+    <a href="restaurante.html" data-i18n="navRestaurant">Restaurante</a>
+    <a href="finca-cultura-cafe.html" data-i18n="navCoffeeBoutique">Finca y cultura del cafÃ©</a>
+    <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+    <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
+    <a href="terminos.html" data-i18n="navTerms">TÃ©rminos y condiciones</a>
+    </nav>
+  </div>
+
+  <div class="home-page" id="reservas">
+  <section class="hero">
+    <div class="hero-content">
+      <div class="hero-badge" data-i18n="heroBadge">APANECA Â· EL SALVADOR</div>
+      <h1 data-i18n="heroTitle">RATATOUILLE XTREME TOURS</h1>
+      <p data-i18n="heroCopy">Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.</p>
+      <div class="hero-actions">
+        <a href="precios.html#laguna-oferta" class="hero-primary" data-i18n="heroCta">VER OFERTA</a>
+        <a href="https://www.tiktok.com/@ratatouille_xtreme?_r=1&amp;_t=ZS-97vZCdP4nDD" class="hero-tiktok" target="_blank" rel="noopener" data-i18n="heroTikTok">SÃ­guenos en TikTok</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-experience-band" aria-labelledby="homeExperienceTitle">
+    <div class="home-experience">
+      <h2 class="section-title" id="homeExperienceTitle" data-i18n-html="homeExperienceTitle">Â¡Vive Apaneca al mÃ¡ximo!<br>Â¡Reserva hoy tu prÃ³xima aventura!</h2>
+      <p class="section-text" data-i18n="homeExperienceText">Conoce la aventura de Ratatouille Apaneca Xtreme Tours.</p>
+      <p class="video-note" data-i18n="homeExperienceVideoNote">El video se reproduce automÃ¡ticamente sin sonido. Puedes activar el audio desde sus controles.</p>
+      <video class="experience-video" autoplay muted loop playsinline controls preload="metadata" poster="imagen10.jpg">
+        <source src="imagen40.mp4" type="video/mp4">
+        Tu navegador no admite la reproducciÃ³n de video.
+      </video>
+    </div>
+  </section>
+
+  <section class="booking-wrapper" id="reservar-tour">
+    <div class="booking-top">
+      <button class="booking-tab" type="button" data-i18n="tours">TOURS</button>
+    </div>
+    <div class="booking-panel">
+      <h2 class="booking-title" id="seleccion-tour" data-i18n="bookingTitle">Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acÃ¡ abajo.</h2>
+      <div class="tour-grid" id="bookingGrid"></div>
+    </div>
+  </section>
+
+  </div>
+
+  <section class="feature-strip" aria-label="Beneficios">
+    <div class="feature">
+      <span aria-hidden="true">ðŸŒ„</span>
+      <h3 data-i18n="featureRoutesTitle">Rutas naturales</h3>
+      <p data-i18n="featureRoutesCopy">Explora paisajes Ãºnicos entre montaÃ±as y naturaleza extrema.</p>
+    </div>
+    <div class="feature">
+      <span aria-hidden="true">ðŸ</span>
+      <h3 data-i18n="featurePremiumTitle">Experiencias premium</h3>
+      <p data-i18n="featurePremiumCopy">Vive aventuras diseÃ±adas para turistas nacionales e internacionales.</p>
+    </div>
+    <div class="feature">
+      <span aria-hidden="true">ðŸŒŽ</span>
+      <h3 data-i18n="featureCareTitle">AtenciÃ³n personalizada</h3>
+      <p data-i18n="featureCareCopy">Experiencias personalizadas con acompaÃ±amiento completo en espaÃ±ol, inglÃ©s y francÃ©s, un valor diferencial que convierte tu tour en una experiencia internacional sin barreras.</p>
+      <div class="visitor-mini">
+        <strong data-i18n="featureVisitorsTitle">Gracias por el apoyo a nuestros clientes viajeros mÃ¡s frecuentes</strong>
+        <p data-i18n="featureVisitorsCopy">El Salvador, Estados Unidos, MÃ©xico, CanadÃ¡, RepÃºblica Dominicana, Colombia, Argentina, Brasil, Puerto Rico, Chile, Uruguay, Francia, EspaÃ±a, Italia y CentroamÃ©rica: Guatemala, Honduras, Nicaragua, Costa Rica, PanamÃ¡ y Belice.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <footer class="footer">
+    <p>Â© 2025 RATATOUILLE XTREME TOURS APANECA â€“ Tours, Aventuras y Experiencias. Todos los derechos reservados.</p>
+    <p data-i18n="copyright">Queda prohibida la reproducciÃ³n total o parcial sin autorizaciÃ³n.</p>
+  </footer>
+
+  <a href="https://wa.me/50378830399" class="whatsapp-float js-whatsapp-link" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.854 7.854 0 0 0 8.003 0C3.58 0 0 3.58 0 8c0 1.408.367 2.783 1.066 3.998L0 16l4.148-1.084A7.963 7.963 0 0 0 8.003 16c4.423 0 8.003-3.58 8.003-8a7.95 7.95 0 0 0-2.405-5.674zM8.003 14.5a6.46 6.46 0 0 1-3.287-.894l-.236-.14-2.46.643.656-2.398-.154-.246A6.466 6.466 0 0 1 1.5 8c0-3.59 2.913-6.5 6.503-6.5 1.736 0 3.367.676 4.594 1.902A6.455 6.455 0 0 1 14.5 8c0 3.59-2.913 6.5-6.497 6.5zm3.58-4.855c-.196-.098-1.158-.572-1.337-.637-.18-.065-.31-.098-.44.098-.131.196-.506.637-.62.768-.114.131-.228.147-.424.049-.196-.098-.827-.305-1.576-.973-.583-.52-.977-1.163-1.091-1.359-.114-.196-.012-.302.086-.4.088-.087.196-.228.294-.343.098-.114.131-.196.196-.327.065-.131.033-.245-.016-.343-.049-.098-.44-1.06-.604-1.452-.16-.385-.323-.333-.44-.339-.114-.006-.245-.007-.376-.007-.131 0-.343.049-.522.245-.18.196-.686.67-.686 1.633s.702 1.895.8 2.026c.098.131 1.38 2.108 3.345 2.955.468.202.833.322 1.118.412.47.15.898.129 1.236.078.377-.056 1.158-.474 1.321-.932.163-.458.163-.85.114-.932-.049-.082-.18-.131-.376-.229z"/></svg>
+  </a>
+  <script>
+const WHATSAPP_NUMBER = "50378830399";
+const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
+const SECONDARY_PHONE = "7255 8194";
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxeGebEF1iiG5oF0sJ0Qz3Lb9UkxfXg1y-me-wbXdeNnW3yzlvfN54NY78VDtm0R40/exec";
+const COMMISSION_REGISTER_KEY = "ratatouille_commission_register_v2";
+const COMMISSION_RATES_KEY = "ratatouille_commission_rates_v2";
+const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
+const DEFAULT_COMMISSION_RATES = {
+  atv1: 30.00,
+  atv2: 25.00,
+  buggy: 20.00,
+  ausoles: 29.99,
+  cafe: 0.00
+};
+const AUSOLES_PROMO_PRICE = 129.99;
+const COFFEE_EXTREME_PRICE = 129.99;
+
+const vehicleOptions = [
+  { id: "atv1", esName: "Cuatrimoto sencilla", enName: "Single ATV", capacity: 1, maxUnits: 8, lagunaPrice: 45, cafeBasicPrice: null, commission: 30 },
+  { id: "atv2", esName: "Cuatrimoto doble", enName: "Double ATV", capacity: 2, maxUnits: 8, lagunaPrice: 65, cafeBasicPrice: null, commission: 25 },
+  { id: "buggy1", esName: "Buggy", enName: "Buggy", capacity: 1, maxUnits: 4, lagunaPrice: 75, cafeBasicPrice: 70, commission: 20 },
+  { id: "buggy2", esName: "Buggy", enName: "Buggy", capacity: 2, maxUnits: 4, lagunaPrice: 80, cafeBasicPrice: 80, commission: 20 },
+  { id: "buggy3", esName: "Buggy", enName: "Buggy", capacity: 3, maxUnits: 4, lagunaPrice: 85, cafeBasicPrice: 95, commission: 20 },
+  { id: "buggy4", esName: "Buggy", enName: "Buggy", capacity: 4, maxUnits: 4, lagunaPrice: 90, cafeBasicPrice: 105, commission: 20 },
+  { id: "utv5", esName: "UTV", enName: "UTV", capacity: 5, maxUnits: 4, lagunaPrice: 95, cafeBasicPrice: 115, commission: 20 },
+  { id: "utv6", esName: "UTV", enName: "UTV", capacity: 6, maxUnits: 4, lagunaPrice: null, cafeBasicPrice: 125, commission: 20 }
+];
+
+const tours = [
+  {
+    id: "verde",
+    icon: "ðŸŒ¿",
+    es: {
+      name: "Tour Laguna Verde",
+      description: "Tour ecolÃ³gico y lleno de aventura hacia Laguna Verde. El precio depende del vehÃ­culo y capacidad seleccionada."
+    },
+    en: {
+      name: "Laguna Verde Tour",
+      description: "Eco adventure to Laguna Verde. Pricing depends on the selected vehicle and capacity."
+    }
+  },
+  {
+    id: "ausoles",
+    icon: "ðŸŒ‹",
+    es: {
+      name: "Ruta Extrema (Ausoles Tour)",
+      description: "Tour lleno de aventura hacia los Ausoles de AhuachapÃ¡n. Promocion especial Xtreme Adventure Deal: antes $189.99, ahora $129.99 por persona, sea en cuatrimoto o buggy."
+    },
+    en: {
+      name: "Extreme Route (Ausoles Tour)",
+      description: "Adventure route to the Ausoles of AhuachapÃ¡n. Xtreme Adventure Deal special promotion: was $189.99, now $129.99 per person, whether by ATV or buggy."
+    }
+  },
+  {
+    id: "cafe-basico",
+    comingSoon: true,
+    icon: "",
+    es: {
+      name: "Ruta del cafÃ©: Tour del cafÃ© BÃ¡sico hacia Tizapa",
+      description: "EspÃ©ralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estÃ¡ndar correcto."
+    },
+    en: {
+      name: "Coffee Route: Basic Coffee Tour to Tizapa",
+      description: "Coming soon. We are preparing this experience so it can be offered with the right standard."
+    }
+  },
+  {
+    id: "cafe-extremo",
+    comingSoon: true,
+    icon: "",
+    es: {
+      name: "Tour Extremo del cafÃ© Tizapa - JuayÃºa",
+      description: "EspÃ©ralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estÃ¡ndar correcto."
+    },
+    en: {
+      name: "Extreme Coffee Tour Tizapa - Juayua",
+      description: "Coming soon. We are preparing this experience so it can be offered with the right standard."
+    }
+  }
+];
+
+const translatorPrices = {
+  verde: 35,
+  ausoles: 60,
+  "cafe-basico": 35,
+  "cafe-extremo": 60
+};
+
+const translations = {
+  es: {
+    promo: "OFERTAS DE AVENTURA: RESERVA TU TOUR EN APANECA",
+    location: "Â¿Visitando desde El Salvador o el extranjero? Reserva tu experiencia personalizada",
+    locationHelp: "Si tienes problemas reservando alguno de nuestros tours puedes llamar para reservar al +503 7883 0399",
+    reservationHelp: "Reservas por llamada:",
+    reservationLanguages: "AtenciÃ³n en espaÃ±ol, inglÃ©s y francÃ©s",
+    termsReminder: "TÃ©rminos y condiciones al final del sitio.",
+    home: "INICIO",
+    reserve: "RESERVAR",
+    navHome: "Reservas",
+    navAbout: "Acerca de",
+    navDestinations: "Destinos",
+    navPrices: "Precios",
+    navVehicles: "VehÃ­culos",
+    navRecommendations: "Recomendaciones",
+    navTerms: "TÃ©rminos y condiciones",
+    navBoutique: "Boutique",
+    navRestaurant: "Restaurante",
+    navGallery: "GalerÃ­a",
+    navCoffeeBoutique: "Finca y cultura del cafÃ©",
+    navExperiences: "Experiencias",
+    heroSale: "",
+    heroBadge: "APANECA Â· EL SALVADOR",
+    heroTitle: "RATATOUILLE XTREME TOURS",
+    heroCopy: "Reserva tu experiencia en Laguna Verde o Ausoles y vive Apaneca en buggy o cuatrimoto.",
+    heroCta: "VER OFERTA",
+      heroTikTok: "SÃ­guenos en TikTok",
+      homeExperienceTitle: "Â¡Vive Apaneca al mÃ¡ximo!<br>Â¡Reserva hoy tu prÃ³xima aventura!",
+      homeExperienceText: "Conoce la aventura de Ratatouille Apaneca Xtreme Tours.",
+      homeExperienceVideoNote: "El video se reproduce automÃ¡ticamente sin sonido. Puedes activar el audio desde sus controles.",
+    tours: "TOURS",
+    bookingTitle: "Por favor, seleccione cuidadosamente el tour correcto entre nuestros destinos disponibles acÃ¡ abajo.",
+    aboutTitle: "ACERCA DE NOSOTROS",
+    aboutCopy: "Ratatouille Apaneca Xtreme Tours reÃºne aventura, naturaleza, cultura del cafÃ© y hospitalidad local en experiencias cuidadosamente organizadas para viajeros nacionales e internacionales.",
+    aboutMissionTitle: "Nuestra experiencia",
+    aboutMissionCopy: "AcompaÃ±amos a cada grupo con atenciÃ³n personalizada y recorridos pensados para disfrutar Apaneca con confianza.",
+    date: "Fecha",
+    time: "Hora",
+    people: "Personas",
+    selectPeople: "Seleccionar personas",
+    vehicles: "VehÃ­culos y unidades",
+    units: "Unidades",
+    capacity: "Capacidad",
+    vehicleCapacity: "VehÃ­culo con capacidad para",
+    pricePerUnit: "Precio por unidad",
+    pricePerPerson: "Precio por persona",
+    singleAtv: "Cuatrimoto sencilla",
+    doubleAtv: "Cuatrimoto doble",
+    buggyOne: "Buggy 1 persona",
+    buggyTwo: "Buggy 2 personas",
+    buggyThree: "Buggy 3 personas",
+    buggyFour: "Buggy 4 personas",
+    buggyFive: "Buggy 5 personas",
+    utvFive: "UTV 5 personas",
+    utvSix: "UTV 6 personas",
+    perPersonShort: "por persona",
+        estimatedTotal: "Total estimado",
+    responsible: "Nombre del responsable",
+    fullName: "Nombre completo",
+    phone: "NÃºmero de telÃ©fono",
+    phonePlaceholder: "CÃ³digo paÃ­s + nÃºmero",
+    email: "Correo electrÃ³nico",
+    requiredFields: "Campos obligatorios para generar la orden",
+    translatorTitle: "TraducciÃ³n disponible",
+    translatorQuestion: "Disfruta de todo tu recorrido con servicio de traducciÃ³n disponible en inglÃ©s y/o francÃ©s por un traductor trilingÃ¼e y guÃ­a de la zona.",
+    translatorQuestionFinal: "Este es un servicio adicional, que puedes adquirir junto a tu tour y cuentas con el beneficio de traducciÃ³n, interpretaciÃ³n y acompaÃ±amiento durante tu experiencia.",
+    translatorOption: "Â¿Deseas incluir guÃ­a traductor?",
+    translatorLanguages: "InglÃ©s o francÃ©s",
+    translatorFinalCheck: "Todo el tour con traducciÃ³n e interpretaciÃ³n disponible en inglÃ©s o francÃ©s por un traductor trilingÃ¼e y guÃ­a de la zona, por costo adicional.",
+    translatorFee: "TraducciÃ³n e interpretaciÃ³n",
+    translatorNotSelected: "NO",
+    translatorSelected: "SÃ",
+    orderSummary: "Resumen de la orden",
+    orderTour: "Tour",
+    orderPeople: "Personas",
+    orderVehicles: "VehÃ­culos",
+    orderCapacity: "Capacidad cubierta",
+    orderTranslation: "TraducciÃ³n",
+    referralSummary: "Â¿CÃ³mo se enterÃ³?",
+    agentSummary: "Agente",
+    orderSubtotal: "Subtotal tour",
+    noVehiclesSelected: "Selecciona las unidades del vehÃ­culo para completar la orden",
+    totalCapacity: "Capacidad total seleccionada",
+    tourPrice: "Precio del tour",
+    pricePending: "Por confirmar",
+    ausolesPersonPriceNote: "Ruta Extrema (Ausoles Tour): promocion $129.99 por persona.",
+    lagunaVehiclePriceNote: "Tour Laguna Verde: 1 h 30 min, precio segÃºn vehÃ­culo seleccionado.",
+    cafePriceNote: "Ruta del cafÃ©: precio actual $0.00 mientras agregamos los detalles completos del tour.",
+    nextStep: "Enviaremos tu orden para confirmar disponibilidad y luego recibirÃ¡s el link de pago.",
+    whatsappSendReminder: "Si se abre WhatsApp como respaldo, revisa la orden cargada y presiona Enviar para que la reserva llegue correctamente.",
+    warning: "Selecciona vehÃ­culos suficientes para cubrir la cantidad de personas.",
+    reserveNow: "RESERVAR AHORA",
+    featureRoutesTitle: "Rutas naturales",
+    featureRoutesCopy: "Explora paisajes Ãºnicos entre montaÃ±as y naturaleza extrema.",
+    featurePremiumTitle: "Experiencias premium",
+    featurePremiumCopy: "Vive aventuras diseÃ±adas para turistas nacionales e internacionales.",
+    featureCareTitle: "AtenciÃ³n personalizada",
+    featureCareCopy: "Experiencias personalizadas con acompaÃ±amiento completo en espaÃ±ol, inglÃ©s y francÃ©s, un valor diferencial que ningÃºn tour convencional ofrece y que convierte tu aventura en una experiencia internacional sin barreras.",
+    featureVisitorsTitle: "Gracias por el apoyo a nuestros clientes viajeros mÃ¡s frecuentes",
+    featureVisitorsCopy: "El Salvador, Estados Unidos, MÃ©xico, CanadÃ¡, RepÃºblica Dominicana, Colombia, Argentina, Brasil, Puerto Rico, Chile, Uruguay, Francia, EspaÃ±a, Italia y CentroamÃ©rica: Guatemala, Honduras, Nicaragua, Costa Rica, PanamÃ¡ y Belice.",
+    destinationsTitle: "DESTINOS",
+    destinationsCopy: "Explora los mejores lugares turÃ­sticos de Apaneca y vive aventuras inolvidables rodeado de naturaleza, montaÃ±a y experiencias extremas.",
+    lagunaCopy: "La Laguna Verde de Apaneca es uno de esos destinos que parecen sacados de una postal. Rodeada por montaÃ±as, bosques nubosos y un clima fresco incomparable, ofrece tranquilidad, aventura y conexiÃ³n con la naturaleza.",
+    ausolesTitle: "Ruta Extrema (Ausoles Tour)",
+    ausolesCopy: "Descubre un fenÃ³meno natural impresionante con vapor, fumarolas y energÃ­a geotÃ©rmica rodeada de montaÃ±as y naturaleza extrema.",
+    cafeBasicTitle: "Ruta del cafÃ©: Tour del cafÃ© BÃ¡sico hacia Tizapa",
+    cafeBasicCopy: "EspÃ©ralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estÃ¡ndar correcto.",
+    cafeExtremeTitle: "Tour Extremo del cafÃ© Tizapa - JuayÃºa",
+    cafeExtremeCopy: "EspÃ©ralo pronto / Coming soon. Estamos preparando esta experiencia para ofrecerla con el estÃ¡ndar correcto.",
+    pricesTitle: "PRECIOS",
+    pricesCopy: "Tarifas actualizadas para Laguna Verde y Ruta Extrema Ausoles. Los tours del cafÃ© estarÃ¡n disponibles prÃ³ximamente.",
+    lagunaPriceTitle: "Tour Laguna Verde",
+    ausolesPriceTitle: "Ruta Extrema (Ausoles Tour)",
+    cafeBasicPriceTitle: "Tour del cafÃ© BÃ¡sico hacia Tizapa",
+    cafeBasicEntrance: "Estos precios incluyen el cargo de entrada de $5 USD por persona a la finca del cafÃ©.",
+    cafeBasicPriceNote: "Tour del cafÃ© BÃ¡sico: precio por vehÃ­culo con entrada de $5 USD por persona incluida.",
+    cafeExtremePriceTitle: "Tour Extremo del cafÃ© Tizapa - JuayÃºa",
+    cafeExtremeEntrance: "Este precio incluye el cargo de entrada de $10 USD por persona a la finca de cafÃ© premium en JuayÃºa.",
+    cafeExtremePromoName: "Coffee Xtreme Deal",
+    cafeExtremeBeforeLabel: "Precio anterior por persona",
+    cafeExtremeNowLabel: "Precio ahora por persona",
+    cafeExtremePriceNote: "Tour Extremo del cafÃ©: $129.99 por persona, sea en buggy o cuatrimoto, con entrada premium de $10 USD incluida.",
+    cafeTitle: "Ruta del cafÃ©",
+    cafeCopy: "Ruta del cafÃ© inspirada en la cultura cafetalera de Apaneca. Pronto agregaremos recorrido, duraciÃ³n, paradas y detalles completos del tour.",
+    cafePriceTitle: "Ruta del cafÃ©",
+    cafeDuration: "DuraciÃ³n del tour: por confirmar",
+    cafePromoName: "Ruta del cafÃ©",
+    cafeBeforeLabel: "Precio actual",
+    cafeNowLabel: "Precio ahora",
+    lagunaPriceNote: "",
+    lagunaDuration: "DuraciÃ³n del tour: 1 h 30 min",
+    ausolesDuration: "DuraciÃ³n del tour: 3 horas",
+    lagunaBeforeLabel: "Precio anterior por persona",
+    lagunaNowLabel: "Precio ahora desde",
+    ausolesBeforeLabel: "Precio anterior",
+    ausolesNowLabel: "Precio ahora",
+    ausolesPromoName: "Oferta Xtreme Ausoles",
+    vehiclesSectionTitle: "VEHÃCULOS",
+    vehiclesSectionCopy: "Elige la opciÃ³n ideal para tu grupo y disfruta la ruta con comodidad, aventura y el estilo de conducciÃ³n que prefieras.",
+    singleAtvVehicleCopy: "Ãgil y divertida para una persona.",
+    doubleAtvVehicleCopy: "Una experiencia compartida para dos personas.",
+    buggiesVehicleTitle: "Buggies",
+    buggiesVehicleCopy: "Opciones para parejas, familias y grupos de hasta cuatro personas.",
+    utvVehicleCopy: "Mayor espacio y comodidad para grupos de cinco o seis personas.",
+    recommendationsTitle: "RECOMENDACIONES",
+    recommendationsCopy: "Llevar ropa cÃ³moda y reservar con anticipaciÃ³n. Se recomienda llegar unos minutos antes de la hora seleccionada.",
+    termsSectionReminder: "Revisa los tÃ©rminos y condiciones al final de esta secciÃ³n antes de enviar tu reserva.",
+    localVisitTitle: "PresÃ©ntate estrictamente en nuestro local",
+    localVisitCopy: "Para recibir tu tour, indicaciones y atenciÃ³n oficial, presÃ©ntate directamente en nuestro local de Ratatouille Apaneca.",
+    avoidScamTitle: "Evita ser estafado",
+    avoidScamCopy: "ComunÃ­cate solo con personal autorizado de nuestro local. No aceptes informaciÃ³n ni indicaciones de personas externas que te quieran promocionar tours.",
+    boutiqueTitle: "BOUTIQUE",
+    boutiqueCopy: "Encuentra souvenirs de El Salvador, recuerdos tÃ­picos y artesanÃ­as salvadoreÃ±as para llevar contigo un detalle especial de tu visita.",
+    hoodiesCopy: "Souvenirs, detalles tÃ­picos y recuerdos inspirados en El Salvador.",
+    accessoriesCopy: "ArtesanÃ­as y artÃ­culos tradicionales salvadoreÃ±os para visitantes.",
+    restaurantTitle: "RESTAURANTE",
+    restaurantCopy: "Disfruta una experiencia gastronÃ³mica ideal para complementar tu aventura en Apaneca, con opciones pensadas para visitantes nacionales e internacionales.",
+    coffeeBoutiqueTitle: "FINCA Y CULTURA DEL CAFÃ‰",
+    coffeeBoutiqueCopy: "Conoce la finca, los cultivos y la cultura del cafÃ© en Apaneca a travÃ©s de imÃ¡genes que muestran el entorno natural, las plantas y el vivero cafetalero.",
+    comingSoon: "EspÃ©ralo pronto / Coming soon",
+    coffeeToursSoonCopy: "Estamos preparando esta experiencia para ofrecerla con el estÃ¡ndar correcto. Pronto estarÃ¡ disponible para reservas.",
+    experiencesTitle: "TOURS Y EXPERIENCIAS",
+    experiencesCopy: "Comentarios, experiencias y opiniones de clientes que ya vivieron nuestros recorridos. Mostramos reseÃ±as y observaciones reales para seguir mejorando.",
+    reviewOne: "Una aventura completa, con paisajes increÃ­bles y excelente atenciÃ³n.",
+    reviewTwo: "El tour a Laguna Verde fue lo mejor de nuestro viaje por Apaneca.",
+    reviewThree: "La aventura en invierno tiene un encanto especial: paisajes verdes, aire fresco y una experiencia inolvidable.",
+    reviewFour: "Uno de los mejores cafÃ©s que he probado en la Ruta del cafÃ©; excelente aroma, sabor y atenciÃ³n.",
+    copyright: "Queda prohibida la reproducciÃ³n total o parcial sin autorizaciÃ³n.",
+    alertVehicle: "Selecciona al menos una unidad de vehÃ­culo.",
+    alertCapacity: "La capacidad seleccionada no cubre la cantidad de personas.",
+    alertRequiredClient: "Completa nombre del responsable, nÃºmero de telÃ©fono y correo electrÃ³nico para generar la orden.",
+    alertTimeRange: "Selecciona una hora de reserva entre 9:00 AM y 6:00 PM.",
+    termsTitle: "TÃ©rminos y condiciones",
+    termsTourSelection: "Selecciona cuidadosamente el tour correcto antes de enviar la orden. Si eliges un tour equivocado, comunÃ­cate de inmediato con personal autorizado para corregirlo.",
+    termsArrival: "Para recibir el tour, indicaciones y atenciÃ³n oficial, presÃ©ntate directamente en nuestro local de Ratatouille Apaneca.",
+    termsPayment: "La orden queda sujeta a confirmaciÃ³n de disponibilidad y al envÃ­o del enlace de pago correspondiente.",
+    termsContact: "No aceptes informaciÃ³n ni indicaciones de personas externas que te quieran promocionar tours; comunÃ­cate solo con personal autorizado de nuestro local.",
+    termsAccepted: "He leÃ­do y comprendido los tÃ©rminos y condiciones, y confirmo que seleccionÃ© cuidadosamente el tour correcto.",
+    referralTitle: "Â¿CÃ³mo te enteraste de nosotros?",
+    referralSocial: "Facebook o Instagram",
+      referralTikTok: "TikTok",
+    referralWebsite: "Nuestra pÃ¡gina web",
+    referralAgent: "Otra / Atendido por un agente",
+    referralAgentName: "Atendido por agente:",
+    referralAgentPlaceholder: "",
+    referralPending: "No seleccionado",
+    whatsappGreeting: "Hola, quiero informaciÃ³n sobre Xtreme Tours APANECA.",
+    emailSubject: "Orden de reserva - Ratatouille Xtreme Tours Apaneca",
+    emailGreeting: "Nueva orden de reserva generada desde la pÃ¡gina web.",
+    sendingOrder: "Enviando orden...",
+    orderSent: "Orden enviada correctamente. Te enviaremos confirmaciÃ³n y link de pago.",
+    whatsappFallback: "No se pudo enviar directo a Gmail. Abriremos WhatsApp con tu orden lista: presiona Enviar para completar la reserva."
+  },
+  en: {
+    promo: "ADVENTURE DEALS: BOOK YOUR TOUR IN APANECA",
+    location: "Visiting from El Salvador or abroad? Book your personalized experience",
+    locationHelp: "If you have trouble booking any of our tours, you can call to reserve at +503 7883 0399",
+    reservationHelp: "Book by phone:",
+    reservationLanguages: "Assistance in Spanish, English, and French",
+    termsReminder: "Terms and conditions at the end of this site.",
+    home: "HOME",
+    reserve: "BOOK",
+    navHome: "Bookings",
+    navAbout: "About us",
+    navDestinations: "Destinations",
+    navPrices: "Prices",
+    navVehicles: "Vehicles",
+    navRecommendations: "Recommendations",
+    navTerms: "Terms and Conditions",
+    navBoutique: "Boutique",
+    navRestaurant: "Restaurant",
+    navGallery: "Gallery",
+    navCoffeeBoutique: "Coffee farm and culture",
+    navExperiences: "Experiences",
+    heroSale: "",
+    heroBadge: "APANECA Â· EL SALVADOR",
+    heroTitle: "RATATOUILLE XTREME TOURS",
+    heroCopy: "Book your Laguna Verde or Ausoles experience and discover Apaneca by buggy or ATV.",
+    heroCta: "SEE OFFER",
+      heroTikTok: "Follow us on TikTok",
+      homeExperienceTitle: "Experience Apaneca to the fullest!<br>Book your next adventure today!",
+      homeExperienceText: "Discover the adventure of Ratatouille Apaneca Xtreme Tours.",
+      homeExperienceVideoNote: "The video plays automatically without sound. You can turn on the audio from its controls.",
+    tours: "TOURS",
+    bookingTitle: "Please carefully select the correct tour from the available destinations below.",
+    aboutTitle: "ABOUT US",
+    aboutCopy: "Ratatouille Apaneca Xtreme Tours brings together adventure, nature, coffee culture, and local hospitality in carefully organized experiences for local and international travelers.",
+    aboutMissionTitle: "Our experience",
+    aboutMissionCopy: "We provide every group with personalized care and thoughtfully planned routes to enjoy Apaneca with confidence.",
+    date: "Date",
+    time: "Time",
+    people: "People",
+    selectPeople: "Select people",
+    vehicles: "Vehicles and units",
+    units: "Units",
+    capacity: "Capacity",
+    vehicleCapacity: "Vehicle capacity up to",
+    pricePerUnit: "Price per unit",
+    pricePerPerson: "Price per person",
+    singleAtv: "Single ATV",
+    doubleAtv: "Double ATV",
+    buggyOne: "Buggy 1 person",
+    buggyTwo: "Buggy 2 people",
+    buggyThree: "Buggy 3 people",
+    buggyFour: "Buggy 4 people",
+    buggyFive: "Buggy 5 people",
+    utvFive: "UTV 5 people",
+    utvSix: "UTV 6 people",
+    perPersonShort: "per person",
+        estimatedTotal: "Estimated total",
+    responsible: "Responsible guest",
+    fullName: "Full name",
+    phone: "Phone number",
+    phonePlaceholder: "Country code + number",
+    email: "Email",
+    requiredFields: "Required fields to generate the order",
+    translatorTitle: "Translation available",
+    translatorQuestion: "Enjoy your entire route with translation service available in English and/or French by a trilingual translator and local guide.",
+    translatorQuestionFinal: "This is an additional service that you can add to your tour, with the benefit of translation, interpretation and guidance during your experience.",
+    translatorOption: "Would you like to include a translator guide?",
+    translatorLanguages: "English or French",
+    translatorFinalCheck: "Full tour with English or French translation and interpretation available by a trilingual translator and local guide, for an extra fee.",
+    translatorFee: "Translation and interpretation",
+    translatorNotSelected: "NO",
+    translatorSelected: "YES",
+    orderSummary: "Order summary",
+    orderTour: "Tour",
+    orderPeople: "People",
+    orderVehicles: "Vehicles",
+    orderCapacity: "Covered capacity",
+    orderTranslation: "Translation",
+    referralSummary: "How did you hear about us?",
+    agentSummary: "Agent",
+    orderSubtotal: "Tour subtotal",
+    noVehiclesSelected: "Select vehicle units to complete the order",
+    totalCapacity: "Selected total capacity",
+    tourPrice: "Tour price",
+    pricePending: "To be confirmed",
+    ausolesPersonPriceNote: "Extreme Route (Ausoles Tour): promo $129.99 per person.",
+    lagunaVehiclePriceNote: "Laguna Verde Tour: 1 h 30 min, price based on selected vehicle.",
+    cafePriceNote: "Coffee Route: current price $0.00 while we add the complete tour details.",
+    nextStep: "We will send your order to confirm availability, then you will receive the payment link.",
+    whatsappSendReminder: "If WhatsApp opens as a backup, review the loaded order and press Send so the reservation arrives correctly.",
+    warning: "Select enough vehicles to cover the number of guests.",
+    reserveNow: "SEND BOOKING ORDER",
+    featureRoutesTitle: "Natural routes",
+    featureRoutesCopy: "Explore unique landscapes between mountains and extreme nature.",
+    featurePremiumTitle: "Premium experiences",
+    featurePremiumCopy: "Enjoy adventures designed for local and international travelers.",
+    featureCareTitle: "Personalized care",
+    featureCareCopy: "Personalized experiences with full support in Spanish, English, and French, a unique advantage that ordinary tours do not offer and that turns your adventure into an international experience without language barriers.",
+    featureVisitorsTitle: "Thank you to our most frequent traveler customers for your support",
+    featureVisitorsCopy: "El Salvador, the United States, Mexico, Canada, the Dominican Republic, Colombia, Argentina, Brazil, Puerto Rico, Chile, Uruguay, France, Spain, Italy, and Central America: Guatemala, Honduras, Nicaragua, Costa Rica, Panama, and Belize.",
+    destinationsTitle: "DESTINATIONS",
+    destinationsCopy: "Explore the best tourist spots in Apaneca and enjoy unforgettable adventures surrounded by nature and mountains.",
+    lagunaCopy: "Laguna Verde in Apaneca feels like a postcard destination. Surrounded by mountains, cloud forests and fresh weather, it offers peace, adventure and connection with nature.",
+    ausolesTitle: "Extreme Route (Ausoles Tour)",
+    ausolesCopy: "Discover an impressive natural phenomenon with steam, fumaroles and geothermal energy surrounded by mountains and extreme nature.",
+    cafeBasicTitle: "Coffee Route: Basic Coffee Tour to Tizapa",
+    cafeBasicCopy: "Coming soon. We are preparing this experience so it can be offered with the right standard.",
+    cafeExtremeTitle: "Extreme Coffee Tour Tizapa - Juayua",
+    cafeExtremeCopy: "Coming soon. We are preparing this experience so it can be offered with the right standard.",
+    pricesTitle: "PRICES",
+    pricesCopy: "Updated rates for Laguna Verde and Extreme Route Ausoles. Coffee tours will be available soon.",
+    lagunaPriceTitle: "Laguna Verde Tour",
+    ausolesPriceTitle: "Extreme Route (Ausoles Tour)",
+    cafeBasicPriceTitle: "Basic Coffee Tour to Tizapa",
+    cafeBasicEntrance: "These prices include the $5 USD per person coffee farm admission fee.",
+    cafeBasicPriceNote: "Basic Coffee Tour: price per vehicle with the $5 USD per person admission fee included.",
+    cafeExtremePriceTitle: "Extreme Coffee Tour Tizapa - Juayua",
+    cafeExtremeEntrance: "This price includes the $10 USD per person admission fee to the premium coffee farm in Juayua.",
+    cafeExtremePromoName: "Coffee Xtreme Deal",
+    cafeExtremeBeforeLabel: "Previous price per person",
+    cafeExtremeNowLabel: "Now per person",
+    cafeExtremePriceNote: "Extreme Coffee Tour: $129.99 per person by buggy or ATV, including the $10 USD premium admission fee.",
+    cafeTitle: "Coffee Route",
+    cafeCopy: "Coffee Route inspired by Apaneca coffee culture. We will add the real route, duration, stops, and official details soon.",
+    cafePriceTitle: "Coffee Route",
+    cafeDuration: "Tour duration: to be confirmed",
+    cafePromoName: "Coffee Route",
+    cafeBeforeLabel: "Current price",
+    cafeNowLabel: "Now",
+    lagunaPriceNote: "",
+    lagunaDuration: "Tour duration: 1 h 30 min",
+    ausolesDuration: "Tour duration: 3 hours",
+    lagunaBeforeLabel: "Previous price per person",
+    lagunaNowLabel: "Now from",
+    ausolesBeforeLabel: "Regular price",
+    ausolesNowLabel: "Now",
+    ausolesPromoName: "Ausoles Xtreme Deal",
+    vehiclesSectionTitle: "VEHICLES",
+    vehiclesSectionCopy: "Choose the ideal option for your group and enjoy the route with comfort, adventure, and your preferred driving style.",
+    singleAtvVehicleCopy: "Agile and fun for one person.",
+    doubleAtvVehicleCopy: "A shared experience for two people.",
+    buggiesVehicleTitle: "Buggies",
+    buggiesVehicleCopy: "Options for couples, families, and groups of up to four people.",
+    utvVehicleCopy: "More room and comfort for groups of five or six people.",
+    recommendationsTitle: "RECOMMENDATIONS",
+    recommendationsCopy: "Wear comfortable clothes and book in advance. Arriving a few minutes before your selected time is recommended.",
+    termsSectionReminder: "Review our Terms and Conditions page before submitting your reservation.",
+    localVisitTitle: "Come directly to our official location",
+    localVisitCopy: "To receive your tour, instructions, and official assistance, please come directly to our Ratatouille Apaneca location.",
+    avoidScamTitle: "Avoid being scammed",
+    avoidScamCopy: "Communicate only with authorized staff from our location. Do not accept information or instructions from outside people trying to promote tours to you.",
+    boutiqueTitle: "BOUTIQUE",
+    boutiqueCopy: "Find El Salvador souvenirs, traditional keepsakes and Salvadoran handmade crafts to take home a special detail from your visit.",
+    hoodiesCopy: "Souvenirs, traditional details and keepsakes inspired by El Salvador.",
+    accessoriesCopy: "Salvadoran crafts and traditional items for visitors.",
+    restaurantTitle: "RESTAURANT",
+    restaurantCopy: "Enjoy a food experience to complement your adventure in Apaneca, with options for local and international visitors.",
+    coffeeBoutiqueTitle: "COFFEE FARM AND CULTURE",
+    coffeeBoutiqueCopy: "Discover the farm, the crops, and Apaneca coffee culture through images of the natural setting, the plants, and the coffee nursery.",
+    comingSoon: "Coming soon",
+    coffeeToursSoonCopy: "We are preparing this experience so it can be offered with the right standard. It will be available for bookings soon.",
+    experiencesTitle: "TOURS AND EXPERIENCES",
+    experiencesCopy: "Comments, experiences and opinions from customers who already lived our routes. We show real reviews and observations to keep improving.",
+    reviewOne: "A complete adventure, with incredible views and excellent attention.",
+    reviewTwo: "The Laguna Verde tour was the best part of our trip through Apaneca.",
+    reviewThree: "The winter adventure has a special charm: green landscapes, fresh air, and an unforgettable experience.",
+    reviewFour: "One of the best coffees I have tried on the Coffee Route; excellent aroma, flavor, and service.",
+    copyright: "Total or partial reproduction without authorization is prohibited.",
+    alertVehicle: "Select at least one vehicle unit.",
+    alertCapacity: "The selected capacity does not cover the number of guests.",
+    alertRequiredClient: "Complete responsible guest name, phone number and email to generate the order.",
+    alertTimeRange: "Select a booking time between 9:00 AM and 6:00 PM.",
+    termsTitle: "Terms and conditions",
+    termsTourSelection: "Carefully select the correct tour before sending the order. If you choose the wrong tour, contact authorized staff immediately so it can be corrected.",
+    termsArrival: "To receive the tour, instructions, and official assistance, come directly to our Ratatouille Apaneca location.",
+    termsPayment: "The order is subject to availability confirmation and the corresponding payment link being sent.",
+    termsContact: "Do not accept information or instructions from outside people trying to promote tours to you; communicate only with authorized staff from our location.",
+    termsAccepted: "I have read and understood the terms and conditions, and I confirm that I carefully selected the correct tour.",
+    referralTitle: "How did you hear about us?",
+    referralSocial: "Facebook or Instagram",
+      referralTikTok: "TikTok",
+    referralWebsite: "Our website",
+    referralAgent: "Other / Assisted by an agent",
+    referralAgentName: "Assisted by agent:",
+    referralAgentPlaceholder: "",
+    referralPending: "Not selected",
+    whatsappGreeting: "Hello, I want information about Xtreme Tours APANECA.",
+    emailSubject: "Booking order - Ratatouille Xtreme Tours Apaneca",
+    emailGreeting: "New booking order generated from the website.",
+    sendingOrder: "Sending order...",
+    orderSent: "Order sent successfully. We will send confirmation and the payment link.",
+    whatsappFallback: "Direct Gmail delivery is not available. We will open WhatsApp with your order ready: press Send to complete the reservation."
+  }
+};
+
+let currentLanguage = "es";
+
+function t(key) {
+  return translations[currentLanguage][key] || translations.es[key] || key;
+}
+
+function vehicleName(vehicle) {
+  return currentLanguage === "en" ? vehicle.enName : vehicle.esName;
+}
+
+function isPerPersonTour(tourId) {
+  return tourId === "ausoles" || tourId === "cafe-extremo";
+}
+
+function availableVehicles(tourId) {
+  if (tourId === "verde") {
+    return vehicleOptions.filter((vehicle) => Number.isFinite(vehicle.lagunaPrice));
+  }
+  if (tourId === "cafe-basico") {
+    return vehicleOptions.filter((vehicle) => Number.isFinite(vehicle.cafeBasicPrice));
+  }
+  if (tourId === "ausoles" || tourId === "cafe-extremo") {
+    return vehicleOptions.filter((vehicle) => ["atv1", "atv2", "buggy1", "buggy2", "buggy3", "buggy4", "utv5", "utv6"].includes(vehicle.id));
+  }
+  return vehicleOptions.filter((vehicle) => !vehicle.id.startsWith("utv"));
+}
+
+function vehiclePrice(vehicle, tourId) {
+  if (tourId === "ausoles") return AUSOLES_PROMO_PRICE;
+  if (tourId === "cafe-extremo") return COFFEE_EXTREME_PRICE;
+  if (tourId === "cafe-basico") return vehicle.cafeBasicPrice;
+  return vehicle.lagunaPrice;
+}
+
+function tourTotalPrice(tourId, selectedVehicles, people) {
+  if (isPerPersonTour(tourId)) {
+    const selectedCapacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
+    const personPrice = tourId === "ausoles" ? AUSOLES_PROMO_PRICE : COFFEE_EXTREME_PRICE;
+    return Math.max(people, selectedCapacity) * personPrice;
+  }
+  return selectedVehicles.reduce((total, vehicle) => total + Number(vehiclePrice(vehicle, tourId) || 0) * vehicle.units, 0);
+}
+
+function translatorPrice(tourId) {
+  return translatorPrices[tourId] || 0;
+}
+
+function formatPrice(value) {
+  const amount = Number(value || 0);
+  if (amount === 0) return "$0.00";
+  return `$${Number.isInteger(amount) ? amount : amount.toFixed(2)}`;
+}
+
+function tourPriceNote(tourId) {
+  if (tourId === "ausoles") return t("ausolesPersonPriceNote");
+  if (tourId === "cafe-basico") return t("cafeBasicPriceNote");
+  if (tourId === "cafe-extremo") return t("cafeExtremePriceNote");
+  return t("lagunaVehiclePriceNote");
+}
+
+function createOrderNumber() {
+  const now = new Date();
+  const datePart = now.toISOString().slice(0, 10).replaceAll("-", "");
+  const timePart = String(now.getHours()).padStart(2, "0") + String(now.getMinutes()).padStart(2, "0") + String(now.getSeconds()).padStart(2, "0");
+  return `RXT-${datePart}-${timePart}`;
+}
+
+function buildBookingCards() {
+  const grid = document.getElementById("bookingGrid");
+  grid.innerHTML = tours.map((tour) => {
+    const detail = tour[currentLanguage];
+    if (tour.comingSoon) {
+      return `
+      <article class="tour-card is-coming-soon" data-tour-id="${tour.id}" aria-disabled="true">
+        <div class="tour-header">
+          <h3>${tour.icon ? `${tour.icon} ` : ""}${detail.name}</h3>
+          <p>${detail.description}</p>
+          <span class="coming-soon-badge">${t("comingSoon")}</span>
+        </div>
+        <p class="section-text">${t("coffeeToursSoonCopy")}</p>
+      </article>
+    `;
+    }
+    return `
+      <form class="tour-card" data-tour-id="${tour.id}">
+        <div class="tour-header">
+          <h3>${tour.icon ? `${tour.icon} ` : ""}${detail.name}</h3>
+          <p>${detail.description}</p>
+        </div>
+        <div class="form-grid">
+          <div class="field">
+            <label>${t("date")}</label>
+            <input name="date" type="date" required>
+          </div>
+          <div class="field">
+            <label>${t("time")}</label>
+            <input name="time" type="time" min="09:00" max="18:00" required>
+          </div>
+          <div class="field full">
+            <label>${t("people")}</label>
+            <select name="people" required>
+              <option value="">${t("selectPeople")}</option>
+              ${[1,2,3,4,5,6,7,8,9,10,15,20,25,30].map((value) => `<option value="${value}">${value} ${t("people")}</option>`).join("")}
+            </select>
+          </div>
+        </div>
+        <div class="vehicles-box">
+          <div class="vehicles-title">${t("vehicles")}</div>
+          <div class="vehicle-list">
+            ${availableVehicles(tour.id).map((vehicle) => `
+              <div class="vehicle-row">
+                <div class="vehicle-name">
+                  <strong>${vehicleName(vehicle)}</strong>
+                  <small>${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()} Â· ${isPerPersonTour(tour.id) ? `${t("pricePerPerson")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}` : `${t("pricePerUnit")}: ${formatPrice(vehiclePrice(vehicle, tour.id))}`} </small>
+                </div>
+                <select name="${vehicle.id}" data-capacity="${vehicle.capacity}" data-label="${vehicleName(vehicle)} ${vehicle.capacity}">
+                  <option value="">${t("units")}</option>
+                  ${Array.from({ length: vehicle.maxUnits }, (_, index) => `<option value="${index + 1}">${index + 1}</option>`).join("")}
+                </select>
+              </div>
+            `).join("")}
+          </div>
+        </div>
+        <div class="client-info">
+          <div class="field">
+            <label>${t("responsible")} *</label>
+            <input name="name" type="text" placeholder="${t("fullName")}" required>
+          </div>
+          <div class="field">
+            <label>${t("phone")} *</label>
+            <input name="phone" type="tel" placeholder="${t("phonePlaceholder")}" required>
+          </div>
+          <div class="field">
+            <label>${t("email")} *</label>
+            <input name="email" type="email" placeholder="correo@ejemplo.com" required>
+          </div>
+        </div>
+        <div class="translator-box">
+          <div class="translator-title">${t("translatorTitle")}</div>
+          <p class="translator-copy">${t("translatorQuestion")}</p>
+          <p class="translator-copy">${t("translatorQuestionFinal")}</p>
+          <div class="field full">
+            <label>${t("translatorOption")}</label>
+            <select name="translator">
+              <option value="no" selected>${t("translatorNotSelected")} - $0</option>
+              <option value="yes">${t("translatorSelected")} - ${formatPrice(translatorPrice(tour.id))}</option>
+            </select>
+          </div>
+        </div>
+        <div class="summary-box">
+          <div class="summary-pass-head">
+            <div>
+              <span class="summary-brand">RATATOUILLE APANECA</span>
+              <strong class="summary-heading">${t("orderSummary")}</strong>
+              <div class="summary-order-code">RXT WEB ORDER</div>
+            </div>
+            <div class="summary-barcode" aria-hidden="true"></div>
+          </div>
+          <div class="summary-section-title">${t("bookingTitle")}</div>
+          <ul class="order-summary-list" data-order-summary></ul>
+          <div class="summary-section-title">${t("tourPrice")}</div>
+          <div class="summary-price-panel">
+            <div class="summary-price-item"><span>${t("orderSubtotal")}</span><strong data-summary-subtotal>$0</strong></div>
+            <div class="summary-price-item"><span>${t("translatorFee")}</span><strong data-summary-translator>$0</strong></div>
+            <div class="summary-price-item total"><span>${t("estimatedTotal")}</span><strong data-summary-price>$0</strong></div>
+          </div>
+          <p class="summary-note">${tourPriceNote(tour.id)}</p>
+          <p class="summary-send-note">${t("nextStep")}</p>
+          <p class="summary-warning" data-summary-warning>${t("warning")}</p>
+        </div>
+        <div class="referral-box">
+          <h4>${t("referralTitle")}</h4>
+          <div class="referral-options">
+            <label class="referral-choice">
+              <input type="radio" name="referralSource" value="social" required>
+              <span class="social-badges" aria-hidden="true">
+                <span class="social-badge social-facebook">f</span>
+                <span class="social-badge social-instagram">â—Ž</span>
+              </span>
+              <span class="referral-label">${t("referralSocial")}</span>
+            </label>
+            <label class="referral-choice">
+              <input type="radio" name="referralSource" value="tiktok" required>
+              <span class="social-badges" aria-hidden="true">
+                <span class="social-badge social-tiktok">TikTok</span>
+              </span>
+              <span class="referral-label">${t("referralTikTok")}</span>
+            </label>
+            <label class="referral-choice">
+              <input type="radio" name="referralSource" value="website" required>
+              <span class="referral-label">${t("referralWebsite")}</span>
+            </label>
+            <label class="referral-choice">
+              <input type="radio" name="referralSource" value="agent" required>
+              <span class="referral-label">${t("referralAgent")}</span>
+            </label>
+          </div>
+          <div class="field full agent-field">
+            <label>${t("referralAgentName")}</label>
+            <input name="agentName" type="text" maxlength="20" autocomplete="name">
+          </div>
+        </div>
+        <div class="terms-box">
+          <h4><a href="terminos.html#terminos">${t("termsTitle")}</a></h4>
+          <ul>
+            <li>${t("termsTourSelection")}</li>
+            <li>${t("termsContact")}</li>
+          </ul>
+          <label class="terms-check">
+            <input type="checkbox" name="termsAccepted" required>
+            <span>${t("termsAccepted")}</span>
+          </label>
+        </div>
+        <button type="submit" class="reserve-btn">${t("reserveNow")}</button>
+        <p class="submit-status" data-submit-status aria-live="polite"></p>
+      </form>
+    `;
+  }).join("");
+
+  grid.querySelectorAll("form.tour-card").forEach((form) => {
+    form.addEventListener("change", () => updateSummary(form));
+    form.addEventListener("input", () => updateSummary(form));
+    form.addEventListener("submit", handleBookingSubmit);
+    updateSummary(form);
+  });
+}
+
+function getFormSummary(form) {
+  const selectedVehicles = availableVehicles(form.dataset.tourId).map((vehicle) => {
+    const field = form.elements[vehicle.id];
+    const units = Number(field?.value || 0);
+    return { ...vehicle, units };
+  }).filter((vehicle) => vehicle.units > 0);
+
+  const capacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
+  const people = Number(form.elements.people.value || 0);
+  const basePrice = tourTotalPrice(form.dataset.tourId, selectedVehicles, people);
+  const wantsTranslator = form.elements.translator.value === "yes";
+  const translatorFee = wantsTranslator ? translatorPrice(form.dataset.tourId) : 0;
+  const totalPrice = basePrice + translatorFee;
+
+  return { selectedVehicles, capacity, people, basePrice, wantsTranslator, translatorFee, totalPrice };
+}
+
+function selectedVehicleText(summary, tourId) {
+  if (!summary.selectedVehicles.length) {
+    return t("noVehiclesSelected");
+  }
+
+  return summary.selectedVehicles.map((vehicle) => {
+    const priceText = isPerPersonTour(tourId) ? `${formatPrice(vehiclePrice(vehicle, tourId))} ${t("perPersonShort")}` : `${formatPrice(vehiclePrice(vehicle, tourId))} c/u`;
+    return `${vehicle.units} x ${vehicleName(vehicle)} (${vehicle.capacity} ${t("people").toLowerCase()}) - ${priceText}`;
+  }).join(" | ");
+}
+
+function translationSummaryText(summary) {
+  return summary.wantsTranslator
+    ? `${t("translatorSelected")} - ${t("translatorLanguages")} - ${formatPrice(summary.translatorFee)}`
+    : `${t("translatorNotSelected")} - $0`;
+}
+
+function getReferralDetails(form) {
+  const selected = form.querySelector('input[name="referralSource"]:checked');
+  const labels = {
+    social: t("referralSocial"),
+    tiktok: t("referralTikTok"),
+    website: t("referralWebsite"),
+    agent: t("referralAgent")
+  };
+  const source = selected?.value || "";
+  return {
+    source,
+    label: labels[source] || t("referralPending"),
+    agentName: fieldValue(form.elements.agentName?.value, "")
+  };
+}
+
+function getOrderSummaryRows(form, summary) {
+  const tour = tours.find((item) => item.id === form.dataset.tourId);
+  const referral = getReferralDetails(form);
+
+  const rows = [
+    [t("orderTour"), tour[currentLanguage].name],
+    [t("orderPeople"), summary.people ? String(summary.people) : t("selectPeople")],
+    [t("orderVehicles"), selectedVehicleText(summary, form.dataset.tourId)],
+    [t("orderCapacity"), `${summary.capacity} ${t("people").toLowerCase()}`],
+    [t("orderTranslation"), translationSummaryText(summary)],
+    [t("referralSummary"), referral.label]
+  ];
+  if (referral.agentName) rows.push([t("agentSummary"), referral.agentName]);
+  return rows;
+}
+
+function summaryRowClass(label) {
+  return [t("orderVehicles"), t("orderTranslation"), t("referralSummary"), t("agentSummary")].includes(label) ? " class=\"is-wide\"" : "";
+}
+
+function getOrderSummaryText(form, summary) {
+  return getOrderSummaryRows(form, summary)
+    .map(([label, value]) => `${label}: ${value}`)
+    .join("\n");
+}
+
+function escapeHtml(value) {
+  return String(value)
+    .replace(/&/g, "&amp;")
+    .replace(/</g, "&lt;")
+    .replace(/>/g, "&gt;")
+    .replace(/"/g, "&quot;")
+    .replace(/'/g, "&#039;");
+}
+
+function buildOrderEmailHtml(form, summary, orderNumber) {
+  const tour = tours.find((item) => item.id === form.dataset.tourId);
+  const rows = getOrderSummaryRows(form, summary)
+    .map(([label, value]) => `
+      <div style="padding:10px 0;">
+        <div style="font-size:11px;font-weight:900;color:#b49a5b;text-transform:uppercase;letter-spacing:.8px;">${escapeHtml(label)}</div>
+        <div style="font-size:18px;font-weight:900;color:#111827;line-height:1.35;">${escapeHtml(value)}</div>
+      </div>
+    `).join("");
+
+  return `
+    <div style="font-family:Montserrat,Arial,sans-serif;background:#f1f5f9;padding:24px;color:#111827;">
+      <div style="max-width:760px;margin:auto;background:white;border:1px solid #e2e8f0;border-radius:14px;overflow:hidden;">
+        <div style="padding:24px 28px 18px;">
+          <div style="font-size:12px;font-weight:900;color:#b49a5b;letter-spacing:2px;text-transform:uppercase;">RATATOUILLE APANECA</div>
+          <div style="font-size:34px;font-weight:900;line-height:1.05;text-transform:uppercase;margin-top:4px;">RESUMEN DE LA ORDEN</div>
+          <div style="font-size:13px;font-weight:900;color:#64748b;letter-spacing:1px;text-transform:uppercase;margin-top:8px;">ORDEN # ${escapeHtml(orderNumber)}</div>
+          <div style="height:58px;margin-top:18px;background:repeating-linear-gradient(90deg,#111827 0 3px,transparent 3px 6px,#111827 6px 8px,transparent 8px 13px,#111827 13px 17px,transparent 17px 20px);"></div>
+        </div>
+        <div style="background:#b49a5b;color:white;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:10px 28px;">DATOS DE RESERVA</div>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:4px 28px;padding:18px 28px;">
+          ${rows}
+        </div>
+        <div style="background:#b49a5b;color:white;font-size:13px;font-weight:900;text-transform:uppercase;letter-spacing:1px;padding:10px 28px;">DATOS DEL CLIENTE</div>
+        <div style="padding:18px 28px;line-height:1.7;font-size:14px;">
+          <strong>${escapeHtml(t("responsible"))}:</strong> ${escapeHtml(fieldValue(form.elements.name.value, "No ingresado"))}<br>
+          <strong>${escapeHtml(t("phone"))}:</strong> ${escapeHtml(fieldValue(form.elements.phone.value, "No ingresado"))}<br>
+          <strong>${escapeHtml(t("email"))}:</strong> ${escapeHtml(fieldValue(form.elements.email.value, "No ingresado"))}<br>
+          <strong>${escapeHtml(t("date"))}:</strong> ${escapeHtml(fieldValue(form.elements.date.value, "No seleccionado"))}<br>
+          <strong>${escapeHtml(t("time"))}:</strong> ${escapeHtml(fieldValue(form.elements.time.value, "No seleccionado"))}
+        </div>
+        <div style="background:#f8fafc;padding:18px 28px;border-top:1px solid #e2e8f0;">
+          <div style="display:grid;grid-template-columns:1fr 1fr 1.2fr;gap:16px;">
+            <div><div style="font-size:11px;font-weight:900;color:#b49a5b;text-transform:uppercase;">${escapeHtml(t("orderSubtotal"))}</div><strong style="font-size:20px;">${escapeHtml(formatPrice(summary.basePrice))}</strong></div>
+            <div><div style="font-size:11px;font-weight:900;color:#b49a5b;text-transform:uppercase;">${escapeHtml(t("translatorFee"))}</div><strong style="font-size:20px;">${escapeHtml(formatPrice(summary.translatorFee))}</strong></div>
+            <div><div style="font-size:11px;font-weight:900;color:#b49a5b;text-transform:uppercase;">${escapeHtml(t("estimatedTotal"))}</div><strong style="font-size:30px;">${escapeHtml(formatPrice(summary.totalPrice))}</strong></div>
+          </div>
+          <p style="margin:18px 0 0;color:#475569;font-size:13px;line-height:1.6;">${escapeHtml(t("nextStep"))}</p>
+        </div>
+      </div>
+    </div>
+  `;
+}
+
+function getVehicleOrderDetails(form) {
+  const selectedLines = availableVehicles(form.dataset.tourId).map((vehicle) => {
+    const units = Number(form.elements[vehicle.id]?.value || 0);
+    if (!units) return "";
+    const priceText = isPerPersonTour(form.dataset.tourId) ? `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} ${t("perPersonShort")}` : `${formatPrice(vehiclePrice(vehicle, form.dataset.tourId))} c/u`;
+    return [
+      `${vehicleName(vehicle)}`,
+      `${t("vehicleCapacity")}: ${vehicle.capacity} ${t("people").toLowerCase()}`,
+      `${t("units")}: ${units}`,
+      `Precio: ${priceText}`
+    ].join(" | ");
+  }).filter(Boolean);
+
+  return selectedLines.length ? selectedLines.join("\n") : t("noVehiclesSelected");
+}
+function getVehicleSelectionsPayload(form, summary) {
+  return summary.selectedVehicles.map((vehicle) => ({
+    id: vehicle.id,
+    label: `${vehicleName(vehicle)}${vehicle.capacity > 1 ? ` ${vehicle.capacity} pax` : ""}`,
+    esName: vehicle.esName,
+    enName: vehicle.enName,
+    capacity: vehicle.capacity,
+    units: vehicle.units,
+    unitPrice: vehiclePrice(vehicle, form.dataset.tourId),
+    commission: form.dataset.tourId === "ausoles" ? DEFAULT_COMMISSION_RATES.ausoles : tourIsCafe(form.dataset.tourId, "") ? DEFAULT_COMMISSION_RATES.cafe : vehicle.commission
+  }));
+}
+
+function fieldValue(value, fallback) {
+  return value && String(value).trim() ? String(value).trim() : fallback;
+}
+
+function setSubmitStatus(form, text, type = "") {
+  const status = form.querySelector("[data-submit-status]");
+  if (!status) return;
+  status.textContent = text;
+  status.className = `submit-status ${type}`.trim();
+}
+
+function openWhatsAppOrder(message) {
+  const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+  window.open(url, "_blank", "noopener");
+}
+
+async function sendOrderToGoogleScript(payload) {
+  if (!GOOGLE_SCRIPT_URL) return false;
+
+  return new Promise((resolve) => {
+    const frameName = `ratatouilleOrderFrame_${Date.now()}`;
+    const iframe = document.createElement("iframe");
+    const form = document.createElement("form");
+    const input = document.createElement("input");
+
+    iframe.name = frameName;
+    iframe.style.display = "none";
+    iframe.setAttribute("aria-hidden", "true");
+
+    form.method = "POST";
+    form.action = GOOGLE_SCRIPT_URL;
+    form.target = frameName;
+    form.style.display = "none";
+
+    input.type = "hidden";
+    input.name = "payload";
+    input.value = JSON.stringify(payload);
+
+    form.appendChild(input);
+    document.body.appendChild(iframe);
+    document.body.appendChild(form);
+
+    let finished = false;
+    const finish = () => {
+      if (finished) return;
+      finished = true;
+      resolve(true);
+      setTimeout(() => {
+        form.remove();
+        iframe.remove();
+      }, 3000);
+    };
+
+    iframe.addEventListener("load", finish, { once: true });
+    form.submit();
+    setTimeout(finish, 2500);
+  });
+}
+
+function loadCommissionRates() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(COMMISSION_RATES_KEY) || "{}");
+    return { ...DEFAULT_COMMISSION_RATES, ...(stored && typeof stored === "object" ? stored : {}) };
+  } catch {
+    return { ...DEFAULT_COMMISSION_RATES };
+  }
+}
+
+function tourIsAusoles(tourId, tourName) {
+  const value = `${tourId || ""} ${tourName || ""}`.toLowerCase();
+  return tourId === "ausoles" || value.includes("ausoles");
+}
+
+function tourIsCafe(tourId, tourName) {
+  const value = `${tourId || ""} ${tourName || ""}`.toLowerCase();
+  return value.includes("cafe") || value.includes("cafÃ©") || value.includes("coffee");
+}
+
+function makeCommissionId(orderNumber) {
+  return `order-${String(orderNumber || Date.now()).toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "")}`;
+}
+
+function calculateCommissionRecord(order) {
+  const rates = loadCommissionRates();
+  const rateForVehicle = (id) => id === "atv1" ? Number(rates.atv1 || 0) : id === "atv2" ? Number(rates.atv2 || 0) : Number(rates.buggy || 0);
+  if (tourIsAusoles(order.tourId, order.tour)) {
+    return Number(order.people || 1) * Number(rates.ausoles || 0);
+  }
+  if (tourIsCafe(order.tourId, order.tour)) {
+    return Number(order.people || 1) * Number(rates.cafe || 0);
+  }
+  const selections = Array.isArray(order.vehicleSelections) ? order.vehicleSelections : [];
+  if (selections.length) {
+    return selections.reduce((total, vehicle) => total + Number(vehicle.units || 0) * rateForVehicle(vehicle.id), 0);
+  }
+  return (Number(order.atvUnits || 0) * Number(rates.atv1 || rates.atv || 0)) + (Number(order.buggyUnits || 0) * Number(rates.buggy || 0));
+}
+
+function buildCommissionRecord(payload) {
+  const record = {
+    id: makeCommissionId(payload.orderNumber),
+    orderNumber: payload.orderNumber,
+    date: new Date().toISOString().slice(0, 10),
+    tour: payload.tour || (tourIsAusoles(payload.tourId, payload.tour) ? "Ruta Extrema (Ausoles Tour)" : tourIsCafe(payload.tourId, payload.tour) ? "Ruta del cafÃ©" : "Laguna Verde"),
+    tourId: payload.tourId,
+    customerName: payload.customerName || "Cliente",
+    atvUnits: Number(payload.atvUnits || 0),
+    buggyUnits: Number(payload.buggyUnits || 0),
+    people: Number(payload.people || 0),
+    vehicleSelections: Array.isArray(payload.vehicleSelections) ? payload.vehicleSelections : [],
+    status: "pending",
+    notes: "Orden real creada desde la pagina de tours.",
+    createdAt: new Date().toISOString()
+  };
+  record.commission = calculateCommissionRecord(record);
+  return record;
+}
+
+function saveCommissionRecord(payload) {
+  try {
+    const record = buildCommissionRecord(payload);
+    const current = JSON.parse(localStorage.getItem(COMMISSION_REGISTER_KEY) || "[]");
+    const orders = Array.isArray(current) ? current : [];
+    const existingIndex = orders.findIndex((order) => order.orderNumber === record.orderNumber);
+
+    if (existingIndex >= 0) {
+      orders[existingIndex] = {
+        ...orders[existingIndex],
+        ...record,
+        id: orders[existingIndex].id || record.id,
+        status: orders[existingIndex].status || "pending",
+        closedAs: orders[existingIndex].closedAs || "",
+        disposedAt: orders[existingIndex].disposedAt || ""
+      };
+    } else {
+      orders.unshift(record);
+    }
+
+    localStorage.setItem(COMMISSION_REGISTER_KEY, JSON.stringify(orders));
+    return record;
+  } catch (error) {
+    console.warn("No se pudo guardar la orden directa de comisiones.", error);
+    return null;
+  }
+}
+
+function queueCommissionOrder(payload) {
+  const queuedPayload = { ...payload, queuedAt: new Date().toISOString() };
+  const commissionRecord = saveCommissionRecord(queuedPayload);
+
+  try {
+    const current = JSON.parse(localStorage.getItem(COMMISSION_INBOX_KEY) || "[]");
+    const inbox = Array.isArray(current) ? current : [];
+    inbox.push(queuedPayload);
+    localStorage.setItem(COMMISSION_INBOX_KEY, JSON.stringify(inbox.slice(-200)));
+  } catch (error) {
+    console.warn("No se pudo registrar la orden para comisiones.", error);
+  }
+
+  try {
+    const commissionChannel = new BroadcastChannel("ratatouille_commissions");
+    commissionChannel.postMessage({ type: "new-order", payload: queuedPayload, record: commissionRecord });
+    commissionChannel.close();
+  } catch {
+    /* localStorage remains the fallback when BroadcastChannel is unavailable. */
+  }
+}
+
+function updateSummary(form) {
+  const summary = getFormSummary(form);
+  const orderList = form.querySelector("[data-order-summary]");
+  orderList.innerHTML = getOrderSummaryRows(form, summary)
+    .map(([label, value]) => `<li${summaryRowClass(label)}><span>${label}</span><span>${value}</span></li>`)
+    .join("");
+  form.querySelector("[data-summary-subtotal]").textContent = formatPrice(summary.basePrice);
+  form.querySelector("[data-summary-translator]").textContent = formatPrice(summary.translatorFee);
+  form.querySelector("[data-summary-price]").textContent = formatPrice(summary.totalPrice);
+  form.querySelector("[data-summary-warning]").classList.toggle("is-visible", summary.people > 0 && summary.capacity < summary.people);
+}
+
+async function handleBookingSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const submitButton = form.querySelector(".reserve-btn");
+
+  if (!form.reportValidity()) {
+    return;
+  }
+  if (form.elements.time.value && (form.elements.time.value < "09:00" || form.elements.time.value > "18:00")) {
+    setSubmitStatus(form, t("alertTimeRange"), "error");
+    form.elements.time.focus();
+    return;
+  }
+
+  const summary = getFormSummary(form);
+
+  if (!summary.selectedVehicles.length) {
+    setSubmitStatus(form, t("alertVehicle"), "error");
+    const firstVehicleInput = form.querySelector(".vehicle-row select");
+    if (firstVehicleInput) firstVehicleInput.focus();
+    return;
+  }
+
+  if (summary.capacity < summary.people) {
+    setSubmitStatus(form, t("alertCapacity"), "error");
+    const firstVehicleInput = form.querySelector(".vehicle-row select");
+    if (firstVehicleInput) firstVehicleInput.focus();
+    return;
+  }
+
+  const tour = tours.find((item) => item.id === form.dataset.tourId);
+  const orderNumber = createOrderNumber();
+  const orderSummaryText = getOrderSummaryText(form, summary);
+  const vehicleOrderDetails = getVehicleOrderDetails(form);
+  const vehicleSelections = getVehicleSelectionsPayload(form, summary);
+  const referral = getReferralDetails(form);
+  const atvUnits = summary.selectedVehicles
+    .filter((vehicle) => vehicle.id.startsWith("atv"))
+    .reduce((total, vehicle) => total + vehicle.units, 0);
+  const buggyUnits = summary.selectedVehicles
+    .filter((vehicle) => vehicle.id.startsWith("buggy") || vehicle.id.startsWith("utv"))
+    .reduce((total, vehicle) => total + vehicle.units, 0);
+  const translatorSelection = translationSummaryText(summary);
+  const emailHtml = buildOrderEmailHtml(form, summary, orderNumber);
+
+  const message = [
+    `ORDEN # ${orderNumber}`,
+    "",
+    t("emailGreeting"),
+    "",
+    "DATOS COMPLETOS DE LA ORDEN",
+    "",
+    `${t("orderTour")}: ${tour[currentLanguage].name}`,
+    `${t("date")}: ${fieldValue(form.elements.date.value, "No seleccionado")}`,
+    `${t("time")}: ${fieldValue(form.elements.time.value, "No seleccionado")}`,
+    `${t("people")}: ${fieldValue(form.elements.people.value, "No seleccionado")}`,
+    "",
+    `${t("vehicles")}:`,
+    vehicleOrderDetails,
+    "",
+    `${t("responsible")}: ${fieldValue(form.elements.name.value, "No ingresado")}`,
+    `${t("phone")}: ${fieldValue(form.elements.phone.value, "No ingresado")}`,
+    `${t("email")}: ${fieldValue(form.elements.email.value, "No ingresado")}`,
+    "",
+    `${t("translatorOption")}: ${translatorSelection}`,
+    `${t("referralSummary")}: ${referral.label}`,
+    ...(referral.agentName ? [`${t("agentSummary")}: ${referral.agentName}`] : []),
+    "",
+    "RESUMEN DE LA ORDEN",
+    orderSummaryText,
+    "",
+    `Subtotal tour: ${formatPrice(summary.basePrice)}`,
+    `${t("translatorFee")}: ${formatPrice(summary.translatorFee)}`,
+    `${t("estimatedTotal")}: ${formatPrice(summary.totalPrice)}`,
+    "",
+    t("nextStep"),
+    t("whatsappSendReminder"),
+    "",
+    `Contacto Ratatouille Xtreme Tours: 7883 0399`,
+    `Contacto adicional: ${SECONDARY_PHONE}`
+  ].join("\n");
+
+  const payload = {
+    orderNumber,
+    subject: `${t("emailSubject")} - ${orderNumber}`,
+    message,
+    emailHtml,
+    customerName: form.elements.name.value,
+    customerPhone: form.elements.phone.value,
+    customerEmail: form.elements.email.value,
+    tour: tour[currentLanguage].name,
+    tourId: form.dataset.tourId,
+    people: form.elements.people.value,
+    atvUnits,
+    buggyUnits,
+    vehicleOrderDetails,
+    vehicleSelections,
+    referralSource: referral.source,
+    referralLabel: referral.label,
+    agentName: referral.agentName,
+    orderSummaryText,
+    total: summary.totalPrice,
+    basePriceNumber: summary.basePrice,
+    totalNumber: summary.totalPrice,
+    destinationEmail: RESERVATION_EMAIL
+  };
+
+  queueCommissionOrder(payload);
+
+  submitButton.disabled = true;
+  setSubmitStatus(form, t("sendingOrder"));
+
+  try {
+    const sentToGmail = await sendOrderToGoogleScript(payload);
+
+    if (sentToGmail) {
+      setSubmitStatus(form, t("orderSent"), "success");
+      form.reset();
+      updateSummary(form);
+      return;
+    }
+
+    setSubmitStatus(form, t("whatsappFallback"), "warning");
+    openWhatsAppOrder(message);
+  } catch (error) {
+    setSubmitStatus(form, t("whatsappFallback"), "warning");
+    openWhatsAppOrder(message);
+  } finally {
+    submitButton.disabled = false;
+  }
+}
+
+function applyTranslations() {
+  document.documentElement.lang = currentLanguage;
+  document.querySelectorAll("[data-i18n]").forEach((element) => {
+    element.textContent = t(element.dataset.i18n);
+  });
+  document.querySelectorAll("[data-i18n-html]").forEach((element) => {
+    element.innerHTML = t(element.dataset.i18nHtml);
+  });
+  buildBookingCards();
+}
+
+function initWhatsAppLinks() {
+  const baseUrl = WHATSAPP_NUMBER ? `https://wa.me/${WHATSAPP_NUMBER}` : "https://wa.me/";
+  document.querySelectorAll(".js-whatsapp-link").forEach((link) => {
+    link.href = baseUrl;
+  });
+}
+
+function initExperienceVideo() {
+  const video = document.querySelector(".experience-video");
+  if (!video) return;
+
+  const startPlayback = () => {
+    video.play().catch(() => {
+      /* Autoplay remains available when the browser allows muted playback. */
+    });
+  };
+
+  video.muted = true;
+  video.defaultMuted = true;
+  video.addEventListener("loadedmetadata", startPlayback, { once: true });
+  video.addEventListener("canplay", startPlayback, { once: true });
+  document.addEventListener("visibilitychange", () => {
+    if (!document.hidden && video.paused) startPlayback();
+  });
+  startPlayback();
+}
+
+document.getElementById("languageSelect").addEventListener("change", (event) => {
+  currentLanguage = event.target.value;
+  applyTranslations();
+});
+
+initWhatsAppLinks();
+initExperienceVideo();
+applyTranslations();
+
+  </script>
+</body>
+</html>
+
