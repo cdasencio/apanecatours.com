@@ -219,9 +219,35 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .submit-status.error{color:#fca5a5}
 .feature-strip{max-width:1280px;margin:60px auto 0;padding:0 20px;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
 .feature{background:linear-gradient(145deg,rgba(7,15,30,.96),rgba(3,10,22,.98));border:1px solid rgba(255,255,255,.07);border-radius:26px;padding:26px}
-.feature span{font-size:34px}
+.feature>span{font-size:34px}
 .feature h3{margin-top:14px;font-size:22px}
 .feature p{margin-top:10px;color:#b8cadb;line-height:1.7;font-size:14px}
+.feedback-card{display:flex;flex-direction:column;gap:12px}
+.feedback-card .feedback-icon{font-size:30px;line-height:1}
+.feedback-form{margin-top:2px;display:grid;gap:10px}
+.feedback-fields{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.feedback-form label{display:grid;gap:6px;color:#d8e8f7;font-size:11px;font-weight:900;text-transform:uppercase;letter-spacing:.04em}
+.feedback-form input,.feedback-form select,.feedback-form textarea{width:100%;min-width:0;border:1px solid rgba(14,165,255,.68);border-radius:14px;background:#061426;color:#f4fbff;font-family:'Montserrat',sans-serif;font-size:13px;font-weight:700;outline:none;padding:12px}
+.feedback-form textarea{min-height:88px;resize:vertical;line-height:1.55}
+.feedback-form input::placeholder,.feedback-form textarea::placeholder{color:#7d94ad}
+.feedback-form input:focus,.feedback-form select:focus,.feedback-form textarea:focus{border-color:rgba(14,165,255,.68);box-shadow:0 0 0 3px rgba(14,165,255,.14)}
+.feedback-actions{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.feedback-submit{border:0;border-radius:999px;background:linear-gradient(135deg,#0ea5ff,#0f75d8);color:white;cursor:pointer;font-family:'Montserrat',sans-serif;font-size:12px;font-weight:950;letter-spacing:.04em;padding:11px 15px;box-shadow:0 10px 24px rgba(14,165,255,.22);transition:.25s}
+.feedback-submit:hover{transform:translateY(-1px);box-shadow:0 12px 28px rgba(14,165,255,.32)}
+.feedback-submit:disabled{cursor:not-allowed;opacity:.62;transform:none}
+.feedback-status{min-height:18px;color:#8ea7c2;font-size:12px;font-weight:800;line-height:1.5}
+.feedback-status.success{color:#86efac}
+.feedback-status.error{color:#fca5a5}
+.support-page{margin-top:6px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:12px}
+.support-page small{display:flex;flex-direction:column;align-items:flex-start;gap:2px;color:rgba(142,167,194,.78);font-size:13px;line-height:1.25}
+.support-page small strong{color:#ffd000;font-size:15px;font-weight:1000;letter-spacing:.08em;text-shadow:0 0 14px rgba(255,208,0,.24)}
+.support-page small span{font-size:13px}
+.support-page a{display:inline-flex;align-items:center;justify-content:center;white-space:nowrap;border:1px solid rgba(255,208,0,.28);border-radius:999px;text-decoration:none;padding:6px 10px;background:rgba(255,208,0,.055);transition:.25s}
+.support-page a:hover{background:rgba(255,208,0,.11);transform:translateY(-1px)}
+.support-page a .paypal-logo{font-family:Arial,sans-serif;font-size:12px!important;font-weight:900;letter-spacing:-.25px;line-height:1}
+.support-page a .paypal-logo span{font-size:12px!important;line-height:1}
+.paypal-logo .pay{color:#003087}
+.paypal-logo .pal{color:#009cde}
 .visitor-mini{margin-top:18px;padding:16px;border-radius:18px;background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.09)}
 .visitor-mini strong{display:block;color:#ffd000;font-size:13px;text-transform:uppercase;letter-spacing:.04em;line-height:1.35}
 .visitor-mini p{margin-top:8px;color:#d8e8f7;font-size:13px;line-height:1.65}
@@ -292,7 +318,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.referral-options{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options,.feedback-fields{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}.support-page{align-items:flex-start;flex-direction:column}.support-page a{width:100%}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -380,10 +406,19 @@ input[type="date"],input[type="time"]{color-scheme:dark}
   </div>
 
   <section class="feature-strip" aria-label="Beneficios">
-    <div class="feature">
-      <span aria-hidden="true">🌄</span>
-      <h3 data-i18n="featureRoutesTitle">Rutas naturales</h3>
-      <p data-i18n="featureRoutesCopy">Explora paisajes únicos entre montañas y naturaleza extrema.</p>
+    <div class="feature feedback-card">
+      <h3 data-i18n="featureRoutesTitle">COMENTARIOS</h3>
+      <form class="feedback-form" id="feedbackForm">
+        <textarea name="comment" required maxlength="1200" data-i18n-placeholder="feedbackCommentPlaceholder" placeholder="Cuéntanos cómo fue tu experiencia o cómo podemos ayudarte."></textarea>
+        <div class="feedback-actions">
+          <button class="feedback-submit" type="submit" data-i18n="feedbackSubmit">ENVIAR COMENTARIO</button>
+          <div class="feedback-status" data-feedback-status aria-live="polite"></div>
+        </div>
+      </form>
+      <div class="support-page">
+        <small><strong data-i18n="supportTips">TIPS</strong><span data-i18n="supportCopy">Support this page</span></small>
+        <a id="paypalDonateLink" href="https://www.paypal.com/ncp/payment/SW4W7QJKDWLCS" target="_blank" rel="noopener" aria-label="PayPal"><span class="paypal-logo"><span class="pay">Pay</span><span class="pal">Pal</span></span></a>
+      </div>
     </div>
     <div class="feature">
       <span aria-hidden="true">🏁</span>
@@ -416,6 +451,8 @@ const WHATSAPP_NUMBER = "50378830399";
 const RESERVATION_EMAIL = "ratatouillextremetours@gmail.com";
 const SECONDARY_PHONE = "7255 8194";
 const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwxeGebEF1iiG5oF0sJ0Qz3Lb9UkxfXg1y-me-wbXdeNnW3yzlvfN54NY78VDtm0R40/exec";
+const COMMENTS_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbyqV14OFEOdGO00oTZ7L6vZECgDwZjYx0LzDd81ZztHHjrPGlHXa9xLo1Nkoc4wafJDcQ/exec";
+const PAYPAL_DONATE_URL = "https://www.paypal.com/ncp/payment/SW4W7QJKDWLCS";
 const COMMISSION_REGISTER_KEY = "ratatouille_commission_register_v2";
 const COMMISSION_RATES_KEY = "ratatouille_commission_rates_v2";
 const COMMISSION_INBOX_KEY = "ratatouille_commission_inbox_v1";
@@ -593,8 +630,18 @@ const translations = {
     whatsappSendReminder: "Si se abre WhatsApp como respaldo, revisa la orden cargada y presiona Enviar para que la reserva llegue correctamente.",
     warning: "Selecciona vehículos suficientes para cubrir la cantidad de personas.",
     reserveNow: "RESERVAR AHORA",
-    featureRoutesTitle: "Rutas naturales",
-    featureRoutesCopy: "Explora paisajes únicos entre montañas y naturaleza extrema.",
+    featureRoutesTitle: "COMENTARIOS",
+    featureRoutesCopy: "",
+    feedbackComment: "Comentario",
+    feedbackCommentPlaceholder: "Cuéntanos cómo fue tu experiencia o cómo podemos ayudarte.",
+    feedbackSubmit: "ENVIAR COMENTARIO",
+    feedbackSending: "Enviando comentario...",
+    feedbackSent: "Gracias. Tu comentario fue enviado correctamente.",
+    feedbackRequired: "Agrega un comentario antes de enviar.",
+    feedbackFallback: "No se pudo confirmar el envío. Intenta de nuevo o escríbenos por WhatsApp.",
+    supportTips: "TIPS",
+    supportCopy: "Support our staff and this page",
+    supportButton: "PayPal",
     featurePremiumTitle: "Experiencias premium",
     featurePremiumCopy: "Vive aventuras diseñadas para turistas nacionales e internacionales.",
     featureCareTitle: "Atención personalizada",
@@ -786,8 +833,18 @@ const translations = {
     whatsappSendReminder: "If WhatsApp opens as a backup, review the loaded order and press Send so the reservation arrives correctly.",
     warning: "Select enough vehicles to cover the number of guests.",
     reserveNow: "SEND BOOKING ORDER",
-    featureRoutesTitle: "Natural routes",
-    featureRoutesCopy: "Explore unique landscapes between mountains and extreme nature.",
+    featureRoutesTitle: "COMMENTS",
+    featureRoutesCopy: "",
+    feedbackComment: "Comment",
+    feedbackCommentPlaceholder: "Tell us about your experience or how we can help.",
+    feedbackSubmit: "SEND COMMENT",
+    feedbackSending: "Sending comment...",
+    feedbackSent: "Thank you. Your comment was sent correctly.",
+    feedbackRequired: "Add a comment before sending.",
+    feedbackFallback: "We could not confirm delivery. Please try again or message us on WhatsApp.",
+    supportTips: "TIPS",
+    supportCopy: "Support our staff and this page",
+    supportButton: "PayPal",
     featurePremiumTitle: "Premium experiences",
     featurePremiumCopy: "Enjoy adventures designed for local and international travelers.",
     featureCareTitle: "Personalized care",
@@ -1284,9 +1341,22 @@ function setSubmitStatus(form, text, type = "") {
   status.className = `submit-status ${type}`.trim();
 }
 
+function setFeedbackStatus(form, text, type = "") {
+  const status = form.querySelector("[data-feedback-status]");
+  if (!status) return;
+  status.textContent = text;
+  status.className = `feedback-status ${type}`.trim();
+}
+
 function openWhatsAppOrder(message) {
   const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
   window.open(url, "_blank", "noopener");
+}
+
+function openFeedbackEmailFallback(message) {
+  const subject = encodeURIComponent("Comentario - Ratatouille Xtreme Tours");
+  const body = encodeURIComponent(message);
+  window.location.href = `mailto:${RESERVATION_EMAIL}?subject=${subject}&body=${body}`;
 }
 
 async function sendOrderToGoogleScript(payload) {
@@ -1330,6 +1400,47 @@ async function sendOrderToGoogleScript(payload) {
     form.submit();
     setTimeout(finish, 2500);
   });
+}
+
+async function sendFeedbackToGoogleScript(payload) {
+  if (!COMMENTS_SCRIPT_URL || !COMMENTS_SCRIPT_URL.trim().startsWith("https://")) return false;
+
+  const formData = new FormData();
+  formData.append("comentario", payload.comment || "");
+  formData.append("pagina", payload.sourceUrl || window.location.href);
+  formData.append("idioma", payload.pageLanguage || currentLanguage);
+  formData.append("dispositivo", payload.deviceType || "");
+  formData.append("navegador", payload.userAgent || navigator.userAgent);
+  formData.append("origen", "Formulario de comentarios - Ratatouille Xtreme Tours");
+
+  await fetch(COMMENTS_SCRIPT_URL, {
+    method: "POST",
+    mode: "no-cors",
+    body: formData
+  });
+  return true;
+}
+
+function buildFeedbackEmailHtml(payload) {
+  return `
+    <div style="font-family:Arial,sans-serif;color:#111827;background:#f8fafc;padding:24px;">
+      <div style="max-width:640px;margin:auto;background:#fff;border:1px solid #e2e8f0;border-radius:18px;overflow:hidden;">
+        <div style="background:#071b2e;color:#fff;padding:22px 24px;">
+          <div style="font-size:12px;font-weight:900;color:#ffd000;text-transform:uppercase;letter-spacing:.8px;">Ratatouille Xtreme Tours Apaneca</div>
+          <h1 style="margin:8px 0 0;font-size:26px;line-height:1.15;">Nuevo comentario</h1>
+        </div>
+        <div style="padding:22px 24px;line-height:1.65;">
+          <p style="margin:0 0 18px;"><strong>Comentario:</strong><br>${escapeHtml(payload.comment).replace(/\n/g, "<br>")}</p>
+          <p style="margin:0;"><strong>Nombre:</strong> ${escapeHtml(payload.customerName)}</p>
+          <p style="margin:0;"><strong>Telefono o WhatsApp:</strong> ${escapeHtml(payload.customerPhone)}</p>
+          <p style="margin:0 0 18px;"><strong>Correo:</strong> ${escapeHtml(payload.customerEmail)}</p>
+          <p style="margin:0;color:#475569;font-size:13px;"><strong>Origen:</strong> ${escapeHtml(payload.sourceUrl)}</p>
+          <p style="margin:0;color:#475569;font-size:13px;"><strong>Dispositivo:</strong> ${escapeHtml(payload.deviceType)}</p>
+          <p style="margin:0;color:#475569;font-size:13px;"><strong>Fecha:</strong> ${escapeHtml(payload.submittedAt)}</p>
+        </div>
+      </div>
+    </div>
+  `;
 }
 
 function loadCommissionRates() {
@@ -1585,6 +1696,80 @@ async function handleBookingSubmit(event) {
   }
 }
 
+async function handleFeedbackSubmit(event) {
+  event.preventDefault();
+  const form = event.currentTarget;
+  const submitButton = form.querySelector(".feedback-submit");
+  const comment = fieldValue(form.elements.comment.value, "");
+
+  if (!comment) {
+    setFeedbackStatus(form, t("feedbackRequired"), "error");
+    form.elements.comment.focus();
+    return;
+  }
+
+  const customerName = "No ingresado";
+  const customerPhone = "No ingresado";
+  const customerEmail = "No ingresado";
+  const submittedAt = new Date().toISOString();
+  const deviceType = window.matchMedia("(max-width: 760px)").matches ? "Celular / pantalla movil" : "Computadora / escritorio";
+  const subject = "Comentario - Ratatouille Xtreme Tours";
+  const message = [
+    "NUEVO COMENTARIO DESDE LA PAGINA WEB",
+    "",
+    `Comentario: ${comment}`,
+    "",
+    `Nombre: ${customerName}`,
+    `Telefono o WhatsApp: ${customerPhone}`,
+    `Correo: ${customerEmail}`,
+    "",
+    `Idioma de la pagina: ${currentLanguage}`,
+    `Origen: ${window.location.href}`,
+    `Dispositivo: ${deviceType}`,
+    `Fecha y hora: ${submittedAt}`,
+    "",
+    `Enviar a: ${RESERVATION_EMAIL}`
+  ].join("\n");
+
+  const payload = {
+    type: "customer_feedback",
+    subject,
+    message,
+    customerName,
+    customerPhone,
+    customerEmail,
+    rating: "",
+    comment,
+    pageLanguage: currentLanguage,
+    sourceUrl: window.location.href,
+    deviceType,
+    userAgent: navigator.userAgent,
+    submittedAt,
+    destinationEmail: RESERVATION_EMAIL
+  };
+  payload.emailHtml = buildFeedbackEmailHtml(payload);
+
+  submitButton.disabled = true;
+  setFeedbackStatus(form, t("feedbackSending"));
+
+  try {
+    const sentToGmail = await sendFeedbackToGoogleScript(payload);
+    if (sentToGmail) {
+      form.reset();
+      setFeedbackStatus(form, t("feedbackSent"), "success");
+      return;
+    }
+    setFeedbackStatus(form, t("feedbackFallback"), "error");
+    openFeedbackEmailFallback(message);
+  } catch (error) {
+    console.warn("No se pudo enviar el comentario.", error);
+    setFeedbackStatus(form, t("feedbackFallback"), "error");
+    openFeedbackEmailFallback(message);
+  } finally {
+    submitButton.disabled = false;
+  }
+}
+
 function applyTranslations() {
   document.documentElement.lang = currentLanguage;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
@@ -1593,6 +1778,11 @@ function applyTranslations() {
   document.querySelectorAll("[data-i18n-html]").forEach((element) => {
     element.innerHTML = t(element.dataset.i18nHtml);
   });
+  document.querySelectorAll("[data-i18n-placeholder]").forEach((element) => {
+    element.placeholder = t(element.dataset.i18nPlaceholder);
+  });
+  const paypalDonateLink = document.getElementById("paypalDonateLink");
+  if (paypalDonateLink) paypalDonateLink.href = PAYPAL_DONATE_URL;
   buildBookingCards();
 }
 
@@ -1630,6 +1820,7 @@ document.getElementById("languageSelect").addEventListener("change", (event) => 
 
 initWhatsAppLinks();
 initExperienceVideo();
+document.getElementById("feedbackForm")?.addEventListener("submit", handleFeedbackSubmit);
 applyTranslations();
 
   </script>
