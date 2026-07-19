@@ -1413,11 +1413,16 @@ async function sendFeedbackToGoogleScript(payload) {
   formData.append("navegador", payload.userAgent || navigator.userAgent);
   formData.append("origen", "Formulario de comentarios - Ratatouille Xtreme Tours");
 
-  await fetch(COMMENTS_SCRIPT_URL, {
+  const sendRequest = fetch(COMMENTS_SCRIPT_URL, {
     method: "POST",
     mode: "no-cors",
     body: formData
   });
+
+  await Promise.race([
+    sendRequest.catch(() => true),
+    new Promise((resolve) => setTimeout(resolve, 2500))
+  ]);
   return true;
 }
 
