@@ -45,7 +45,11 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
 .nav-center-bar summary{display:none;color:#e8f6ff;font-size:15px;font-weight:900;list-style:none;cursor:pointer;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
 .nav-center-bar summary::-webkit-details-marker{display:none}
-.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:center}
+.nav-experience-cluster{display:flex;align-items:stretch;gap:6px;min-width:0}
+.nav-experience-cluster>a:first-child{flex:1;min-width:0}
+.nav-center-bar a.nav-tips-link{flex:0 0 auto;align-self:center;min-width:0;padding:6px 7px;border-color:rgba(255,208,0,.38);background:rgba(255,208,0,.07);color:#ffd000!important;font-size:9px;letter-spacing:.08em;border-radius:13px;box-shadow:none}
+.nav-center-bar a.nav-tips-link:hover{background:rgba(255,208,0,.14);color:#ffd000!important;transform:translateY(-1px);box-shadow:0 7px 14px rgba(255,208,0,.12)}
 .nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
 .nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
 .hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('imagen10.jpg');background-size:cover;background-position:center}
@@ -219,7 +223,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.nav-experience-cluster{gap:5px}.nav-center-bar a.nav-tips-link{padding:6px 7px;min-height:34px;font-size:9px}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -265,7 +269,10 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     <a href="boutique.html" data-i18n="navBoutique">Boutique</a>
     <a href="restaurante.html" data-i18n="navRestaurant">Restaurante</a>
     <a href="finca-cultura-cafe.html" data-i18n="navCoffeeBoutique">Finca y cultura del café</a>
-    <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+    <span class="nav-experience-cluster">
+      <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+      <a href="index.html?tips=1" class="nav-tips-link" data-i18n="supportTips">TIPS</a>
+    </span>
     <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
     <a href="terminos.html" data-i18n="navTerms">Términos y condiciones</a>
     </nav>
@@ -587,7 +594,99 @@ input[type="date"],input[type="time"]{color-scheme:dark}
                 <h4>Contact</h4>
                 <p>Ratatouille Xtreme Tours Apaneca<br>Apaneca, Ahuachapán, El Salvador<br>Email: xtremetoursapaneca@gmail.com<br>WhatsApp / Phone: +503 7883 0399</p>
               </div>
-            </section>
+              <div class="legal-content" data-lang-panel="fr" hidden>
+                <h3>CONDITIONS GÉNÉRALES</h3>
+                <p>En accédant au site web de <strong>Ratatouille Xtreme Tours Apaneca</strong> à l'adresse <strong>apanecatours.com</strong>, en soumettant une demande de réservation ou en utilisant l'un de nos services touristiques, vous acceptez d'être lié par les présentes Conditions générales (« Conditions »). Si vous n'acceptez pas ces Conditions, vous ne devez pas utiliser le Site ni soumettre de demande de réservation.</p>
+                <h4>1. À propos de nous</h4>
+                <p>Ratatouille Xtreme Tours Apaneca est un opérateur touristique situé à Apaneca, dans le département d'Ahuachapán, en République du Salvador, spécialisé dans l'organisation d'expériences touristiques, de visites guidées, d'activités d'aventure et d'excursions (« Tours »).</p>
+                <p>Notre siège est situé à Apaneca, Ahuachapán, El Salvador.</p>
+                <h4>2. Nature du site web et demandes de réservation</h4>
+                <p>Notre site web permet aux visiteurs de demander des informations et de soumettre des demandes de réservation.</p>
+                <p>L'envoi d'une demande de réservation ne constitue pas une réservation confirmée et ne crée aucune obligation contractuelle entre le client et Ratatouille Xtreme Tours Apaneca.</p>
+                <p>Une réservation ne sera considérée comme confirmée que lorsque :</p>
+                <ul><li>Notre équipe aura confirmé, par WhatsApp, e-mail ou appel téléphonique, la disponibilité du Tour demandé.</li><li>Le paiement intégral aura été reçu.</li></ul>
+                <p>Tant que ces deux conditions ne sont pas remplies, la disponibilité du Tour n'est pas garantie.</p>
+                <h4>3. Conditions d'éligibilité</h4>
+                <p>Pour effectuer une réservation, vous devez être âgé d'au moins 18 ans.</p>
+                <p>Les personnes mineures doivent être accompagnées d'un parent ou d'un représentant légal responsable qui accepte les présentes Conditions en leur nom.</p>
+                <p>Certains Tours peuvent être soumis à des conditions d'âge minimales supplémentaires, qui seront communiquées lors du processus de confirmation.</p>
+                <h4>4. Tarifs et modes de paiement</h4>
+                <p><strong>Paiement intégral requis.</strong> Toute réservation doit être réglée dans son intégralité afin d'être confirmée.</p>
+                <p><strong>Modes de paiement acceptés.</strong> Nous acceptons actuellement :</p>
+                <ul><li>Les liens de paiement sécurisés fournis par des prestataires de paiement externes.</li><li>Les cartes de crédit ou de débit traitées par des plateformes sécurisées autorisées.</li><li>Tout autre mode de paiement qui pourra être communiqué au moment de la réservation.</li></ul>
+                <p><strong>Protection des données financières.</strong> Ratatouille Xtreme Tours Apaneca ne conserve pas les numéros complets des cartes de crédit ou de débit. Les paiements électroniques sont exclusivement traités par des plateformes tierces sécurisées.</p>
+                <p><strong>Tarifs.</strong> Tous les prix sont indiqués en dollars des États-Unis (USD). Les prix peuvent être modifiés à tout moment avant la confirmation et le paiement de la réservation. Le prix confirmé par écrit via WhatsApp ou par e-mail sera le prix applicable à la réservation.</p>
+                <p><strong>Frais bancaires.</strong> Le client est responsable de tous les frais bancaires, frais de virement ou frais de traitement liés à son mode de paiement.</p>
+                <h4>5. Politique d'annulation et de remboursement</h4>
+                <p><strong>Annulation au moins 48 heures avant le Tour.</strong> Si le client annule au moins 48 heures avant le début prévu du Tour, il aura droit à un remboursement de 100 % du montant payé, déduction faite uniquement des frais de traitement non remboursables.</p>
+                <p><strong>Annulation moins de 48 heures avant le Tour.</strong> Les annulations effectuées moins de 48 heures avant le départ donnent droit à un remboursement de 50 % du montant payé.</p>
+                <p><strong>Absence (« No Show »).</strong> Aucun remboursement ne sera accordé aux clients qui ne se présentent pas au Tour.</p>
+                <p><strong>Annulation par l'entreprise.</strong> Si Ratatouille Xtreme Tours Apaneca annule une activité pour des raisons opérationnelles, météorologiques ou de sécurité, le client pourra choisir entre :</p>
+                <ul><li>Reprogrammer l'activité sans frais supplémentaires.</li><li>Recevoir un remboursement intégral.</li></ul>
+                <p><strong>Cas de force majeure.</strong> Nous ne pourrons être tenus responsables des annulations ou des modifications résultant de circonstances indépendantes de notre volonté, notamment :</p>
+                <ul><li>Conditions météorologiques extrêmes.</li><li>Catastrophes naturelles.</li><li>Urgences nationales.</li><li>Restrictions gouvernementales.</li><li>Fermeture de routes.</li><li>Troubles civils.</li><li>Pandémies.</li></ul>
+                <p>Dans de telles situations, nous nous efforcerons de bonne foi de reprogrammer l'activité ou de trouver une solution raisonnable.</p>
+                <p><strong>Délai de remboursement.</strong> Les remboursements approuvés seront traités dans un délai maximal de quinze (15) jours ouvrables.</p>
+                <h4>6. Acceptation des risques et décharge de responsabilité</h4>
+                <p>Les Tours proposés peuvent inclure des activités d'aventure et de pleine nature comportant des risques inhérents. Ces risques peuvent notamment comprendre :</p>
+                <ul><li>Des blessures corporelles.</li><li>Des maladies.</li><li>Des dommages matériels.</li><li>Des accidents.</li><li>Le décès.</li></ul>
+                <p>En participant à un Tour, vous reconnaissez et acceptez pleinement ces risques.</p>
+                <p>Tous les participants devront signer, avant le début de toute activité, un document distinct de <strong>Décharge de responsabilité et d'acceptation des risques</strong>. La signature de ce document est obligatoire.</p>
+                <h4>7. Santé, condition physique et comportement</h4>
+                <p>En réservant un Tour, vous déclarez être en bonne condition physique et apte à participer à l'activité en toute sécurité.</p>
+                <p>En outre :</p>
+                <ul><li>Vous devez informer l'entreprise de toute condition médicale pertinente.</li><li>Vous devez respecter toutes les consignes de sécurité données par nos guides.</li><li>Vous ne pouvez pas participer sous l'influence de l'alcool ou de substances illicites.</li></ul>
+                <p>L'entreprise se réserve le droit de refuser ou de mettre fin à la participation de toute personne dont le comportement représente un risque pour elle-même ou pour les autres participants. Dans ce cas, aucun remboursement ne sera accordé.</p>
+                <h4>8. Photographies et contenus audiovisuels</h4>
+                <p>Au cours des Tours, nous pouvons prendre des photographies et enregistrer des vidéos à des fins promotionnelles.</p>
+                <p>En participant, vous autorisez l'utilisation de ces images sur :</p>
+                <ul><li>Notre site web officiel.</li><li>Facebook.</li><li>Instagram.</li><li>TikTok.</li><li>Nos supports publicitaires.</li></ul>
+                <p>Si vous ne souhaitez pas apparaître sur des photographies ou des vidéos, vous devez nous en informer par écrit avant le début du Tour.</p>
+                <h4>9. Responsabilités du client</h4>
+                <p>Le client est responsable de :</p>
+                <ul><li>Disposer des documents nécessaires pour voyager au Salvador.</li><li>Souscrire une assurance voyage et/ou une assurance médicale s'il le juge nécessaire.</li><li>Se présenter à l'heure au point de rendez-vous.</li><li>Porter des vêtements et un équipement adaptés à l'activité.</li><li>Respecter les lois de la République du Salvador.</li></ul>
+                <h4>10. Limitation de responsabilité</h4>
+                <p>Dans toute la mesure permise par la législation salvadorienne, Ratatouille Xtreme Tours Apaneca, ses propriétaires, employés, guides et collaborateurs ne pourront être tenus responsables des dommages indirects, accessoires, particuliers ou consécutifs résultant :</p>
+                <ul><li>De la participation à un Tour.</li><li>De l'utilisation du Site web.</li><li>De circonstances échappant raisonnablement à notre contrôle.</li></ul>
+                <p>Aucune disposition des présentes Conditions ne limite les droits qui ne peuvent être légalement exclus en vertu de la législation salvadorienne.</p>
+                <h4>11. Indemnisation</h4>
+                <p>Le client accepte d'indemniser et de dégager de toute responsabilité Ratatouille Xtreme Tours Apaneca, ses propriétaires, employés et représentants contre toute réclamation, tout dommage, toute perte ou toute dépense résultant :</p>
+                <ul><li>Du non-respect des présentes Conditions.</li><li>D'une violation de la loi.</li><li>D'actes ou d'omissions commis par le client pendant le Tour.</li></ul>
+                <h4>12. Consentement aux communications</h4>
+                <p>En soumettant une demande de réservation, vous autorisez Ratatouille Xtreme Tours Apaneca à vous contacter par :</p>
+                <ul><li>WhatsApp.</li><li>Appels téléphoniques.</li><li>SMS.</li><li>E-mail.</li></ul>
+                <p>Ces communications pourront être utilisées pour confirmer les réservations, traiter les paiements, partager des informations relatives au Tour et fournir une assistance à la clientèle.</p>
+                <h4>13. Propriété intellectuelle</h4>
+                <p>L'ensemble du contenu du Site, y compris les textes, images, logos, dessins, photographies, vidéos et supports promotionnels, est la propriété de Ratatouille Xtreme Tours Apaneca ou de leurs titulaires respectifs.</p>
+                <p>Toute reproduction, diffusion ou utilisation est interdite sans autorisation écrite préalable.</p>
+                <h4>14. Droit applicable et juridiction compétente</h4>
+                <p>Les présentes Conditions sont régies et interprétées conformément aux lois de la République du Salvador.</p>
+                <p>Tout litige relatif aux présentes Conditions ou à la participation à nos Tours sera soumis exclusivement aux tribunaux compétents du département d'Ahuachapán, République du Salvador.</p>
+                <h4>15. Coordonnées</h4>
+                <p><strong>Ratatouille Xtreme Tours Apaneca</strong><br>Apaneca, Ahuachapán, El Salvador<br><strong>E-mail :</strong> <a href="mailto:xtremetoursapaneca@gmail.com">xtremetoursapaneca@gmail.com</a><br><strong>WhatsApp / Téléphone :</strong> +503 7883 0399</p>
+                <p>En utilisant notre Site web ou en réservant l'un de nos services, vous déclarez avoir lu, compris et accepté intégralement les présentes Conditions générales.</p>
+                <h3>POLITIQUE DE CONFIDENTIALITÉ</h3>
+                <p>La présente Politique de confidentialité explique comment Ratatouille Xtreme Tours Apaneca collecte, utilise et protège les informations que vous fournissez lorsque vous visitez notre site web <strong>apanecatours.com</strong> ou lorsque vous demandez une réservation pour l'un de nos Tours et expériences touristiques à Apaneca, El Salvador.</p>
+                <h4>Informations que nous recueillons</h4>
+                <p>Lorsque vous effectuez une demande de réservation via notre site web, nos formulaires de contact, WhatsApp ou par e-mail, nous pouvons recueillir les informations suivantes :</p>
+                <ul><li>Nom et prénom.</li><li>Adresse e-mail.</li><li>Numéro de téléphone.</li><li>Numéro WhatsApp.</li><li>Nombre de participants au Tour.</li><li>Date souhaitée pour l'activité.</li><li>Toute information complémentaire liée à la réservation.</li></ul>
+                <p>Nous ne recueillons pas directement, par l'intermédiaire de notre site web, les numéros de cartes de crédit, les coordonnées bancaires ou toute autre information financière sensible.</p>
+                <h4>Utilisation de vos informations</h4>
+                <p>Les informations que vous nous fournissez sont utilisées afin de :</p>
+                <ul><li>Vérifier la disponibilité des Tours et des activités.</li><li>Gérer et confirmer les réservations.</li><li>Communiquer avec vous par téléphone, WhatsApp, SMS ou e-mail.</li><li>Vous transmettre des informations importantes concernant votre Tour.</li><li>Fournir une assistance à la clientèle.</li><li>Améliorer nos services.</li><li>Vous envoyer des promotions, des offres spéciales ou des nouveautés concernant nos Tours, sauf si vous choisissez de ne plus recevoir ces communications.</li></ul>
+                <h4>Partage des informations</h4>
+                <p>Nous ne vendons pas, ne louons pas et n'échangeons pas vos informations personnelles avec des tiers à des fins publicitaires.</p>
+                <p>Nous pouvons uniquement partager certaines informations avec :</p>
+                <ul><li>Des prestataires de services qui nous aident à exploiter notre entreprise ou notre site web.</li><li>Des plateformes de communication et de gestion des réservations.</li><li>Les autorités administratives ou judiciaires lorsque la loi l'exige.</li></ul>
+                <h4>Conservation et protection des données</h4>
+                <p>Nous prenons des mesures raisonnables afin de protéger les informations personnelles que vous nous fournissez, en limitant leur accès exclusivement au personnel autorisé.</p>
+                <p>Toutefois, aucun système de stockage ou de transmission de données n'est totalement sécurisé. Par conséquent, nous ne pouvons garantir une sécurité absolue.</p>
+                <h4>Vos droits</h4>
+                <p>Vous avez le droit de :</p>
+                <ul><li>Demander une copie des informations personnelles que nous détenons à votre sujet.</li><li>Demander la rectification de données inexactes ou obsolètes.</li><li>Demander la suppression de vos données personnelles lorsque la législation applicable le permet.</li><li>Demander à ne plus recevoir de communications promotionnelles.</li></ul>
+                <h4>Contact</h4>
+                <p><strong>Ratatouille Xtreme Tours Apaneca</strong><br>Apaneca, Ahuachapán, El Salvador<br><strong>E-mail :</strong> <a href="mailto:xtremetoursapaneca@gmail.com">xtremetoursapaneca@gmail.com</a><br><strong>WhatsApp / Téléphone :</strong> +503 7883 0399</p>
+              </div>            </section>
 
   </main>
 
@@ -674,7 +773,7 @@ const translations = {
     locationHelp: "Si vous avez des difficultes a reserver l'un de nos tours, vous pouvez appeler le +503 7883 0399",
     reservationHelp: "Reservation par telephone :",
     reservationLanguages: "Assistance en espagnol, anglais et francais",
-    termsReminder: "Conditions generales a la fin du site.",
+    termsReminder: "Conditions générales à la fin du site.",
     home: "ACCUEIL",
     reserve: "RESERVER",
     navHome: "Reservations",
@@ -684,7 +783,7 @@ const translations = {
     navPrices: "Prix",
     navVehicles: "Vehicules",
     navRecommendations: "Recommandations",
-    navTerms: "Conditions generales",
+    navTerms: "Conditions générales",
     navBoutique: "Boutique",
     navRestaurant: "Restaurant",
     navGallery: "Galerie",
@@ -826,7 +925,7 @@ const translations = {
     utvVehicleCopy: "Plus d'espace et de confort pour les groupes de cinq ou six personnes.",
     recommendationsTitle: "RECOMMANDATIONS",
     recommendationsCopy: "Portez des vetements confortables et reservez a l'avance. Il est recommande d'arriver quelques minutes avant l'heure choisie.",
-    termsSectionReminder: "Consultez notre page Conditions generales avant d'envoyer votre reservation.",
+    termsSectionReminder: "Veuillez consulter nos Conditions générales avant de soumettre votre demande de réservation.",
     localVisitTitle: "Presentez-vous directement a notre adresse officielle",
     localVisitCopy: "Pour recevoir votre tour, les instructions et l'assistance officielle, presentez-vous directement a notre local Ratatouille Apaneca.",
     avoidScamTitle: "Evitez les arnaques",
@@ -852,7 +951,7 @@ const translations = {
     alertCapacity: "La capacite selectionnee ne couvre pas le nombre de personnes.",
     alertRequiredClient: "Completez le nom du client responsable, le numero de telephone et l'e-mail pour generer la commande.",
     alertTimeRange: "Selectionnez une heure de reservation entre 9 h 00 et 18 h 00.",
-    termsTitle: "Conditions generales",
+    termsTitle: "Conditions générales",
     termsTourSelection: "Selectionnez soigneusement le bon tour avant d'envoyer la commande. Si vous choisissez le mauvais tour, contactez immediatement le personnel autorise afin de le corriger.",
     termsArrival: "Pour recevoir le tour, les instructions et l'assistance officielle, presentez-vous directement a notre local Ratatouille Apaneca.",
     termsPayment: "La commande est soumise a la confirmation de disponibilite et a l'envoi du lien de paiement correspondant.",
