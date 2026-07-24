@@ -242,7 +242,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .feedback-status{min-height:18px;color:#8ea7c2;font-size:12px;font-weight:800;line-height:1.5}
 .feedback-status.success{color:#86efac}
 .feedback-status.error{color:#fca5a5}
-.support-page{margin-top:6px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:12px}
+.support-page{margin-top:6px;display:flex;align-items:center;justify-content:space-between;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:12px;scroll-margin-top:120px}
 .support-page small{display:flex;flex-direction:column;align-items:flex-start;gap:2px;color:rgba(142,167,194,.78);font-size:13px;line-height:1.25}
 .support-page small strong{color:#ffd000;font-size:15px;font-weight:1000;letter-spacing:.08em;text-shadow:0 0 14px rgba(255,208,0,.24)}
 .support-page small span{font-size:13px}
@@ -572,6 +572,7 @@ const translations = {
     home: "INICIO",
     reserve: "RESERVAR",
     navHome: "Reservas",
+    navMenu: "Menú de secciones",
     navAbout: "Acerca de",
     navDestinations: "Destinos",
     navPrices: "Precios",
@@ -711,6 +712,7 @@ const translations = {
     ausolesPromoName: "Oferta Xtreme Ausoles",
     vehiclesSectionTitle: "VEHÍCULOS",
     vehiclesSectionCopy: "Elige la opción ideal para tu grupo y disfruta la ruta con comodidad, aventura y el estilo de conducción que prefieras.",
+    atvVehicleTitle: "Cuadrimotos",
     singleAtvVehicleCopy: "Ágil y divertida para una persona.",
     doubleAtvVehicleCopy: "Una experiencia compartida para dos personas.",
     buggiesVehicleTitle: "Buggies",
@@ -775,6 +777,7 @@ const translations = {
     home: "HOME",
     reserve: "BOOK",
     navHome: "Bookings",
+    navMenu: "Section menu",
     navAbout: "About us",
     navDestinations: "Destinations",
     navPrices: "Prices",
@@ -914,6 +917,7 @@ const translations = {
     ausolesPromoName: "Ausoles Xtreme Deal",
     vehiclesSectionTitle: "VEHICLES",
     vehiclesSectionCopy: "Choose the ideal option for your group and enjoy the route with comfort, adventure, and your preferred driving style.",
+    atvVehicleTitle: "ATVs",
     singleAtvVehicleCopy: "Agile and fun for one person.",
     doubleAtvVehicleCopy: "A shared experience for two people.",
     buggiesVehicleTitle: "Buggies",
@@ -978,6 +982,7 @@ const translations = {
     home: "ACCUEIL",
     reserve: "RESERVER",
     navHome: "Reservations",
+    navMenu: "Menu des sections",
     navAbout: "A propos",
     navDestinations: "Destinations",
     navPrices: "Prix",
@@ -1117,6 +1122,7 @@ const translations = {
     ausolesPromoName: "Offre Xtreme Ausoles",
     vehiclesSectionTitle: "VEHICULES",
     vehiclesSectionCopy: "Choisissez l'option ideale pour votre groupe et profitez du parcours avec confort, aventure et le style de conduite que vous preferez.",
+    atvVehicleTitle: "Quads",
     singleAtvVehicleCopy: "Agile et amusant pour une personne.",
     doubleAtvVehicleCopy: "Une experience partagee pour deux personnes.",
     buggiesVehicleTitle: "Buggies",
@@ -1173,7 +1179,16 @@ const translations = {
   }
 };
 
-let currentLanguage = "es";
+const LANGUAGE_STORAGE_KEY = "ratatouilleLanguage";
+const SUPPORTED_LANGUAGES = ["es", "en", "fr"];
+let currentLanguage = (() => {
+  try {
+    const savedLanguage = localStorage.getItem(LANGUAGE_STORAGE_KEY);
+    return SUPPORTED_LANGUAGES.includes(savedLanguage) ? savedLanguage : "es";
+  } catch (error) {
+    return "es";
+  }
+})();
 
 function t(key) {
   return (translations[currentLanguage] && translations[currentLanguage][key]) || translations.en[key] || translations.es[key] || key;
@@ -2004,6 +2019,8 @@ async function handleFeedbackSubmit(event) {
 
 function applyTranslations() {
   document.documentElement.lang = currentLanguage;
+  const languageSelect = document.getElementById("languageSelect");
+  if (languageSelect) languageSelect.value = currentLanguage;
   document.querySelectorAll("[data-i18n]").forEach((element) => {
     element.textContent = t(element.dataset.i18n);
   });
@@ -2045,13 +2062,33 @@ function initExperienceVideo() {
   startPlayback();
 }
 
-document.getElementById("languageSelect").addEventListener("change", (event) => {
-  currentLanguage = event.target.value;
+function initTipsAnchor() {
+  const tipsLink = document.querySelector(".nav-tips-link");
+  const tipsTarget = document.getElementById("tips-support");
+  if (!tipsLink || !tipsTarget) return;
+
+  tipsLink.addEventListener("click", (event) => {
+    event.preventDefault();
+    const headerOffset = window.innerWidth <= 560 ? 88 : 118;
+    const targetTop = tipsTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
+    window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
+    history.replaceState(null, "", "#tips-support");
+  });
+}
+
+document.getElementById("languageSelect")?.addEventListener("change", (event) => {
+  currentLanguage = SUPPORTED_LANGUAGES.includes(event.target.value) ? event.target.value : "es";
+  try {
+    localStorage.setItem(LANGUAGE_STORAGE_KEY, currentLanguage);
+  } catch (error) {
+    // Continue translating even if localStorage is blocked.
+  }
   applyTranslations();
 });
 
 initWhatsAppLinks();
 initExperienceVideo();
+initTipsAnchor();
 document.getElementById("feedbackForm")?.addEventListener("submit", handleFeedbackSubmit);
 applyTranslations();
 
