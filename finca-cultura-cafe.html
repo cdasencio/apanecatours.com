@@ -45,9 +45,13 @@ header{width:100%;position:sticky;top:0;z-index:100;background:rgba(3,8,20,.90);
 .nav-center-bar{width:calc(100% - 80px);max-width:1280px;margin:28px auto 0;background:linear-gradient(135deg,rgba(7,27,46,.92),rgba(2,8,23,.96));border:1px solid rgba(14,165,255,.28);border-radius:28px;padding:18px;box-shadow:0 20px 45px rgba(0,0,0,.38),inset 0 0 25px rgba(14,165,255,.06);backdrop-filter:blur(18px)}
 .nav-center-bar summary{display:none;color:#e8f6ff;font-size:15px;font-weight:900;list-style:none;cursor:pointer;padding:14px 16px;border-radius:18px;background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.08)}
 .nav-center-bar summary::-webkit-details-marker{display:none}
-.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px}
+.nav-links{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;align-items:center}
+.nav-experience-cluster{display:flex;align-items:stretch;gap:6px;min-width:0}
+.nav-experience-cluster>a:first-child{flex:1;min-width:0}
 .nav-center-bar a{color:#e8f6ff;text-decoration:none;font-size:15px;font-weight:900;text-align:center;padding:16px 12px;border-radius:20px;background:rgba(255,255,255,.045);border:1px solid rgba(255,255,255,.06);transition:.3s}
 .nav-center-bar a:hover{background:linear-gradient(135deg,#0ea5ff,#0f172a);color:white;transform:translateY(-4px);box-shadow:0 12px 28px rgba(14,165,255,.28)}
+.nav-center-bar a.nav-tips-link{flex:0 0 auto;align-self:center;min-width:0;padding:6px 7px;border-color:rgba(255,208,0,.38);background:rgba(255,208,0,.07);color:#ffd000!important;font-size:9px;letter-spacing:.08em;border-radius:13px;box-shadow:none}
+.nav-center-bar a.nav-tips-link:hover{background:rgba(255,208,0,.14);color:#ffd000!important;transform:translateY(-1px);box-shadow:0 7px 14px rgba(255,208,0,.12)}
 .hero{min-height:calc(100vh - 118px);display:flex;align-items:center;justify-content:center;text-align:center;padding:80px 24px;position:relative;overflow:hidden;margin-top:0;background-image:linear-gradient(180deg,rgba(2,8,23,.18),rgba(2,8,23,.34) 45%,rgba(2,8,23,.78) 100%),url('imagen10.jpg');background-size:cover;background-position:center}
 .hero::after{content:"";position:absolute;inset:0;z-index:1;background:radial-gradient(circle at center,rgba(0,0,0,.08),rgba(0,0,0,.34) 72%)}
 .hero-content{max-width:940px;position:relative;z-index:2;margin:auto}
@@ -219,7 +223,7 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 @media(max-width:1100px){.tour-grid,.feature-strip{grid-template-columns:1fr}.client-info{grid-template-columns:1fr}.nav-center-bar{width:calc(100% - 32px);padding:18px}.nav-links{grid-template-columns:repeat(3,1fr)}.image-gallery{grid-template-columns:repeat(2,1fr)}.vehicle-showcase{grid-template-columns:repeat(2,1fr)}}
 @media(max-width:850px){header{flex-direction:column;gap:18px;padding:22px}.header-left,.contact-panel,.nav{justify-content:center}.nav{flex-wrap:wrap}.form-grid,.vehicle-list,.price-grid-tours,.promo-price{grid-template-columns:1fr}.summary-pass-head,.summary-price-panel{grid-template-columns:1fr}.order-summary-list{grid-template-columns:1fr}.summary-price-item.total{border-left:none;border-top:1px solid rgba(180,154,91,.35);padding-left:0;padding-top:14px}}
 @media(max-width:850px){.experience-video{width:100%;height:auto;max-height:none;margin-bottom:0;border-radius:0}}
-@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
+@media(max-width:560px){.nav-center-bar{border-radius:22px;padding:12px}.nav-center-bar summary{display:none}.nav-links{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-top:0}.nav-center-bar a{font-size:12px;padding:13px 8px;min-height:48px;display:flex;align-items:center;justify-content:center}.nav-experience-cluster{gap:5px}.nav-center-bar a.nav-tips-link{flex:0 0 auto;align-self:center;min-width:0;padding:6px 7px;border-color:rgba(255,208,0,.38);background:rgba(255,208,0,.07);color:#ffd000!important;font-size:9px;letter-spacing:.08em;border-radius:13px;box-shadow:none}.image-gallery{grid-template-columns:1fr}.image-gallery img,.restaurant-gallery img{height:230px}.vehicle-showcase{grid-template-columns:1fr}.referral-options{grid-template-columns:1fr}.referral-choice{min-height:78px;flex-direction:row;justify-content:flex-start;text-align:left}.referral-label{max-width:none}}
 @media(max-width:520px){.promo-bar{font-size:14px}.reservation-help-bar{font-size:13px;padding:9px 14px}.reservation-help-bar .help-main{gap:6px}.logo-btn{width:100%;text-align:center}.booking-panel{padding:20px}.tour-card{padding:20px}.vehicle-row{grid-template-columns:1fr}.section-title{font-size:30px}.hero h1{font-size:38px}.content-section{padding:26px}}
 
   </style>
@@ -265,7 +269,10 @@ input[type="date"],input[type="time"]{color-scheme:dark}
     <a href="boutique.html" data-i18n="navBoutique">Boutique</a>
     <a href="restaurante.html" data-i18n="navRestaurant">Restaurante</a>
     <a href="finca-cultura-cafe.html" data-i18n="navCoffeeBoutique">Finca y cultura del café</a>
-    <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+    <span class="nav-experience-cluster">
+      <a href="experiencias.html" data-i18n="navExperiences">Experiencias</a>
+      <a href="index.html?tips=1" class="nav-tips-link" data-i18n="supportTips">TIPS</a>
+    </span>
     <a href="recomendaciones.html" data-i18n="navRecommendations">Recomendaciones</a>
     <a href="terminos.html" data-i18n="navTerms">Términos y condiciones</a>
     </nav>
@@ -322,6 +329,7 @@ const translations = {
     navRestaurant: "Restaurante",
     navCoffeeBoutique: "Finca y cultura del café",
     navExperiences: "Experiencias",
+    supportTips: "TIPS",
     navRecommendations: "Recomendaciones",
     navTerms: "Términos y condiciones",
     coffeeBoutiqueTitle: "FINCA Y CULTURA DEL CAFÉ",
@@ -346,6 +354,7 @@ const translations = {
     navRestaurant: "Restaurant",
     navCoffeeBoutique: "Coffee Farm and Culture",
     navExperiences: "Experiences",
+    supportTips: "TIPS",
     navRecommendations: "Recommendations",
     navTerms: "Terms and Conditions",
     coffeeBoutiqueTitle: "COFFEE FARM AND CULTURE",
