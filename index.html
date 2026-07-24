@@ -2065,15 +2065,26 @@ function initExperienceVideo() {
 function initTipsAnchor() {
   const tipsLink = document.querySelector(".nav-tips-link");
   const tipsTarget = document.getElementById("tips-support");
-  if (!tipsLink || !tipsTarget) return;
+  if (!tipsTarget) return;
 
-  tipsLink.addEventListener("click", (event) => {
-    event.preventDefault();
-    const headerOffset = window.innerWidth <= 560 ? 88 : 118;
+  const scrollToTips = () => {
+    const headerOffset = window.innerWidth <= 560 ? 160 : 118;
     const targetTop = tipsTarget.getBoundingClientRect().top + window.scrollY - headerOffset;
     window.scrollTo({ top: Math.max(0, targetTop), behavior: "smooth" });
     history.replaceState(null, "", "#tips-support");
-  });
+  };
+
+  if (tipsLink) {
+    tipsLink.addEventListener("click", (event) => {
+      event.preventDefault();
+      scrollToTips();
+    });
+  }
+
+  const params = new URLSearchParams(window.location.search);
+  if (params.get("tips") === "1" || window.location.hash === "#tips-support") {
+    setTimeout(scrollToTips, 120);
+  }
 }
 
 document.getElementById("languageSelect")?.addEventListener("change", (event) => {
