@@ -162,9 +162,6 @@ input[type="date"],input[type="time"]{color-scheme:dark}
 .translator-box{margin-top:20px;background:linear-gradient(135deg,rgba(255,208,0,.10),rgba(14,165,255,.08));border:1px solid rgba(255,208,0,.28);border-radius:24px;padding:22px}
 .translator-title{color:#ffd000;font-size:15px;font-weight:900;text-transform:uppercase;letter-spacing:.8px;margin-bottom:10px}
 .translator-copy{color:#d7e7f4;line-height:1.7;font-size:14px;margin-bottom:16px}
-.translator-box.is-unavailable{background:linear-gradient(135deg,rgba(255,208,0,.08),rgba(8,18,31,.90));border-color:rgba(255,208,0,.38)}
-.translator-box.is-unavailable .translator-field{display:none}
-.translator-status{margin:0;color:#d7e7f4;line-height:1.7;font-size:14px}
 .summary-box{margin-top:20px;border-radius:18px;background:#f8fafc;color:#101827;border:1px solid rgba(255,255,255,.16);padding:0;overflow:hidden;box-shadow:0 18px 34px rgba(0,0,0,.30)}
 .summary-pass-head{display:grid;grid-template-columns:1fr 150px;gap:18px;align-items:start;padding:22px 22px 18px;background:white}
 .summary-brand{display:block;color:#b49a5b;font-size:12px;font-weight:900;letter-spacing:2px;text-transform:uppercase;margin-bottom:6px}
@@ -638,10 +635,6 @@ const translations = {
     translatorFee: "Traducción e interpretación",
     translatorNotSelected: "NO",
     translatorSelected: "SÍ",
-    translatorTitlePromo: "Traducción disponible",
-    translatorTitleAvailableAgain: "Traducción disponible de nuevo",
-    translatorTitleUnavailable: "Traducción no disponible",
-    translatorUnavailableMessage: "No disponible en las siguientes fechas, por su comprensión, gracias.",
     orderSummary: "Resumen de la orden",
     orderTour: "Tour",
     orderPeople: "Personas",
@@ -847,10 +840,6 @@ const translations = {
     translatorFee: "Translation and interpretation",
     translatorNotSelected: "NO",
     translatorSelected: "YES",
-    translatorTitlePromo: "Translation available",
-    translatorTitleAvailableAgain: "Translation available again",
-    translatorTitleUnavailable: "Translation unavailable",
-    translatorUnavailableMessage: "Not available on the following dates. Thank you for your understanding.",
     orderSummary: "Order summary",
     orderTour: "Tour",
     orderPeople: "People",
@@ -1056,10 +1045,6 @@ const translations = {
     translatorFee: "Traduction et interpretation",
     translatorNotSelected: "NON",
     translatorSelected: "OUI",
-    translatorTitlePromo: "Traduction disponible",
-    translatorTitleAvailableAgain: "Traduction de nouveau disponible",
-    translatorTitleUnavailable: "Traduction non disponible",
-    translatorUnavailableMessage: "Non disponible aux dates suivantes. Merci de votre compréhension.",
     orderSummary: "Resume de la commande",
     orderTour: "Tour",
     orderPeople: "Personnes",
@@ -1270,43 +1255,6 @@ function createOrderNumber() {
   return `RXT-${datePart}-${timePart}`;
 }
 
-function isTranslatorAvailable(dateValue) {
-  if (!dateValue) return false;
-  const parts = String(dateValue).split("-").map(Number);
-  if (parts.length !== 3 || parts.some((part) => !Number.isFinite(part))) return false;
-  const selectedDate = new Date(Date.UTC(parts[0], parts[1] - 1, parts[2], 12));
-  return [6, 0].includes(selectedDate.getUTCDay());
-}
-
-function isTranslatorPromoLeadDay(date = new Date()) {
-  const dayName = new Intl.DateTimeFormat("en-US", { weekday: "short", timeZone: "America/El_Salvador" }).format(date);
-  return dayName === "Fri";
-}
-
-function updateTranslatorAvailability(form) {
-  const selectedDate = form.elements.date?.value;
-  const available = isTranslatorAvailable(selectedDate);
-  const showPromo = available || (!selectedDate && isTranslatorPromoLeadDay());
-  const box = form.querySelector("[data-translator-box]");
-  const title = form.querySelector("[data-translator-title]");
-  const mainCopy = form.querySelector("[data-translator-copy]");
-  const finalCopy = form.querySelector("[data-translator-copy-final]");
-  const status = form.querySelector("[data-translator-status]");
-  const select = form.elements.translator;
-
-  if (box) box.classList.toggle("is-unavailable", !showPromo);
-  if (title) title.textContent = showPromo ? t("translatorTitlePromo") : t("translatorTitleUnavailable");
-  if (mainCopy) mainCopy.hidden = !showPromo;
-  if (finalCopy) finalCopy.hidden = !showPromo;
-  if (status) {
-    status.hidden = showPromo;
-    status.textContent = t("translatorUnavailableMessage");
-  }
-  if (select) {
-    select.disabled = !available;
-    if (!available) select.value = "no";
-  }
-}
 function buildBookingCards() {
   const grid = document.getElementById("bookingGrid");
   grid.innerHTML = tours.map((tour) => {
@@ -1377,14 +1325,13 @@ function buildBookingCards() {
             <input name="email" type="email" placeholder="correo@ejemplo.com" required>
           </div>
         </div>
-        <div class="translator-box is-unavailable" data-translator-box>
-          <div class="translator-title" data-translator-title>${t("translatorTitleUnavailable")}</div>
-          <p class="translator-copy" data-translator-copy hidden>${t("translatorQuestion")}</p>
-          <p class="translator-copy" data-translator-copy-final hidden>${t("translatorQuestionFinal")}</p>
-          <p class="translator-status" data-translator-status>${t("translatorUnavailableMessage")}</p>
-          <div class="field full translator-field">
+        <div class="translator-box">
+          <div class="translator-title">${t("translatorTitle")}</div>
+          <p class="translator-copy">${t("translatorQuestion")}</p>
+          <p class="translator-copy">${t("translatorQuestionFinal")}</p>
+          <div class="field full">
             <label>${t("translatorOption")}</label>
-            <select name="translator" disabled>
+            <select name="translator">
               <option value="no" selected>${t("translatorNotSelected")} - $0</option>
               <option value="yes">${t("translatorSelected")} - ${formatPrice(translatorPrice(tour.id))}</option>
             </select>
@@ -1478,7 +1425,7 @@ function getFormSummary(form) {
   const capacity = selectedVehicles.reduce((total, vehicle) => total + vehicle.capacity * vehicle.units, 0);
   const people = Number(form.elements.people.value || 0);
   const basePrice = tourTotalPrice(form.dataset.tourId, selectedVehicles, people);
-  const wantsTranslator = isTranslatorAvailable(form.elements.date?.value) && form.elements.translator.value === "yes";
+  const wantsTranslator = form.elements.translator.value === "yes";
   const translatorFee = wantsTranslator ? translatorPrice(form.dataset.tourId) : 0;
   const totalPrice = basePrice + translatorFee;
 
@@ -1853,7 +1800,6 @@ function queueCommissionOrder(payload) {
 }
 
 function updateSummary(form) {
-  updateTranslatorAvailability(form);
   const summary = getFormSummary(form);
   const orderList = form.querySelector("[data-order-summary]");
   orderList.innerHTML = getOrderSummaryRows(form, summary)
